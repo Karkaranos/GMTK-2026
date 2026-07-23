@@ -152,10 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c08dc0df3476d4fadb83706e95a76d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressBar
-  _fillType: 0
+  _fillType: 1
   _resetOnEnable: 1
   _beginOnEnable: 1
   _internalWidth: 2
+  fillRate: 1
 --- !u!1 &5154673474222885139
 GameObject:
   m_ObjectHideFlags: 0

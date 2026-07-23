@@ -15,12 +15,19 @@ public class ProgressBar : MonoBehaviour
     private bool IsTimer() => _fillType == FillType.Timer;
 
     [SerializeField, Tooltip("# of seconds long")] private float _internalWidth;
+    [SerializeField, Tooltip("How much it fills each second.")] private float fillRate = 1;
     private float fillAmount;
 
     private bool filling;
     private Coroutine fillCoroutine;
     public Action OnBarEnable;
     public Action OnBarFinish;
+
+    public float FillRate
+    {
+        get => fillRate;
+        set => FillRate = Mathf.Max(value, 0);
+    }
 
     void Awake()
     {
@@ -84,7 +91,7 @@ public class ProgressBar : MonoBehaviour
         while (fillAmount < _internalWidth)
         {
             yield return null;
-            fillAmount += Time.deltaTime;
+            fillAmount += Time.deltaTime * fillRate;
             slider.value = fillAmount;
 
             if (fillAmount > _internalWidth)
