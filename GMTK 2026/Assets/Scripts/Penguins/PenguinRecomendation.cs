@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -5,6 +6,8 @@ using UnityEngine;
 /// </summary>
 public class PenguinRecomendation : MonoBehaviour
 {
+    private Dictionary<RocketSection, RocketPart> recommendations;
+
     public void Initialize()
     {
 
