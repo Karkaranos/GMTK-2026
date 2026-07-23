@@ -1121,7 +1121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScroller
   scrollRange: 20
-  scrollSpeed: 1
+  scrollSpeed: 0.75
+  lerpSpeed: 5
 --- !u!1001 &1326969004
 PrefabInstance:
   m_ObjectHideFlags: 0
