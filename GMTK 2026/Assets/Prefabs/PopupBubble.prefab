@@ -485,6 +485,7 @@ MonoBehaviour:
     drainSpeed: 0.075
   radialFillImage: {fileID: 8427285747243625148}
   iconImage: {fileID: 3369633356989001711}
+  fadeIconImage: {fileID: 913518310960011072}
 --- !u!95 &5050777849674198970
 Animator:
   serializedVersion: 7

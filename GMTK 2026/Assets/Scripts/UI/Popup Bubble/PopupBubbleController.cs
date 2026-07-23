@@ -10,9 +10,16 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     public Image radialFillImage;
     public Image iconImage;
 
+    [SerializeField]
+    private Image fadeIconImage;
+
     private float progress = 0;
 
     private bool mouseDown;
+
+    #region GS
+    public Image FadeIconImage { get => fadeIconImage; set => fadeIconImage = value; }
+    #endregion
 
     private void Update()
     {
