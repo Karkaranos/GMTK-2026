@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -36,10 +35,27 @@ public class RocketManager : Manager
         foreach(var section in parts.Database)
         {
             RocketPart[] partsArray = new RocketPart[section.Parts.Length];
-            partsArray.AddRange(section.Parts);
+            section.Parts.CopyTo(partsArray, 0);
             ShuffleArray(partsArray);
             partScoringDict.Add(section.Section, partsArray);
         }
+
+        DebugScoring();
+    }
+
+    public void DebugScoring()
+    {
+        string scoring = "";
+        foreach(var section in partScoringDict.Keys)
+        {
+            scoring += $"{section}: ";
+            for(int i = 0; i < partScoringDict[section].Length; i++)
+            {
+                scoring += $"\n    {i}. {partScoringDict[section][i].Name}.  ";
+            }
+            scoring += "\n\n";
+        }
+        Debug.Log(scoring);
     }
 
     /// <summary>
@@ -51,7 +67,7 @@ public class RocketManager : Manager
     {
         for(int i = array.Length - 1; i > 0; i--)
         {
-            int rand = Random.Range(0, i);
+            int rand = Random.Range(0, i + 1);
             Swap(array, i, rand);
         }
     }

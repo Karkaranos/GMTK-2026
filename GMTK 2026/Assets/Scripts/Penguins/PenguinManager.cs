@@ -10,12 +10,13 @@ public class PenguinManager : Manager
     [SerializeField, Tooltip("Controls how many penguins recommend each part, with index 0 being the best choice, " +
         "index 1 being the second best, and so on.")] 
     private int[] favorRatio;
+    [SerializeField] private PenguinRecDisplay recDisplay;
 
-    private PenguinRecomendation[] penguins;
+    private Penguin[] penguins;
 
     public override void Initialize()
     {
-        penguins = GetComponentsInChildren<PenguinRecomendation>(true);
+        penguins = GetComponentsInChildren<Penguin>(true);
         AssignParts();
     }
 
@@ -35,7 +36,7 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations);
+            penguin.Initialize(recommendations, recDisplay);
         }
     }
 
