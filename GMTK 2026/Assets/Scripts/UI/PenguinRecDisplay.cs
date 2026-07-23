@@ -33,6 +33,7 @@ public class PenguinRecDisplay : MonoBehaviour
 
     public void TogglePopup(bool shown)
     {
+        SceneSwitcher.CanSwitchScenes = !shown;
         cg.alpha = shown ? 1 : 0;
         cg.blocksRaycasts = shown;
         cg.interactable = shown;

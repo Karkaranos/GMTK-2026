@@ -49,10 +49,14 @@ public class ObjectScroller : MonoBehaviour
         baseLocation = transform.position;
         scrollAction = InputSystem.actions.FindAction("Scroll");
         scrollAction.Enable();
+    }
+
+    private void OnEnable()
+    {
         scrollAction.performed += HandleScrollPerformed;
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         scrollAction.performed -= HandleScrollPerformed;
     }
