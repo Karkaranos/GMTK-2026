@@ -706,7 +706,7 @@ MonoBehaviour:
   section: {fileID: 0}
   partDisplay: {fileID: 8335350002159557210}
   buildBar: {fileID: 8883127606921741328}
-  buildButton: {fileID: 606050893392636023}
+  group: {fileID: 0}
 --- !u!1001 &8703988532823796128
 PrefabInstance:
   m_ObjectHideFlags: 0

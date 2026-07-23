@@ -36,6 +36,10 @@ public class SectionBuilder : MonoBehaviour
         parts = Array.Find(partDB.Database, x => x.Section == section.Section).Parts;
         SelectedPart = selectedPart;
         buildBar.OnBarFinish += OnBarFinish;
+        if (section.BuildingBar == null)
+        {
+            section.BuildingBar = buildBar;
+        }
     }
 
     public void ScrollPart(int direction)

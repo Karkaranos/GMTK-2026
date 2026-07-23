@@ -7,6 +7,7 @@ public class BuildingSection : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer rend;
     [SerializeField] private RocketSection section;
+    [field: SerializeField] public ProgressBar BuildingBar { get; set; }
 
     private RocketPart part;
 
@@ -16,5 +17,14 @@ public class BuildingSection : MonoBehaviour
     {
         this.part = part;
         rend.sprite = part.Sprite;
+    }
+
+    /// <summary>
+    /// Increases/decreases the build rate of this part.
+    /// </summary>
+    /// <param name="buildRate"></param>
+    public void AddBuildRate(int buildRate)
+    {
+        BuildingBar.FillRate += buildRate;
     }
 }
