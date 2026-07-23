@@ -324,18 +324,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
   MainMenu:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1480843819
+      Data2: 1256766198
+      Data3: -624929150
+      Data4: 1807347482
+    Path: event:/Test
   TestSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1480843819
+      Data2: 1256766198
+      Data3: -624929150
+      Data4: 1807347482
+    Path: event:/Test
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

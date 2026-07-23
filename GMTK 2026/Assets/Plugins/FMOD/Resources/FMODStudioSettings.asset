@@ -233,9 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.Settings
   switchSettingsMigration: 1
   HasSourceProject: 0
-  HasPlatforms: 0
+  HasPlatforms: 1
   sourceProjectPath: 
-  sourceBankPath: Assets/FMOD Builds/Desktop
+  sourceBankPath: Assets/FMOD Builds
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -256,7 +256,8 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -270,7 +271,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131637
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131637
   Platforms:
   - {fileID: -7287835654332070852}
