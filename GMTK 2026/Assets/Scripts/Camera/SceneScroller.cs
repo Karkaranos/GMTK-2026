@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// Controls scrolling up and down in the rocket scene.
 /// </summary>
-public class ObjectScroller : MonoBehaviour
+public class SceneScroller : MonoBehaviour
 {
     private const float LERP_LEEWAY = 0.01f;
 

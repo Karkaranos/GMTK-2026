@@ -270,13 +270,28 @@ MonoBehaviour:
     normalizeCurveTime: 1
     parentBehavior: {fileID: 294192520}
     time: 0
-  OnCameraToggleEvent:
+  CameraActivateEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1267135512}
         m_TargetAssemblyTypeName: ObjectScroller, Assembly-CSharp
         m_MethodName: set_enabled
-        m_Mode: 0
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  CameraDeactivateEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1267135512}
+        m_TargetAssemblyTypeName: ObjectScroller, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -772,7 +787,10 @@ MonoBehaviour:
     normalizeCurveTime: 1
     parentBehavior: {fileID: 1780772052}
     time: 0
-  OnCameraToggleEvent:
+  CameraActivateEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  CameraDeactivateEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!224 &1834030985 stripped

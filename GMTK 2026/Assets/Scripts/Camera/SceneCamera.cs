@@ -11,7 +11,8 @@ public class SceneCamera : MonoBehaviour
     [SerializeField] private CinemachineCamera cam;
     [SerializeField] private float previewOffset;
     [SerializeField] private CoroutineTimeline timeline;
-    [SerializeField] private UnityEvent<bool> OnCameraToggleEvent;
+    [SerializeField] private UnityEvent CameraActivateEvent;
+    [SerializeField] private UnityEvent CameraDeactivateEvent;
 
     private Vector3 defaultPos;
 
@@ -28,12 +29,12 @@ public class SceneCamera : MonoBehaviour
     public void OnCameraActivate()
     {
         cam.Prioritize();
-        OnCameraToggleEvent?.Invoke(true);
+        CameraActivateEvent?.Invoke();
     }
 
     public void OnCameraDeactivate()
     {
-        OnCameraToggleEvent?.Invoke(false);
+        CameraDeactivateEvent?.Invoke();
     }
 
     private void SetCamPosition(float progress)
