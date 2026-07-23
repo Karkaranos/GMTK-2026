@@ -1,25 +1,47 @@
+using NaughtyAttributes;
 using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public PopupBubbleData bubbleData;
-    public Image radialFillImage;
-    public Image iconImage;
 
-    [SerializeField]
+    //COMPONENTS
+    [SerializeField, BoxGroup("Components")]
+    private Image radialFillImage;
+    [SerializeField, BoxGroup("Components")]
+    private Image iconImage;
+    [SerializeField, BoxGroup("Components")]
     private Image fadeIconImage;
+    [SerializeField, BoxGroup("Components")]
+    private Animator _animator;
+
+    //ANIMATION
+    [SerializeField, BoxGroup("Animation")]
+    private string _animCriticalID = "B_CRITICAL";
+    [SerializeField, BoxGroup("Animation")]
+    private string _animInteractID = "T_INTERACT";
+    [SerializeField, BoxGroup("Animation")]
+    private string _animCompleteID = "T_COMPLETED";
 
     private float progress = 0;
+    private float timer = 0;
 
     private bool mouseDown;
 
     #region GS
     public Image FadeIconImage { get => fadeIconImage; set => fadeIconImage = value; }
+    public Image IconImage { get => iconImage; set => iconImage = value; }
     #endregion
+
+
+    private void Start()
+    {
+        StartCoroutine(Timer(0.1f));
+    }
 
     private void Update()
     {
@@ -46,6 +68,7 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         radialFillImage.fillAmount = progress;
     }
 
+    #region Input
     public void OnPointerClick(PointerEventData eventData)
     {
         //fill by click increment if click type
@@ -58,11 +81,14 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         {
             Complete();
         }
+
+        _animator.SetTrigger(_animInteractID);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         mouseDown = true;
+        _animator.SetTrigger(_animInteractID);
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -81,17 +107,35 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         //remove hover effect
         return;
     }
+    #endregion
+
+    private IEnumerator Timer(float interval)
+    {
+        bool timing = true;
+        while (timing)
+        {
+            yield return new WaitForSeconds(interval);
+            timer += interval;
+            
+            if (timer > bubbleData.GracePeriod)
+            {
+                _animator.SetBool(_animCriticalID, true);
+                timing = false;
+            }
+
+        }
+    }
 
     public void Complete()
     {
         //little pop sound would be fun
 
         bubbleData.onComplete?.Invoke();
-        Destroy(gameObject);
+        _animator.SetTrigger(_animCompleteID);
     }
 
 }
-
+//=====================================================================================================================
 [Serializable]
 public struct PopupBubbleData
 {
@@ -114,5 +158,12 @@ public struct PopupBubbleData
     [Tooltip("Percent progress drain per second (0.0 - 1.0)")]
     public float drainSpeed;
 
+    [SerializeField, Tooltip("How long the pop-up exists before it starts draining progress.")]
+    private float _gracePeriod;
+
     public Action onComplete;
+
+    #region GS
+    public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
+    #endregion
 }

@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 4649665992217092406}
   - component: {fileID: 7922605537687452543}
   - component: {fileID: 5050777849674198970}
+  - component: {fileID: 8336472797548429291}
   m_Layer: 5
   m_Name: PopupBubble
   m_TagString: Untagged
@@ -483,9 +484,15 @@ MonoBehaviour:
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0.075
+    _gracePeriod: 0
   radialFillImage: {fileID: 8427285747243625148}
   iconImage: {fileID: 3369633356989001711}
   fadeIconImage: {fileID: 913518310960011072}
+  _animator: {fileID: 5050777849674198970}
+  _animTimerID: F_TIMER
+  _animCriticalID: B_CRITICAL
+  _animInteractID: T_INTERACT
+  _animCompleteID: T_COMPLETED
 --- !u!95 &5050777849674198970
 Animator:
   serializedVersion: 7
@@ -508,3 +515,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8336472797548429291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9166382726989490355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 851f59f4d8adf6c42983224116c2eafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventMethods

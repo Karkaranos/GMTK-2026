@@ -370,6 +370,7 @@ MonoBehaviour:
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0.1
+    _gracePeriod: 5
 --- !u!4 &1779501862
 Transform:
   m_ObjectHideFlags: 0
