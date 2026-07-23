@@ -6,6 +6,7 @@
  ******************************************/
 using FMOD.Studio;
 using FMODUnity;
+using NaughtyAttributes;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,6 +19,9 @@ public class AudioManager : MonoBehaviour
     private Bus masterBus;
     private Bus sfxBus;
     private Bus musicBus;
+
+    [SerializeField, Tooltip("Audio File to test")]
+    private string testString;
 
     [Range(0, 1), HideInInspector]
     public float MasterVolume = 1f;
@@ -100,4 +104,13 @@ public class AudioManager : MonoBehaviour
     {
         backgroundMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
+
+    [Button]
+    public void PlaySound()
+    {
+        EventReference reference = EventReference.Find("event:/" + testString);
+        PlayOneShot(reference);
+    }
+
 }
