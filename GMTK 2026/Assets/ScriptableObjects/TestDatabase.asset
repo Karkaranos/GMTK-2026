@@ -16,24 +16,24 @@ MonoBehaviour:
   - section: 0
     parts:
     - name: TestTop1
-      partSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
     - name: TestTop2
-      partSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     - name: TestTop3
-      partSprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+      sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   - section: 1
     parts:
     - name: TestEngine1
-      partSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
     - name: TestEngine2
-      partSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     - name: TestEngine3
-      partSprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+      sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   - section: 2
     parts:
     - name: TestWings1
-      partSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
     - name: TestWings2
-      partSprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     - name: TestWings3
-      partSprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+      sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}

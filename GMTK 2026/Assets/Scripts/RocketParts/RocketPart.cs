@@ -4,5 +4,8 @@ using UnityEngine;
 public class RocketPart
 {
     [SerializeField] private string name;
-    [SerializeField] private Sprite partSprite;
+    [SerializeField] private Sprite sprite;
+
+    public Sprite Sprite => sprite;
+    public string Name => name;
 }
