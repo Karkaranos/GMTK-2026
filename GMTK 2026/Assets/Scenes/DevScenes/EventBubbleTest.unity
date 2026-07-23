@@ -370,21 +370,6 @@ MonoBehaviour:
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0.1
-    onComplete:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1779501861}
-          m_TargetAssemblyTypeName: BubbleTester, Assembly-CSharp
-          m_MethodName: TestListener
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!4 &1779501862
 Transform:
   m_ObjectHideFlags: 0
