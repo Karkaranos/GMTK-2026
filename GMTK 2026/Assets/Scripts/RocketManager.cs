@@ -9,7 +9,7 @@ using UnityEngine;
 public class RocketManager : Manager
 {
     [SerializeField] private RocketPartDatabase parts;
-    private static RocketManager instance;
+    public static RocketManager Instance { get; private set;  }
 
     private readonly Dictionary<RocketSection, RocketPart[]> partScoringDict = new Dictionary<RocketSection, RocketPart[]>();
 
@@ -21,7 +21,7 @@ public class RocketManager : Manager
 
     public override void Initialize()
     {
-        if (instance != null && instance != this)
+        if (Instance != null && Instance != this)
         {
             Debug.LogWarning("Duplicate RocketManager found.");
             Destroy(gameObject);
@@ -29,7 +29,7 @@ public class RocketManager : Manager
         }
         else
         {
-            instance = this;
+            Instance = this;
         }
 
         // Setup the scoring tiers for the rocket parts.

@@ -6,10 +6,10 @@ using UnityEngine;
 /// </summary>
 public class PenguinRecomendation : MonoBehaviour
 {
-    private Dictionary<RocketSection, RocketPart> recommendations;
+    private Dictionary<RocketSection, RocketPart> recomendations;
 
-    public void Initialize()
+    public void Initialize(Dictionary<RocketSection, RocketPart> recs)
     {
-
+        recomendations = recs;
     }
 }
