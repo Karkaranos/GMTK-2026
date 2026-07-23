@@ -1,0 +1,65 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+/// <summary>
+/// Manages all information related to rocket scoring, including the current progress in the control room and
+/// what parts are most optimal.
+/// </summary>
+public class RocketManager : Manager
+{
+    [SerializeField] private RocketPartDatabase parts;
+    public static RocketManager Instance { get; private set;  }
+
+    private readonly Dictionary<RocketSection, RocketPart[]> partScoringDict = new Dictionary<RocketSection, RocketPart[]>();
+
+    public float Progress { get; set; }
+
+    #region Properties
+    public Dictionary<RocketSection, RocketPart[]> PartScoring => partScoringDict;
+    #endregion
+
+    public override void Initialize()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Debug.LogWarning("Duplicate RocketManager found.");
+            Destroy(gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        // Setup the scoring tiers for the rocket parts.
+        foreach(var section in parts.Database)
+        {
+            RocketPart[] partsArray = new RocketPart[section.Parts.Length];
+            partsArray.AddRange(section.Parts);
+            ShuffleArray(partsArray);
+            partScoringDict.Add(section.Section, partsArray);
+        }
+    }
+
+    /// <summary>
+    /// Shuffles ana array using the fisher-yates algorithm.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="array"></param>
+    private static void ShuffleArray<T>(T[] array)
+    {
+        for(int i = array.Length - 1; i > 0; i--)
+        {
+            int rand = Random.Range(0, i);
+            Swap(array, i, rand);
+        }
+    }
+
+    private static void Swap<T>(T[] array, int index1, int index2)
+    {
+        T temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
+}
