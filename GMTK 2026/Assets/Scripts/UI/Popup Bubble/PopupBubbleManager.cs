@@ -19,6 +19,7 @@ public class PopupBubbleManager : MonoBehaviour
 
         instance.GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(position);
         bubbleController.bubbleData = data;
-        bubbleController.iconImage.sprite = data.iconSprite;
+        bubbleController.IconImage.sprite = data.iconSprite;
+        bubbleController.FadeIconImage.sprite = data.iconSprite;
     }
 }
