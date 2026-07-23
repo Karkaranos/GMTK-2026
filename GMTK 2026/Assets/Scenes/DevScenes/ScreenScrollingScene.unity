@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e89982d19b95ea43a2ee3683ff408b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectScroller
-  scrollRange: 10
+  scrollRange: 20
   scrollSpeed: 1
 --- !u!1001 &1326969004
 PrefabInstance:

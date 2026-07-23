@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,14 +12,14 @@ public class ObjectScroller : MonoBehaviour
 
     private InputAction scrollAction;
     private Vector3 baseLocation;
-    private float scrollLocation;
+    [ShowNonSerializedField] private float scrollLocation;
 
     public float ScrollLocation
     {
         get { return scrollLocation; }
         set
         {
-            scrollLocation = value;
+            scrollLocation = Mathf.Clamp(value, - scrollRange / 2, scrollRange / 2);
             transform.position = baseLocation + Vector3.up * scrollLocation;
         }
     }
@@ -27,6 +28,7 @@ public class ObjectScroller : MonoBehaviour
     {
         baseLocation = transform.position;
         scrollAction = InputSystem.actions.FindAction("Scroll");
+        scrollAction.Enable();
         scrollAction.performed += HandleScrollPerformed;
     }
 
@@ -37,13 +39,7 @@ public class ObjectScroller : MonoBehaviour
 
     private void HandleScrollPerformed(InputAction.CallbackContext obj)
     {
-        Debug.Log(obj.ReadValue<Vector2>());
-        ScrollLocation += scrollSpeed * obj.ReadValue<Vector2>().y;
-    }
-
-    private void Update()
-    {
-        Debug.Log(scrollAction.ReadValue<Vector2>());
+        ScrollLocation -= scrollSpeed * obj.ReadValue<Vector2>().normalized.y;
     }
 
     private void OnDrawGizmosSelected()
