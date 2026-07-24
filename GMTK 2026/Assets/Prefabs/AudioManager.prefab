@@ -117,3 +117,45 @@ MonoBehaviour:
       Data3: 1036061102
       Data4: -65384067
     Path: event:/Ice Break
+  UIClick:
+    Guid:
+      Data1: 1837178418
+      Data2: 1116657435
+      Data3: -931052415
+      Data4: 286084437
+    Path: event:/UI Click
+  Fire:
+    Guid:
+      Data1: -1383689436
+      Data2: 1164258753
+      Data3: -1637655413
+      Data4: 1767073262
+    Path: event:/Fire
+  FireOut:
+    Guid:
+      Data1: -472736569
+      Data2: 1224101437
+      Data3: -619698757
+      Data4: -1511394367
+    Path: event:/FireOut
+  Master:
+    Guid:
+      Data1: 196027296
+      Data2: 1117370739
+      Data3: -275448402
+      Data4: -526979242
+    Path: event:/TestSoundMaster
+  SFX:
+    Guid:
+      Data1: 1271826599
+      Data2: 1137266743
+      Data3: 367711412
+      Data4: 1678247461
+    Path: event:/TestSoundSFX
+  Music:
+    Guid:
+      Data1: -528290171
+      Data2: 1281227859
+      Data3: 1406725821
+      Data4: 1979767939
+    Path: event:/TestSoundMusic
