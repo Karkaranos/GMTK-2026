@@ -15,11 +15,15 @@ public class ParticleMaster : Manager
 
     public static ParticleMaster INST;
 
+    private void Start()
+    {
+        Initialize();
+    }
     public override void Initialize()
     {
         if (INST == null)
             INST = this;
-        else
+        else if (INST != this)
             Debug.LogError("Multiple instances of ParticleMaster exist. There can only be one.");
     }
 
@@ -30,6 +34,15 @@ public class ParticleMaster : Manager
             return;
 
         _library[index].Play(parent);
+    }
+
+    public void Play(string id, Vector3 position)
+    {
+        int index;
+        if (!DoesIDExist(id, out index))
+            return;
+
+        _library[index].Play(position);
     }
 
     private int Find(string id)
@@ -98,6 +111,11 @@ public class ParticleMaster : Manager
         public void Play(Transform parent)
         {
             GameObject obj = Instantiate(_prefab, parent);
+        }
+
+        public void Play(Vector3 position)
+        {
+            GameObject obj = Instantiate(_prefab, position, Quaternion.identity);
         }
     }
 }

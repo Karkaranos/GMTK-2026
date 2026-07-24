@@ -214,7 +214,7 @@ AnimationClip:
   m_Events:
   - time: 0.05
     functionName: PlayParticle
-    data: 
+    data: AlertInteract
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

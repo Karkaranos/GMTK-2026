@@ -47,4 +47,9 @@ MonoBehaviour:
   _library:
   - _id: AlertSuccess
     _prefab: {fileID: 8072399824244248882, guid: c17b8275e8473f64db411548dd8074a5, type: 3}
+  - _id: AlertInteract
+    _prefab: {fileID: 8072399824244248882, guid: c17b8275e8473f64db411548dd8074a5, type: 3}
+  - _id: AlertSpawn
+    _prefab: {fileID: 8072399824244248882, guid: c17b8275e8473f64db411548dd8074a5, type: 3}
   _simID: 
+  _simParent: {fileID: 0}

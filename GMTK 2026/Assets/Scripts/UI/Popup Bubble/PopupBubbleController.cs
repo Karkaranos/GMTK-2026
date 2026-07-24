@@ -1,3 +1,4 @@
+using MarUtility.UIExtensions;
 using NaughtyAttributes;
 using System;
 using System.Collections;
@@ -12,6 +13,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     //COMPONENTS
     [SerializeField, BoxGroup("Components")]
     private Image radialFillImage;
+    [SerializeField, BoxGroup("Components")]
+    private FillController _fillCtrl;
     [SerializeField, BoxGroup("Components")]
     private Image iconImage;
     [SerializeField, BoxGroup("Components")]
@@ -65,7 +68,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         }    
 
         //update visual
-        radialFillImage.fillAmount = progress;
+        //radialFillImage.fillAmount = progress;
+        _fillCtrl.FillAmount = progress;
     }
 
     #region Input
