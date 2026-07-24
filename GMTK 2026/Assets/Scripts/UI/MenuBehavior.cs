@@ -16,10 +16,11 @@ public class MenuBehavior : MonoBehaviour
     public static MenuBehavior Instance;
     public bool IsPaused = false;
 
-    [SerializeField, Scene] private int gameScene;
+    [SerializeField, Scene] private int[] gameScenes;
     [SerializeField, Scene] private int menuScene;
 
     [SerializeField, Required] private GameObject pauseMenu;
+    [SerializeField, Required] private GameObject postLaunchMenu;
     [SerializeField, Required] private GameObject mainMenu;
     [SerializeField, Required] private GameObject controls;
     [SerializeField, Required] private GameObject credits;
@@ -41,6 +42,7 @@ public class MenuBehavior : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         pauseMenu.SetActive(false);
+        postLaunchMenu.SetActive(false);
 
         // If the current scene is the menu scene, enables the menu. Otherwise, disables it
         mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
@@ -58,17 +60,19 @@ public class MenuBehavior : MonoBehaviour
         if(IsPaused)
         {
             pauseMenu.SetActive(false);
+            IsPaused = false;
         }
+        postLaunchMenu.SetActive(false);
     }
 
     /// <summary>
     /// Loads the game scene by the provided index
     /// </summary>
-    public void LoadGameScene()
+    public void LoadGameScene(int index)
     {
         credits.SetActive(false);
         controls.SetActive(false);
-        SceneManager.LoadScene(gameScene);
+        SceneManager.LoadScene(gameScenes[index]);
     }
 
     /// <summary>
@@ -95,7 +99,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void TogglePauseState()
     {
-        if(SceneManager.GetActiveScene().buildIndex == gameScene)
+        if(SceneManager.GetActiveScene().buildIndex != menuScene && postLaunchMenu.activeSelf == false)
         {
             IsPaused = !IsPaused;
             pauseMenu.SetActive(IsPaused);
@@ -106,6 +110,11 @@ public class MenuBehavior : MonoBehaviour
                 controls.SetActive(false);
             }
         }
+    }
+
+    public void LaunchComplete()
+    {
+        postLaunchMenu.SetActive(true);
     }
 
     /// <summary>
