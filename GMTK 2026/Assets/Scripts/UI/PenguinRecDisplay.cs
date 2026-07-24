@@ -8,8 +8,10 @@ public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] private CanvasGroup cg;
     [SerializeField] private RecReferences[] recReferences;
 
-    private InputAction clickAction;
     private bool isMouseOver;
+    private static bool isShown;
+
+    public static bool IsShown => isShown;
 
     #region Nested
     [System.Serializable]
@@ -19,16 +21,6 @@ public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
         [SerializeField] internal Image image;
     }
     #endregion
-
-    private void Awake()
-    {
-        clickAction = InputSystem.actions.FindAction("Click");
-    }
-
-    private void OnDestroy()
-    {
-        clickAction.started -= HandleClick;
-    }
 
     public void ShowPenguin(Penguin penguin)
     {
@@ -43,23 +35,17 @@ public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void HidePopup()
     {
+        Penguin.ResetSelectedPenguin();
         TogglePopup(false);
     }
 
     public void TogglePopup(bool shown)
     {
         SceneSwitcher.CanSwitchScenes = !shown;
+        isShown = shown;
         cg.alpha = shown ? 1 : 0;
         cg.blocksRaycasts = shown;
         cg.interactable = shown;
-        if (shown)
-        {
-            clickAction.started += HandleClick;
-        }
-        else
-        {
-            clickAction.started -= HandleClick;
-        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -72,7 +58,7 @@ public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
         isMouseOver = false;
     }
 
-    private void HandleClick(InputAction.CallbackContext obj)
+    public void HandlePopupClick()
     {
         if (!isMouseOver)
         {
