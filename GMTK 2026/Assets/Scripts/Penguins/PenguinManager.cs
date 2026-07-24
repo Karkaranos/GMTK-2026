@@ -19,22 +19,17 @@ public class PenguinManager : Manager
     private InputAction clickAction;
     private Penguin[] penguins;
 
-    [SerializeField, BoxGroup("Screens"), Tooltip("Parent of penguin UI.")]
-    private Transform _perSecUIHolder;
-    [SerializeField, BoxGroup("Screens")]
-    private TMP_Text _distanceTravelledText;
-
-    #region GS
-    public TMP_Text DistanceTravelledText { get => _distanceTravelledText; }
-    #endregion
-
+    private ScreenUIManager screenUIMan;
     public override void Initialize()
     {
+        screenUIMan = GetComponent<ScreenUIManager>();
+
         clickAction = InputSystem.actions.FindAction("Click");
         clickAction.Enable();
         clickAction.started += HandleClick;
         penguins = GetComponentsInChildren<Penguin>(true);
         AssignParts();
+
     }
 
     private void OnDestroy()
@@ -72,7 +67,7 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations, _perSecUIHolder.GetChild(i).GetComponent<Image>());
+            penguin.Initialize(recommendations, screenUIMan.PerSecUIHolder.GetChild(i).GetComponent<Image>());
             i++;
         }
     }

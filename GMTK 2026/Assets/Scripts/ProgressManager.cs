@@ -26,6 +26,7 @@ public class ProgressManager : Manager
     //MANAGERS
     private BuildingManager buildMan;
     private PenguinManager penguinMan;
+    private ScreenUIManager screenUIMan;
 
     public override void Initialize()
     {
@@ -36,6 +37,7 @@ public class ProgressManager : Manager
 
         buildMan = FindAnyObjectByType<BuildingManager>();
         penguinMan = FindAnyObjectByType<PenguinManager>();
+        screenUIMan = penguinMan.GetComponent<ScreenUIManager>();
 
         CountdownManager.OnCountdownFinished += SaveDistanceFlown;
     }
@@ -94,12 +96,21 @@ public class ProgressManager : Manager
         shipQuality = topScore + wingScore + engineScore;
         if (shipQuality < 0)
             shipQuality = 0;
+
+        //UI
+        //screenUIMan.TopPart.PartImage.sprite = 
+        screenUIMan.TotalPartQuality.text = shipQuality.ToString();
+        screenUIMan.TopPart.QualityText.text = topScore.ToString();
+        screenUIMan.WingPart.QualityText.text = wingScore.ToString();
+        screenUIMan.EnginePart.QualityText.text = engineScore.ToString();
     }
 
     private void CalculateDistanceFlown()
     {
         distanceFlown = shipQuality * totalProgress * _distanceModifier;
-        penguinMan.DistanceTravelledText.text = distanceFlown.ToString();
+
+        //UI
+        screenUIMan.DistanceTravelledText.text = distanceFlown.ToString();
     }
     #endregion
 }
