@@ -17,6 +17,7 @@ public class RocketMover : MonoBehaviour
         "Should be approximately how far the player needs to get to \"win.\"")] 
     private float maxGravityFieldDistance;
     [SerializeField] private AnimationCurve gravityFalloffCurve;
+    [SerializeField] private float menuDelay;
     [SerializeField] private float debugHeight;
 
     [SerializeField, BoxGroup("References")] private CinemachineCamera rocketCam;
@@ -30,7 +31,20 @@ public class RocketMover : MonoBehaviour
 
     private void Awake()
     {
-        //StartCoroutine(LaunchRoutine(ProgressManager.DistanceFlown * unitScaler));
+        if (MenuBehavior.Instance == null)
+        {
+            Debug.LogWarning("Didn't start in title scene; automatic launch canceled; use inspector buttons to test launch");
+        }
+        else
+        {
+            StandardLaunch();
+        }
+    }
+
+    [Button]
+    private void StandardLaunch()
+    {
+        StartCoroutine(LaunchRoutine(ProgressManager.DistanceFlown * unitScaler));
     }
 
     [Button]
@@ -41,6 +55,8 @@ public class RocketMover : MonoBehaviour
 
     private IEnumerator LaunchRoutine(float flyDistance)
     {
+        Debug.Log($"Executing launch with fly distance {flyDistance} ({ProgressManager.DistanceFlown} * {unitScaler})");
+
         yield return new WaitForSeconds(launchDelay);
         // Calculate the time the rocket needs to accelerate, decellerate, and fly at a constant speed.
         
@@ -82,6 +98,15 @@ public class RocketMover : MonoBehaviour
 
         // Capture the max reached height.
         Debug.Log(rb.position.y);
+
+        yield return new WaitForSeconds(menuDelay);
+
+        if (MenuBehavior.Instance == null)
+        {
+            Debug.LogWarning("And then the menu would pop up");
+            yield break;
+        }
+        MenuBehavior.Instance.LaunchComplete();
     }
 
     private FlyTime GetFlyTimes(float flyDistance)
