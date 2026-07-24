@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class RocketManager : Manager
 {
+    [SerializeField] private int[] partQualityMultipliers = new int[] { 3, 2, 1 };
     [SerializeField] private RocketPartDatabase parts;
     public static RocketManager Instance { get; private set;  }
 
@@ -38,6 +39,10 @@ public class RocketManager : Manager
             section.Parts.CopyTo(partsArray, 0);
             ShuffleArray(partsArray);
             partScoringDict.Add(section.Section, partsArray);
+            for(int i = 0; i < partsArray.Length; i++)
+            {
+                partsArray[i].Quality = partQualityMultipliers[i];
+            }
         }
 
         DebugScoring();
