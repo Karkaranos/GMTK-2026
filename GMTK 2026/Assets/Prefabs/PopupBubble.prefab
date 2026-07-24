@@ -379,7 +379,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.56, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8734522809868514635}
   - {fileID: 8450717278886434224}
@@ -407,6 +407,7 @@ MonoBehaviour:
     drainSpeed: 0.075
     _gracePeriod: 0
   radialFillImage: {fileID: 1628922665695672958}
+  _fillCtrl: {fileID: 0}
   iconImage: {fileID: 4355132330461847519}
   fadeIconImage: {fileID: 7904537649099082002}
   _animator: {fileID: 4936315377337544243}
