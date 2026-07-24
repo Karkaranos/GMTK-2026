@@ -50,6 +50,11 @@ public class ShipEventBubbleSpawner : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     public IEnumerator SpawnAfterTime(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -133,5 +138,13 @@ public class ShipEventBubbleSpawner : MonoBehaviour
     {
         sectionToSlow.buildBar.FillRate += fillRateDecrementPerBubble;
         activeBubbles.Remove(bubbleController);
+    }
+
+    public void PopAllBubbles()
+    {
+        while(activeBubbles.Count > 0)
+        {
+            activeBubbles[0].Complete();
+        }
     }
 }
