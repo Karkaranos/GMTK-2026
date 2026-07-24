@@ -1,13 +1,14 @@
 /*****************************************
  * Author Name:     Cade Naylor           
  * Created Date:    7/23/2026
- * Modified Date:   7/23/2026
+ * Modified Date:   7/24/2026
  * Description:     Stores functions called by menu buttons
  ******************************************/
 using NaughtyAttributes;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuBehavior : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private GameObject mainMenu;
     [SerializeField, Required] private GameObject controls;
     [SerializeField, Required] private GameObject credits;
+    [SerializeField, Required] private GameObject settings;
+
+    [SerializeField, Required] private Slider masterVolume;
+    [SerializeField, Required] private Slider sfxVolume;
+    [SerializeField, Required] private Slider musicVolume;
 
     private void Start()
     {
@@ -40,6 +46,10 @@ public class MenuBehavior : MonoBehaviour
         mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
 
         SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+
+        masterVolume.value = AudioManager.instance.MasterVolume;
+        sfxVolume.value = AudioManager.instance.SFXVolume;
+        musicVolume.value = AudioManager.instance.MusicVolume;
     }
 
     private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
@@ -112,6 +122,40 @@ public class MenuBehavior : MonoBehaviour
     public void ToggleControls()
     {
         controls.SetActive(!controls.activeInHierarchy);
+    }
+
+    /// <summary>
+    /// Sets the master volume when the slider is updated
+    /// </summary>
+    public void SetMasterVolume(float volume)
+    {
+        AudioManager.instance.MasterVolume = volume;
+        AudioManager.instance.UpdateVolume();
+    }
+
+    /// <summary>
+    /// Sets the sound effect volume when the slider is updated
+    /// </summary>
+    public void SetSFXVolume(float volume)
+    {
+        AudioManager.instance.SFXVolume = volume;
+    }
+
+    /// <summary>
+    /// Sets the music volume when the slider is updated
+    /// </summary>
+    public void SetMusicVolume(float volume)
+    {
+        AudioManager.instance.MusicVolume = volume;
+        AudioManager.instance.UpdateVolume();
+    }
+
+    /// <summary>
+    /// Toggles whether the credits are enabled or not
+    /// </summary>
+    public void ToggleSettings()
+    {
+        settings.SetActive(!settings.activeInHierarchy);
     }
 
 
