@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class ParticleMaster : MonoBehaviour
+public class ParticleMaster : Manager
 {
     [SerializeField, OnValueChanged("OnVC_Library"), Tooltip("CANNOT HAVE REPEAT IDs")]
     private List<Data> _library = new List<Data>();
@@ -15,12 +15,7 @@ public class ParticleMaster : MonoBehaviour
 
     public static ParticleMaster INST;
 
-    private void Awake()
-    {
-        Initialize();
-    }
-
-    private void Initialize()
+    public override void Initialize()
     {
         if (INST == null)
             INST = this;
