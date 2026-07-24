@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294192519}
   - component: {fileID: 294192518}
+  - component: {fileID: 294192521}
   - component: {fileID: 294192520}
   m_Layer: 0
   m_Name: RocketCamera
@@ -220,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 294192517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.8, y: 0, z: -10}
+  m_LocalPosition: {x: 19.2, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -300,6 +301,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &294192521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294192517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePixelPerfect
 --- !u!114 &838685452 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2821362155521418715, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}
@@ -433,6 +446,7 @@ GameObject:
   - component: {fileID: 1254691705}
   - component: {fileID: 1254691706}
   - component: {fileID: 1254691707}
+  - component: {fileID: 1254691708}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -483,7 +497,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -605,6 +619,30 @@ MonoBehaviour:
   leftCam: {fileID: 1780772052}
   rightCam: {fileID: 294192520}
   previewWindow: 0.1
+--- !u!114 &1254691708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254691701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.PixelPerfectCamera
+  m_ComponentVersion: 1
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1920
+  m_RefResolutionY: 1080
+  m_CropFrame: 4
+  m_GridSnapping: 1
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!114 &1267135512 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1496891876127075374, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}
@@ -688,6 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1780772051}
   - component: {fileID: 1780772050}
+  - component: {fileID: 1780772053}
   - component: {fileID: 1780772052}
   m_Layer: 0
   m_Name: PenguinCamera
@@ -804,6 +843,18 @@ MonoBehaviour:
   CameraDeactivateEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1780772053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780772048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePixelPerfect
 --- !u!224 &1834030985 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4296574472605825163, guid: 0ee90d5c5d6f0eb4abd82259dec5c81b, type: 3}
@@ -1142,7 +1193,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6037234754185662771, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.8
+      value: 19.2
       objectReference: {fileID: 0}
     - target: {fileID: 6037234754185662771, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}
       propertyPath: m_LocalPosition.y
