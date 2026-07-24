@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using NaughtyAttributes;
 
 public class CountdownManager : Manager
 {
@@ -12,8 +13,10 @@ public class CountdownManager : Manager
     [HideInInspector]
     public int TimeLeft;
 
+    public float RemainingTime { get => remainingTime; set => remainingTime = value; }
+
     public event Action<float> OnTimeChanged;
-    public event Action OnCountdownFinished;
+    public static event Action OnCountdownFinished;
 
     public override void Initialize()
     {
@@ -42,6 +45,7 @@ public class CountdownManager : Manager
         {
             isRunning = false;
             OnCountdownFinished?.Invoke();
+            MenuBehavior.Instance.LoadGameScene(1);
         }
     }
 
@@ -49,4 +53,10 @@ public class CountdownManager : Manager
     public void Resume() => isPaused = false;
 
     public float GetRemainingTime() => remainingTime;
+
+    [Button]
+    public void SkipToTheEnd()
+    {
+        remainingTime = 3;
+    }
 }

@@ -1,6 +1,10 @@
+using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls giving all penguins their recommended parts.
@@ -12,12 +16,38 @@ public class PenguinManager : Manager
     private int[] favorRatio;
     [SerializeField] private PenguinRecDisplay recDisplay;
 
+    private InputAction clickAction;
     private Penguin[] penguins;
 
+    private ScreenUIManager screenUIMan;
     public override void Initialize()
     {
+        screenUIMan = GetComponent<ScreenUIManager>();
+
+        clickAction = InputSystem.actions.FindAction("Click");
+        clickAction.Enable();
+        clickAction.started += HandleClick;
         penguins = GetComponentsInChildren<Penguin>(true);
         AssignParts();
+
+    }
+
+    private void OnDestroy()
+    {
+        clickAction.started -= HandleClick;
+    }
+
+    private void HandleClick(InputAction.CallbackContext obj)
+    {
+        Debug.Log(clickAction);
+        if (PenguinRecDisplay.IsShown)
+        {
+            recDisplay.HandlePopupClick();
+        }
+        else if (Penguin.SelectedPenguin != null && !Penguin.SelectedPenguin.IsDistracted)
+        {
+            recDisplay.ShowPenguin(Penguin.SelectedPenguin);
+        }
     }
 
     private void AssignParts()
@@ -27,6 +57,7 @@ public class PenguinManager : Manager
         
 
         // Assign each penguin a random set of parts.
+        int i = 0;
         foreach (var penguin in penguins)
         {
             Dictionary<RocketSection, RocketPart> recommendations = new Dictionary<RocketSection, RocketPart>();
@@ -36,7 +67,8 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations, recDisplay);
+            penguin.Initialize(recommendations, screenUIMan.PerSecUIHolder.GetChild(i).GetComponent<Image>());
+            i++;
         }
     }
 
@@ -61,5 +93,17 @@ public class PenguinManager : Manager
             partAssignments.Add(type, partList);
         }
         return partAssignments;
+    }
+
+    //Returns the percent of penguins distracted.
+    public float GetDistractedPercentage()
+    {
+        int distractedCount = 0;
+        foreach (Penguin p in penguins)
+        {
+            if (p.IsDistracted)
+                distractedCount++;
+        }
+        return distractedCount / penguins.Length;
     }
 }
