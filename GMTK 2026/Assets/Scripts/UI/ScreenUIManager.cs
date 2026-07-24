@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class ScreenUIManager : MonoBehaviour
 {
-    [SerializeField, BoxGroup("Screens"), Tooltip("Parent of penguin UI.")]
+    //PROGRESS
+    [SerializeField, BoxGroup("Progress"), Tooltip("Parent of penguin UI.")]
     private Transform _perSecUIHolder;
-    [SerializeField, BoxGroup("Screens")]
+
+    //TRAVEL DISTANCE
+    [SerializeField, BoxGroup("Travel Distance")]
     private TMP_Text _distanceTravelledText;
 
-    [SerializeField, BoxGroup("Screens")]
+    //SHIP PARTS
+    [SerializeField, BoxGroup("Ship Parts")]
     private TMP_Text _totalPartQuality;
-    [SerializeField, BoxGroup("Screens")]
+    [SerializeField, BoxGroup("Ship Parts")]
     private RocketUI _topPart;
-    [SerializeField, BoxGroup("Screens")]
+    [SerializeField, BoxGroup("Ship Parts")]
     private RocketUI _wingPart;
-    [SerializeField, BoxGroup("Screens")]
+    [SerializeField, BoxGroup("Ship Parts")]
     private RocketUI _enginePart;
 
     #region GS
