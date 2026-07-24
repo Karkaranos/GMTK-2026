@@ -1,7 +1,10 @@
+using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls giving all penguins their recommended parts.
@@ -16,13 +19,17 @@ public class PenguinManager : Manager
     private InputAction clickAction;
     private Penguin[] penguins;
 
+    private ScreenUIManager screenUIMan;
     public override void Initialize()
     {
+        screenUIMan = GetComponent<ScreenUIManager>();
+
         clickAction = InputSystem.actions.FindAction("Click");
         clickAction.Enable();
         clickAction.started += HandleClick;
         penguins = GetComponentsInChildren<Penguin>(true);
         AssignParts();
+
     }
 
     private void OnDestroy()
@@ -50,6 +57,7 @@ public class PenguinManager : Manager
         
 
         // Assign each penguin a random set of parts.
+        int i = 0;
         foreach (var penguin in penguins)
         {
             Dictionary<RocketSection, RocketPart> recommendations = new Dictionary<RocketSection, RocketPart>();
@@ -59,7 +67,8 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations);
+            penguin.Initialize(recommendations, screenUIMan.PerSecUIHolder.GetChild(i).GetComponent<Image>());
+            i++;
         }
     }
 
