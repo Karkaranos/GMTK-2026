@@ -12,6 +12,7 @@ public class BuildingSection : MonoBehaviour
     private RocketPart part;
 
     public RocketSection Section => section;
+    public RocketPart Part => part;
 
     public void SetPart(RocketPart part)
     {
