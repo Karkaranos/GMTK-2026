@@ -15,7 +15,7 @@ public class CountdownManager : Manager
     public float RemainingTime { get => remainingTime; set => remainingTime = value; }
 
     public event Action<float> OnTimeChanged;
-    public event Action OnCountdownFinished;
+    public static event Action OnCountdownFinished;
 
     public override void Initialize()
     {

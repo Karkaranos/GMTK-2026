@@ -59,7 +59,7 @@ public class SceneSwitcher : MonoBehaviour
 
     private void HandleMousePos(InputAction.CallbackContext obj)
     {
-        if (CanSwitchScenes)
+        if (CanSwitchScenes && !MenuBehavior.GamePaused)
         {
             Vector2 mousePos = obj.ReadValue<Vector2>();
             float normalizedMouseX = mousePos.x / Screen.width;

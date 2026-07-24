@@ -1,9 +1,7 @@
-using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 /// <summary>
 /// Controls giving all penguins their recommended parts.
@@ -14,9 +12,6 @@ public class PenguinManager : Manager
         "index 1 being the second best, and so on.")] 
     private int[] favorRatio;
     [SerializeField] private PenguinRecDisplay recDisplay;
-
-    [SerializeField, BoxGroup("UI"), Tooltip("Parent of all penguin UI icons.")]
-    private Transform _perSecondHolder;
 
     private InputAction clickAction;
     private Penguin[] penguins;
@@ -53,7 +48,7 @@ public class PenguinManager : Manager
         // Allocate the number of each part to be assigned.
         Dictionary<RocketSection, List<RocketPart>> partAssignments = GetPartAssignments();
         
-        int index = 0;
+
         // Assign each penguin a random set of parts.
         foreach (var penguin in penguins)
         {
@@ -64,9 +59,7 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations, _perSecondHolder.GetChild(index).GetComponent<Image>());
-
-            index++;
+            penguin.Initialize(recommendations);
         }
     }
 
