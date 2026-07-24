@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls giving all penguins their recommended parts.
@@ -15,6 +16,9 @@ public class PenguinManager : Manager
 
     private InputAction clickAction;
     private Penguin[] penguins;
+
+    [SerializeField, Tooltip("Parent of penguin UI.")]
+    private Transform _perSecUIHolder;
 
     public override void Initialize()
     {
@@ -50,6 +54,7 @@ public class PenguinManager : Manager
         
 
         // Assign each penguin a random set of parts.
+        int i = 0;
         foreach (var penguin in penguins)
         {
             Dictionary<RocketSection, RocketPart> recommendations = new Dictionary<RocketSection, RocketPart>();
@@ -59,7 +64,8 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations);
+            penguin.Initialize(recommendations, _perSecUIHolder.GetChild(i).GetComponent<Image>());
+            i++;
         }
     }
 
