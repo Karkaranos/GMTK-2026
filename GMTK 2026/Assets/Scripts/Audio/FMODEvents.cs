@@ -15,6 +15,10 @@ public class FMODEvents : MonoBehaviour
     [SerializeField, Foldout("SFX")] public EventReference Bee;
     [SerializeField, Foldout("SFX")] public EventReference Meow;
     [SerializeField, Foldout("SFX")] public EventReference Pen;
+    [SerializeField, Foldout("SFX")] public EventReference DavidNoise;
+    [SerializeField, Foldout("SFX")] public EventReference ZachNoise;
+    [SerializeField, Foldout("SFX")] public EventReference Tools;
+    [SerializeField, Foldout("SFX")] public EventReference IceBreaks;
 
 
     public static FMODEvents instance { get; private set; }
