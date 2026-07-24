@@ -5,8 +5,10 @@
  * Description:     Stores functions called by menu buttons
  ******************************************/
 using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -15,6 +17,7 @@ public class MenuBehavior : MonoBehaviour
 
     public static MenuBehavior Instance;
     public bool IsPaused = false;
+    [SerializeField] private InputAction pauseAction;
 
     [SerializeField, Scene] private int[] gameScenes;
     [SerializeField, Scene] private int menuScene;
@@ -30,6 +33,8 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
 
+    public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
+
     private void Start()
     {
         if (Instance != null)
@@ -40,6 +45,9 @@ public class MenuBehavior : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        pauseAction.Enable();
+        pauseAction.performed += HandlePauseInput;
 
         pauseMenu.SetActive(false);
         postLaunchMenu.SetActive(false);
@@ -54,15 +62,24 @@ public class MenuBehavior : MonoBehaviour
         musicVolume.value = AudioManager.instance.MusicVolume;
     }
 
+    private void OnDestroy()
+    {
+        pauseAction.performed -= HandlePauseInput;
+    }
+
     private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
     {
         mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
         if(IsPaused)
         {
-            pauseMenu.SetActive(false);
-            IsPaused = false;
+            SetPaused(false);
         }
         postLaunchMenu.SetActive(false);
+    }
+
+    private void HandlePauseInput(InputAction.CallbackContext obj)
+    {
+        TogglePauseState();
     }
 
     /// <summary>
@@ -99,15 +116,26 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void TogglePauseState()
     {
-        if(SceneManager.GetActiveScene().buildIndex != menuScene && postLaunchMenu.activeSelf == false)
-        {
-            IsPaused = !IsPaused;
-            pauseMenu.SetActive(IsPaused);
+        SetPaused(!IsPaused);
+    }
 
-            if(!IsPaused)
+    public void SetPaused(bool paused)
+    {
+        if (SceneManager.GetActiveScene().buildIndex == gameScene)
+        {
+            IsPaused = paused;
+            pauseMenu.SetActive(IsPaused);
+            Time.timeScale = IsPaused ? 0 : 1;
+
+            if (!IsPaused)
             {
                 credits.SetActive(false);
                 controls.SetActive(false);
+                InputSystem.actions.Enable();
+            }
+            else
+            {
+                InputSystem.actions.Disable();
             }
         }
     }
