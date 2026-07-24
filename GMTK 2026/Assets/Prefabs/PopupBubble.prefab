@@ -481,7 +481,7 @@ MonoBehaviour:
   bubbleData:
     type: 0
     iconSprite: {fileID: 0}
-    clickProgressIncrement: 0.2
+    clickProgressIncrement: 0.125
     fillSpeed: 0
     drainSpeed: 0.075
     _gracePeriod: 0
@@ -489,7 +489,6 @@ MonoBehaviour:
   iconImage: {fileID: 3369633356989001711}
   fadeIconImage: {fileID: 913518310960011072}
   _animator: {fileID: 5050777849674198970}
-  _animTimerID: F_TIMER
   _animCriticalID: B_CRITICAL
   _animInteractID: T_INTERACT
   _animCompleteID: T_COMPLETED
