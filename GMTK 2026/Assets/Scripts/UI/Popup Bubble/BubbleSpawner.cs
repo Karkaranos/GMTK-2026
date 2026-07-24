@@ -6,7 +6,6 @@ using System.Collections;
 public class BubbleSpawner : MonoBehaviour
 {
     public GameObject BubblePrefab;
-
     public PopupBubbleData bubbleData;
 
     public Canvas targetCanvas;
@@ -18,21 +17,17 @@ public class BubbleSpawner : MonoBehaviour
 
     private bool singleSpawnPoint => !randomizeSpawnPosition;
     [ShowIf("singleSpawnPoint")]
-    public Vector3 spawnPositionOffset;
+    public List<Transform> spawnPositions;
 
     public int maxBubblesActive;
-
-    public Vector2 spawnTimeRange;
-
     private List<PopupBubbleController> activeBubbles = new();
-
+    public Vector2 spawnTimeRange;
     private Coroutine spawnTimer;
 
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(255, 0, 255, 0.5f);
         if (randomizeSpawnPosition) Gizmos.DrawCube((Vector3)((Vector2)transform.position + spawnRect.center), spawnRect.size);
-        if (singleSpawnPoint) Gizmos.DrawSphere(spawnPositionOffset + transform.position, 0.2f);
     }
 
     private void Update()
@@ -52,10 +47,17 @@ public class BubbleSpawner : MonoBehaviour
 
     private Vector2 RandomLocalPosition()
     {
-        float randomX = Random.Range(0, spawnRect.width);
-        float randomY = Random.Range(0, spawnRect.height);
+        if (randomizeSpawnPosition)
+        {
+            float randomX = Random.Range(0, spawnRect.width);
+            float randomY = Random.Range(0, spawnRect.height);
 
-        return new Vector2(randomX, randomY);
+            return new Vector2(randomX, randomY);
+        }
+        else
+        {
+            return spawnPositions[Random.Range(0, spawnPositions.Count)].localPosition;
+        }
     }
 
     public PopupBubbleController SpawnPopupBubble(PopupBubbleData data, Vector3 position)
@@ -69,7 +71,7 @@ public class BubbleSpawner : MonoBehaviour
         bubbleController.IconImage.sprite = data.iconSprite;
         bubbleController.FadeIconImage.sprite = data.iconSprite;
 
-        bubbleController.bubbleData.onComplete = () => {activeBubbles.Remove(bubbleController); };
+        bubbleController.bubbleData.onComplete = () => { activeBubbles.Remove(bubbleController); };
 
         return bubbleController;
     }
