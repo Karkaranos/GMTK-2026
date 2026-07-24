@@ -19,6 +19,13 @@ public class FMODEvents : MonoBehaviour
     [SerializeField, Foldout("SFX")] public EventReference ZachNoise;
     [SerializeField, Foldout("SFX")] public EventReference Tools;
     [SerializeField, Foldout("SFX")] public EventReference IceBreaks;
+    [SerializeField, Foldout("SFX")] public EventReference UIClick;
+    [SerializeField, Foldout("SFX")] public EventReference Fire;
+    [SerializeField, Foldout("SFX")] public EventReference FireOut;
+
+    [SerializeField, Foldout("Test Sounds")] public EventReference Master;
+    [SerializeField, Foldout("Test Sounds")] public EventReference SFX;
+    [SerializeField, Foldout("Test Sounds")] public EventReference Music;
 
 
     public static FMODEvents instance { get; private set; }

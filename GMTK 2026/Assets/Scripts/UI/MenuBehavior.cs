@@ -88,6 +88,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void LoadGameScene(int index)
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         credits.SetActive(false);
         controls.SetActive(false);
         SceneManager.LoadScene(gameScenes[index]);
@@ -98,6 +99,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void LoadMenuScene()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         SceneManager.LoadScene(menuScene);
     }
 
@@ -106,6 +108,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #endif
@@ -124,6 +127,7 @@ public class MenuBehavior : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != menuScene && !postLaunchMenu.activeSelf)
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
             IsPaused = paused;
             pauseMenu.SetActive(IsPaused);
             Time.timeScale = IsPaused ? 0 : 1;
@@ -151,6 +155,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void ToggleCredits()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         credits.SetActive(!credits.activeInHierarchy);
     }
 
@@ -159,6 +164,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void ToggleControls()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         controls.SetActive(!controls.activeInHierarchy);
     }
 
@@ -169,6 +175,7 @@ public class MenuBehavior : MonoBehaviour
     {
         AudioManager.instance.MasterVolume = volume;
         AudioManager.instance.UpdateVolume();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.Master);
     }
 
     /// <summary>
@@ -177,6 +184,8 @@ public class MenuBehavior : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         AudioManager.instance.SFXVolume = volume;
+        AudioManager.instance.UpdateVolume();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.SFX);
     }
 
     /// <summary>
@@ -186,6 +195,7 @@ public class MenuBehavior : MonoBehaviour
     {
         AudioManager.instance.MusicVolume = volume;
         AudioManager.instance.UpdateVolume();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.Music);
     }
 
     /// <summary>

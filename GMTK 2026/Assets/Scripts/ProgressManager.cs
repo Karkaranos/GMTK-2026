@@ -100,9 +100,18 @@ public class ProgressManager : Manager
         //UI
         //screenUIMan.TopPart.PartImage.sprite = 
         screenUIMan.TotalPartQuality.text = shipQuality.ToString();
+
         screenUIMan.TopPart.QualityText.text = topScore.ToString();
+         if (parts[RocketSection.Top] != null) 
+            screenUIMan.TopPart.PartImage.sprite = parts[RocketSection.Top].Sprite;
+
         screenUIMan.WingPart.QualityText.text = wingScore.ToString();
+        if (parts[RocketSection.Wings] != null)
+            screenUIMan.WingPart.PartImage.sprite = parts[RocketSection.Wings].Sprite;
+
         screenUIMan.EnginePart.QualityText.text = engineScore.ToString();
+        if (parts[RocketSection.Engine] != null)
+            screenUIMan.EnginePart.PartImage.sprite = parts[RocketSection.Engine].Sprite;
     }
 
     private void CalculateDistanceFlown()
