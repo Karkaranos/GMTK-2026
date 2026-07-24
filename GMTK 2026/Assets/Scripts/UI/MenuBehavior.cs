@@ -121,7 +121,7 @@ public class MenuBehavior : MonoBehaviour
 
     public void SetPaused(bool paused)
     {
-        if (SceneManager.GetActiveScene().buildIndex == gameScene)
+        if (SceneManager.GetActiveScene().buildIndex != menuScene && !postLaunchMenu.activeSelf)
         {
             IsPaused = paused;
             pauseMenu.SetActive(IsPaused);
