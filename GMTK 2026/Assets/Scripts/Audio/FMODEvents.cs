@@ -12,7 +12,8 @@ public class FMODEvents : MonoBehaviour
 {
     [SerializeField, Foldout("Music")] public EventReference MainMenu;
 
-    [SerializeField, Foldout("SFX")] public EventReference TestSound;
+    [SerializeField, Foldout("SFX")] public EventReference Bee;
+    [SerializeField, Foldout("SFX")] public EventReference Meow;
 
 
     public static FMODEvents instance { get; private set; }
