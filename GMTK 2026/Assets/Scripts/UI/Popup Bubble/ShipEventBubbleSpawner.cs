@@ -31,7 +31,7 @@ public class ShipEventBubbleSpawner : MonoBehaviour
     public SectionBuilder sectionToSlow;
     public float fillRateDecrementPerBubble;
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(255, 0, 255, 0.5f);
         if (randomizeSpawnPosition) Gizmos.DrawCube((Vector3)((Vector2)transform.position + spawnRect.center), spawnRect.size);
@@ -94,14 +94,14 @@ public class ShipEventBubbleSpawner : MonoBehaviour
 
     public PopupBubbleController SpawnPopupBubble(PopupBubbleData data, Vector3 position)
     {
-        GameObject instance = Instantiate(BubblePrefab, transform);
+        GameObject instance = Instantiate(BubblePrefab, targetCanvas.transform);
         PopupBubbleController bubbleController = instance.transform.GetComponent<PopupBubbleController>();
 
         int posIndex = -1;
 
         if(randomizeSpawnPosition)
         {
-            instance.transform.localPosition = RandomLocalPosition();
+            instance.transform.position = transform.TransformPoint(RandomLocalPosition());
         }
         else
         {
@@ -109,7 +109,7 @@ public class ShipEventBubbleSpawner : MonoBehaviour
 
             if (posIndex >= 0)
             {
-                instance.transform.localPosition = spawnPositions[posIndex].localPosition;
+                instance.transform.position = spawnPositions[posIndex].position;
                 positionsInUse[posIndex] = true;
             }
             else
