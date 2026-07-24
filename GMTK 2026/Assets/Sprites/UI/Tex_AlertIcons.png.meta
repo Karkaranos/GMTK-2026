@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 9d34a14e7101f7344837d0eb140872a5
+guid: 7af01a671ee05db49aebf568d5c04850
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2847911949613920888
-    second: Tex_Alert_Zzz_0
+      213: 3848997963619355576
+    second: Tex_AlertIcons_0
   - first:
-      213: 526897880566155415
-    second: Tex_Alert_Zzz_1
+      213: -8957787747618776797
+    second: Tex_AlertIcons_1
   - first:
-      213: 8089252024969732954
-    second: Tex_Alert_Zzz_2
+      213: 5979724520321032520
+    second: Tex_AlertIcons_2
+  - first:
+      213: 1441246970346016826
+    second: Tex_AlertIcons_3
+  - first:
+      213: 215299163658943982
+    second: Tex_AlertIcons_4
+  - first:
+      213: -3179995339716980731
+    second: Tex_AlertIcons_5
+  - first:
+      213: -4950021909507775332
+    second: Tex_AlertIcons_6
+  - first:
+      213: -6645785099506106662
+    second: Tex_AlertIcons_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +67,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,67 +121,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tex_Alert_Zzz_0
+      name: Tex_AlertIcons_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 23
-        width: 16
-        height: 17
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88d0ca3bb2f2a78d0800000000000000
-      internalID: -2847911949613920888
+      spriteID: 8bbcbba41436a6530800000000000000
+      internalID: 3848997963619355576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tex_Alert_Zzz_1
+      name: Tex_AlertIcons_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 23
-        width: 16
-        height: 17
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7984d0ca4daef4700800000000000000
-      internalID: 526897880566155415
+      spriteID: 32916d1018b8fa380800000000000000
+      internalID: -8957787747618776797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tex_Alert_Zzz_2
+      name: Tex_AlertIcons_2
       rect:
         serializedVersion: 2
-        x: 39
-        y: 23
-        width: 16
-        height: 17
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a532ee6abdbc24070800000000000000
-      internalID: 8089252024969732954
+      spriteID: 841ad60f4cf3cf250800000000000000
+      internalID: 5979724520321032520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tex_AlertIcons_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a301515cb76500410800000000000000
+      internalID: 1441246970346016826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tex_AlertIcons_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed745ad275ecf200800000000000000
+      internalID: 215299163658943982
       vertices: []
       indices: 
       edges: []
@@ -175,7 +234,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c2b6263c847e2064ca5f7a416e01f17e
     internalID: 0
     vertices: []
     indices: 
@@ -183,11 +242,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Tex_Alert_Zzz_0: -2847911949613920888
-      Tex_Alert_Zzz_1: 526897880566155415
-      Tex_Alert_Zzz_2: 8089252024969732954
+      Tex_AlertIcons_0: 3848997963619355576
+      Tex_AlertIcons_1: -8957787747618776797
+      Tex_AlertIcons_2: 5979724520321032520
+      Tex_AlertIcons_3: 1441246970346016826
+      Tex_AlertIcons_4: 215299163658943982
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
