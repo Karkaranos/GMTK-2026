@@ -51,7 +51,7 @@ public class SectionBuilder : MonoBehaviour
     {
         buildBar.gameObject.SetActive(true);
         group.interactable = false;
-        section.OnBeginBuild();
+        section.OnBeginBuild(parts[selectedPart]);
     }
 
     private void OnBarFinish()
@@ -59,7 +59,6 @@ public class SectionBuilder : MonoBehaviour
         buildBar.gameObject.SetActive(false);
         group.interactable = true;
 
-        section.SetPart(parts[selectedPart]);
         section.OnEndBuild();
         
     }

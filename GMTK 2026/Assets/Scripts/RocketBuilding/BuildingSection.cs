@@ -13,10 +13,12 @@ public class BuildingSection : MonoBehaviour
     [field: SerializeField, BoxGroup("References")] public ProgressBar BuildingBar { get; set; }
 
     private RocketPart part;
+    private RocketPart buildingPart;
     private ShipEventBubbleSpawner[] eventSpawners;
 
     public RocketSection Section => section;
     public RocketPart Part => part;
+    public RocketPart BuildingPart => buildingPart;
 
     private void Awake()
     {
@@ -47,8 +49,9 @@ public class BuildingSection : MonoBehaviour
         }
     }
 
-    public void OnBeginBuild()
+    public void OnBeginBuild(RocketPart buildingPart)
     {
+        this.buildingPart = buildingPart;
         buildingParticles.Play();
         ToggleEventSpawners(true);
     }
@@ -65,6 +68,7 @@ public class BuildingSection : MonoBehaviour
 
     public void OnEndBuild()
     {
+        SetPart(buildingPart);
         buildingParticles.Stop();
         ToggleEventSpawners(false);
         // Clear all bubbles.

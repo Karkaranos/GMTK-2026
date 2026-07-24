@@ -103,17 +103,19 @@ public class ProgressManager : Manager
         //screenUIMan.TopPart.PartImage.sprite = 
         Dictionary<RocketSection, bool> issues = buildMan.CheckIssues();
 
+        Dictionary<RocketSection, RocketPart> constructingParts = buildMan.GetConstructionParts();
+
         screenUIMan.TopPart.WarningImage.enabled = issues[RocketSection.Top];
-         if (parts[RocketSection.Top] != null) 
-            screenUIMan.TopPart.PartImage.sprite = parts[RocketSection.Top].Sprite;
+         if (constructingParts[RocketSection.Top] != null) 
+            screenUIMan.TopPart.PartImage.sprite = constructingParts[RocketSection.Top].Sprite;
 
         screenUIMan.WingPart.WarningImage.enabled = issues[RocketSection.Wings];
-        if (parts[RocketSection.Wings] != null)
-            screenUIMan.WingPart.PartImage.sprite = parts[RocketSection.Wings].Sprite;
+        if (constructingParts[RocketSection.Wings] != null)
+            screenUIMan.WingPart.PartImage.sprite = constructingParts[RocketSection.Wings].Sprite;
 
         screenUIMan.EnginePart.WarningImage.enabled = issues[RocketSection.Engine];
-        if (parts[RocketSection.Engine] != null)
-            screenUIMan.EnginePart.PartImage.sprite = parts[RocketSection.Engine].Sprite;
+        if (constructingParts[RocketSection.Engine] != null)
+            screenUIMan.EnginePart.PartImage.sprite = constructingParts[RocketSection.Engine].Sprite;
     }
 
     private void CalculateDistanceFlown()
