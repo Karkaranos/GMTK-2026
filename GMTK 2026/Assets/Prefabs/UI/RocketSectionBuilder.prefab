@@ -719,6 +719,10 @@ PrefabInstance:
       propertyPath: _fillType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 256126878945930672, guid: 8388850cb3484994fac62e433003adf5, type: 3}
+      propertyPath: _internalWidth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3037864388765881107, guid: 8388850cb3484994fac62e433003adf5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
