@@ -10,14 +10,14 @@ public class BuildingSection : MonoBehaviour
     [field: SerializeField] public ProgressBar BuildingBar { get; set; }
 
     private RocketPart part;
-    private ShipEventBubbleSpawner[] eventSpawners;
+    [SerializeField] private ShipEventBubbleSpawner[] eventSpawners;
 
     public RocketSection Section => section;
     public RocketPart Part => part;
 
     private void Awake()
     {
-        eventSpawners = GetComponentsInChildren<ShipEventBubbleSpawner>();
+        eventSpawners = GetComponentsInChildren<ShipEventBubbleSpawner>(true);
         ToggleEventSpawners(false);
     }
 
@@ -52,5 +52,10 @@ public class BuildingSection : MonoBehaviour
     public void OnEndBuild()
     {
         ToggleEventSpawners(false);
+        // Clear all bubbles.
+        foreach (var eventSpawner in eventSpawners)
+        {
+            eventSpawner.PopAllBubbles();
+        }
     }
 }

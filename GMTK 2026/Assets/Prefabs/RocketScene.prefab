@@ -474,7 +474,7 @@ MonoBehaviour:
   randomizeSpawnPosition: 1
   spawnRect:
     serializedVersion: 2
-    x: -9.12
+    x: -8.9
     y: 3.19
     width: 17.5
     height: 8.8
@@ -945,6 +945,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &5056557253743865375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8312282401295166889}
+  - component: {fileID: 2257183126346844268}
+  m_Layer: 0
+  m_Name: SleepingWorkers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8312282401295166889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056557253743865375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3368560596045975478}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2257183126346844268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056557253743865375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 15
+    height: 3.75
+  spawnPositions: []
+  maxBubblesActive: 1
+  spawnTimeRange: {x: 10, y: 15}
+  sectionToSlow: {fileID: 149117166976467226}
+  fillRateDecrementPerBubble: 0.5
 --- !u!1 &5988701906256833672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,6 +1823,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2440904258871755965, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7639366565443315480}
+    - targetCorrespondingSourceObject: {fileID: 2440904258871755965, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8312282401295166889}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
 --- !u!114 &979436457040801676 stripped
