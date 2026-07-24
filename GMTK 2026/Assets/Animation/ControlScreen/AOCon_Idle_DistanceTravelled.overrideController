@@ -7,5 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AOCon_Idle_DistanceTravelled
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 12c33407a510e37488ad08f6254b03e2, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0a5599ffac74ac34eb53003a331dcc22, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e9cbc230aa1a0fd47b315a034fadf0fa, type: 2}
