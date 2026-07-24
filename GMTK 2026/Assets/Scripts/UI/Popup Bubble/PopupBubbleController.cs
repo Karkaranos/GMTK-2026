@@ -35,6 +35,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
 
     private bool mouseDown;
 
+    private bool completed;
+
     #region GS
     public Image FadeIconImage { get => fadeIconImage; set => fadeIconImage = value; }
     public Image IconImage { get => iconImage; set => iconImage = value; }
@@ -132,6 +134,9 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
 
     public void Complete()
     {
+        if (completed) return;
+        completed = true;
+
         //little pop sound would be fun
 
         bubbleData.onComplete?.Invoke();

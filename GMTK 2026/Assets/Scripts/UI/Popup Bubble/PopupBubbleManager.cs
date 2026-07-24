@@ -12,14 +12,22 @@ public class PopupBubbleManager : MonoBehaviour
         Instance = this;
     }
 
-    public void SpawnPopupBubble(PopupBubbleData data, Vector3 position)
+    public PopupBubbleController SpawnPopupBubble(PopupBubbleData data, Vector3 position)
     {
         GameObject instance = Instantiate(BubblePrefab, transform);
         PopupBubbleController bubbleController = instance.GetComponent<PopupBubbleController>();
 
-        instance.GetComponent<RectTransform>().position = Camera.main.WorldToScreenPoint(position);
+
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(Camera.main, position);
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle( GetComponent<RectTransform>(), screenPoint, null, out localPoint );
+
+        instance.GetComponent<RectTransform>().position = localPoint;
+
         bubbleController.bubbleData = data;
         bubbleController.IconImage.sprite = data.iconSprite;
         bubbleController.FadeIconImage.sprite = data.iconSprite;
+
+        return bubbleController;
     }
 }

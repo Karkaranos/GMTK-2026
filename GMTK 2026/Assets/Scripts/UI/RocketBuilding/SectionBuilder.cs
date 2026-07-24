@@ -8,7 +8,7 @@ public class SectionBuilder : MonoBehaviour
     [SerializeField] private RocketPartDatabase partDB;
     [SerializeField] private BuildingSection section;
     [SerializeField] private Image partDisplay;
-    [SerializeField] private ProgressBar buildBar;
+    public ProgressBar buildBar;
 
     [SerializeField, ReadOnly] private CanvasGroup group;
 
