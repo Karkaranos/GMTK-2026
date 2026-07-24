@@ -22,6 +22,8 @@ public class Penguin : MonoBehaviour
 
     private Image perSecondImage;
 
+    private int distractionCount = 0;
+
     public static Penguin SelectedPenguin
     {
         get { return selectedPenguin; }
@@ -104,5 +106,17 @@ public class Penguin : MonoBehaviour
     public static void ResetSelectedPenguin()
     {
         SelectedPenguin = mouseOverPenguin;
+    }
+
+    public void AddDistraction()
+    {
+        distractionCount++;
+        IsDistracted = distractionCount > 0;
+    }
+
+    public void RemoveDistraction()
+    {
+        distractionCount = Mathf.Max(0, distractionCount - 1);
+        IsDistracted = distractionCount > 0;
     }
 }
