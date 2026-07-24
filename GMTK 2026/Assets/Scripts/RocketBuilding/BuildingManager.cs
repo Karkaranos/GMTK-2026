@@ -8,9 +8,22 @@ public class BuildingManager : Manager
 {
     private BuildingSection[] sections;
 
+    public static Dictionary<RocketSection, RocketPart> SavedParts { get; private set; }
+
     public override void Initialize()
     {
         sections = GetComponentsInChildren<BuildingSection>(true);
+        CountdownManager.OnCountdownFinished += SaveParts;
+    }
+
+    private void OnDestroy()
+    {
+        CountdownManager.OnCountdownFinished -= SaveParts;
+    }
+
+    private void SaveParts()
+    {
+        SavedParts = GetParts();
     }
 
     public Dictionary<RocketSection, RocketPart> GetParts()
