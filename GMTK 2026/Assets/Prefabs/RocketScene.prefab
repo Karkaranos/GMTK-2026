@@ -1578,6 +1578,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7403918703098116172}
   m_SourcePrefab: {fileID: 100100000, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+--- !u!114 &149117166976467226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 730435822883234115, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+  m_PrefabInstance: {fileID: 590748662127616089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559767391859009267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778215bf7d2b81c4a81acc9633d169c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SectionBuilder
 --- !u!224 &3393075280111309138 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2820481771715883275, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
@@ -1679,19 +1690,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2998700064653813036, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1937704557475144050}
   m_SourcePrefab: {fileID: 100100000, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
 --- !u!114 &979436457040801676 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 213909140110779527, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
   m_PrefabInstance: {fileID: 1107988306017700619}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2809639977386339879}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bb1b137c73de854f81abe72c362c693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSection
+--- !u!1 &2809639977386339879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2998700064653813036, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}
+  m_PrefabInstance: {fileID: 1107988306017700619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1937704557475144050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809639977386339879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -9.12
+    y: 3.19
+    width: 17.5
+    height: 8.8
+  spawnPositions: []
+  maxBubblesActive: 3
+  spawnTimeRange: {x: 6, y: 10}
+  sectionToSlow: {fileID: 149117166976467226}
+  fillRateDecrementPerBubble: 0.2
 --- !u!4 &3368560596045975478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2440904258871755965, guid: e10000099f5aae94d9a2c23d7d38c01c, type: 3}

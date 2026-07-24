@@ -55,7 +55,6 @@ public class PenguinManager : Manager
         // Allocate the number of each part to be assigned.
         Dictionary<RocketSection, List<RocketPart>> partAssignments = GetPartAssignments();
         
-
         // Assign each penguin a random set of parts.
         int i = 0;
         foreach (var penguin in penguins)
