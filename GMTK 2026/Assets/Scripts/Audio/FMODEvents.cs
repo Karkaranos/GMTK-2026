@@ -10,10 +10,11 @@ using NaughtyAttributes;
 
 public class FMODEvents : MonoBehaviour
 {
-    [SerializeField, Foldout("Music")] public EventReference MainMenu;
+    [SerializeField, Foldout("Music")] public EventReference Beat;
 
     [SerializeField, Foldout("SFX")] public EventReference Bee;
     [SerializeField, Foldout("SFX")] public EventReference Meow;
+    [SerializeField, Foldout("SFX")] public EventReference Pen;
 
 
     public static FMODEvents instance { get; private set; }

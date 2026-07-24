@@ -61,13 +61,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca42b7008275a40b10461df992ca77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FMODEvents
-  MainMenu:
+  Beat:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -14567180
+      Data2: 1215420056
+      Data3: -1373569101
+      Data4: -1988611906
+    Path: event:/Beat
   Bee:
     Guid:
       Data1: -1480843819
@@ -82,3 +82,10 @@ MonoBehaviour:
       Data3: 752645788
       Data4: -1860015315
     Path: event:/Cat Meow
+  Pen:
+    Guid:
+      Data1: 690499483
+      Data2: 1148336860
+      Data3: 882762385
+      Data4: 856948143
+    Path: event:/Pen Click
