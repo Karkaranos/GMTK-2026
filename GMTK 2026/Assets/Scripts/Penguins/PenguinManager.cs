@@ -1,5 +1,7 @@
+using NaughtyAttributes;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -17,8 +19,14 @@ public class PenguinManager : Manager
     private InputAction clickAction;
     private Penguin[] penguins;
 
-    [SerializeField, Tooltip("Parent of penguin UI.")]
+    [SerializeField, BoxGroup("Screens"), Tooltip("Parent of penguin UI.")]
     private Transform _perSecUIHolder;
+    [SerializeField, BoxGroup("Screens")]
+    private TMP_Text _distanceTravelledText;
+
+    #region GS
+    public TMP_Text DistanceTravelledText { get => _distanceTravelledText; }
+    #endregion
 
     public override void Initialize()
     {

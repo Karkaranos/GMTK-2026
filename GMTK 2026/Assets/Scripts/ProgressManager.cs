@@ -99,6 +99,7 @@ public class ProgressManager : Manager
     private void CalculateDistanceFlown()
     {
         distanceFlown = shipQuality * totalProgress * _distanceModifier;
+        penguinMan.DistanceTravelledText.text = distanceFlown.ToString();
     }
     #endregion
 }

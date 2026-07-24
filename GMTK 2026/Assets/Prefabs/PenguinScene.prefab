@@ -115,7 +115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99999
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a2b4e9287d7b25a4abdc7edf2b2e0d31, type: 2}
   m_sharedMaterial: {fileID: -437777865941486161, guid: a2b4e9287d7b25a4abdc7edf2b2e0d31, type: 2}
@@ -694,7 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinManager
   favorRatio: 090000000400000002000000
   recDisplay: {fileID: 7661651045303104915}
-  _perSecondHolder: {fileID: 4315683696553958769}
+  _perSecUIHolder: {fileID: 4315683696553958769}
+  _distanceTravelledText: {fileID: 2114498759224259802}
 --- !u!1 &8084580897740786181
 GameObject:
   m_ObjectHideFlags: 0
