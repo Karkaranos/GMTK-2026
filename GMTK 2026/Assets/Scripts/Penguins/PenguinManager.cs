@@ -39,7 +39,6 @@ public class PenguinManager : Manager
 
     private void HandleClick(InputAction.CallbackContext obj)
     {
-        Debug.Log(clickAction);
         if (PenguinRecDisplay.IsShown)
         {
             recDisplay.HandlePopupClick();

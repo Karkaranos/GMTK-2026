@@ -76,6 +76,8 @@ public class ProgressManager : Manager
     {
         totalProgress += amount;
         Mathf.Clamp(totalProgress, 0, 100);
+        //UI
+        screenUIMan.DistanceTravelledText.text = Mathf.RoundToInt(totalProgress).ToString();
     }
 
     #region Calculate
@@ -99,17 +101,17 @@ public class ProgressManager : Manager
 
         //UI
         //screenUIMan.TopPart.PartImage.sprite = 
-        screenUIMan.TotalPartQuality.text = shipQuality.ToString();
+        Dictionary<RocketSection, bool> issues = buildMan.CheckIssues();
 
-        screenUIMan.TopPart.QualityText.text = topScore.ToString();
+        screenUIMan.TopPart.WarningImage.enabled = issues[RocketSection.Top];
          if (parts[RocketSection.Top] != null) 
             screenUIMan.TopPart.PartImage.sprite = parts[RocketSection.Top].Sprite;
 
-        screenUIMan.WingPart.QualityText.text = wingScore.ToString();
+        screenUIMan.WingPart.WarningImage.enabled = issues[RocketSection.Wings];
         if (parts[RocketSection.Wings] != null)
             screenUIMan.WingPart.PartImage.sprite = parts[RocketSection.Wings].Sprite;
 
-        screenUIMan.EnginePart.QualityText.text = engineScore.ToString();
+        screenUIMan.EnginePart.WarningImage.enabled = issues[RocketSection.Engine];
         if (parts[RocketSection.Engine] != null)
             screenUIMan.EnginePart.PartImage.sprite = parts[RocketSection.Engine].Sprite;
     }
@@ -117,9 +119,6 @@ public class ProgressManager : Manager
     private void CalculateDistanceFlown()
     {
         distanceFlown = shipQuality * totalProgress * _distanceModifier;
-
-        //UI
-        screenUIMan.DistanceTravelledText.text = distanceFlown.ToString();
     }
     #endregion
 }

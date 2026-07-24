@@ -49,6 +49,16 @@ public class BuildingSection : MonoBehaviour
         ToggleEventSpawners(true);
     }
 
+    public bool CheckIssue()
+    {
+        bool hasIssue = false;
+        foreach(var eventSpawner in eventSpawners)
+        {
+            hasIssue |= eventSpawner.ActiveBubbleNum > 0;
+        }
+        return hasIssue;
+    }
+
     public void OnEndBuild()
     {
         ToggleEventSpawners(false);

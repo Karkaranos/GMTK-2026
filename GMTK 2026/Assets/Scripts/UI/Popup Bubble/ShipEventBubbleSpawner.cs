@@ -31,6 +31,8 @@ public class ShipEventBubbleSpawner : MonoBehaviour
     public SectionBuilder sectionToSlow;
     public float fillRateDecrementPerBubble;
 
+    public int ActiveBubbleNum => activeBubbles.Count;
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(255, 0, 255, 0.5f);
