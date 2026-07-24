@@ -12,6 +12,8 @@ public class CountdownManager : Manager
     [HideInInspector]
     public int TimeLeft;
 
+    public float RemainingTime { get => remainingTime; set => remainingTime = value; }
+
     public event Action<float> OnTimeChanged;
     public event Action OnCountdownFinished;
 

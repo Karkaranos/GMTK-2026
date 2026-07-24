@@ -62,4 +62,16 @@ public class PenguinManager : Manager
         }
         return partAssignments;
     }
+
+    //Returns the percent of penguins distracted.
+    public float GetDistractedPercentage()
+    {
+        int distractedCount = 0;
+        foreach (Penguin p in penguins)
+        {
+            if (p.IsDistracted)
+                distractedCount++;
+        }
+        return distractedCount / penguins.Length;
+    }
 }
