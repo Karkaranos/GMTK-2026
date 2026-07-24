@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 844107620817959322}
   - component: {fileID: 6955277079849452694}
   - component: {fileID: 8585865553726597484}
-  - component: {fileID: 1940108905062292401}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -153,16 +152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c62b6645878bd7499c4e3717c4fbce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PenguinRecomendation
---- !u!114 &1940108905062292401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8684297412971265208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78f6a6796a217d4cb439c2f17d49434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HoverColorChange
-  hoverColor: {r: 0.3773218, g: 0.34175852, b: 0.8050314, a: 1}
+  selectedColor: {r: 0.3764706, g: 0.34117648, b: 0.8039216, a: 1}
+  rend: {fileID: 844107620817959322}

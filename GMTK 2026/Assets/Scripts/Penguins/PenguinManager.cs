@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Controls giving all penguins their recommended parts.
@@ -12,12 +13,34 @@ public class PenguinManager : Manager
     private int[] favorRatio;
     [SerializeField] private PenguinRecDisplay recDisplay;
 
+    private InputAction clickAction;
     private Penguin[] penguins;
 
     public override void Initialize()
     {
+        clickAction = InputSystem.actions.FindAction("Click");
+        clickAction.Enable();
+        clickAction.started += HandleClick;
         penguins = GetComponentsInChildren<Penguin>(true);
         AssignParts();
+    }
+
+    private void OnDestroy()
+    {
+        clickAction.started -= HandleClick;
+    }
+
+    private void HandleClick(InputAction.CallbackContext obj)
+    {
+        Debug.Log(clickAction);
+        if (PenguinRecDisplay.IsShown)
+        {
+            recDisplay.HandlePopupClick();
+        }
+        else if (Penguin.SelectedPenguin != null && !Penguin.SelectedPenguin.IsDistracted)
+        {
+            recDisplay.ShowPenguin(Penguin.SelectedPenguin);
+        }
     }
 
     private void AssignParts()
@@ -36,7 +59,7 @@ public class PenguinManager : Manager
                 recommendations.Add(type, partAssignments[type][randomPartIndex]);
                 partAssignments[type].RemoveAt(randomPartIndex);
             }
-            penguin.Initialize(recommendations, recDisplay);
+            penguin.Initialize(recommendations);
         }
     }
 
