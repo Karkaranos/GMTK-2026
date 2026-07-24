@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 80a6974c0b3746d418cac9c5cf16d192
+guid: e5cf9b7869b7ae349a579b9e3a238ae8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1465387773493203085
-    second: ControlRoomPlaceholder_0
+      213: -6868674127806971634
+    second: Pillar (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spriteMeshType: 0
+  alignment: 9
+  spritePivot: {x: 0, y: 0.47826087}
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ControlRoomPlaceholder_0
+      name: Pillar (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1914
-        height: 1081
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 3
+        width: 91
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37facbe7595e9abe0800000000000000
-      internalID: -1465387773493203085
+      spriteID: e014626c5419da0a0800000000000000
+      internalID: -6868674127806971634
       vertices: []
       indices: 
       edges: []
@@ -125,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 396775216f3c95f4382bd454f378dac9
+    internalID: -359035511
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ControlRoomPlaceholder_0: -1465387773493203085
+      Pillar (1)_0: -6868674127806971634
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
