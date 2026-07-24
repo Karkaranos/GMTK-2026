@@ -39,6 +39,19 @@ public class BuildingManager : Manager
         return parts;
     }
 
+    public Dictionary<RocketSection, RocketPart> GetConstructionParts()
+    {
+        Dictionary<RocketSection, RocketPart> parts = new();
+        foreach (var section in sections)
+        {
+            if (!parts.ContainsKey(section.Section))
+            {
+                parts.Add(section.Section, section.BuildingPart);
+            }
+        }
+        return parts;
+    }
+
     public Dictionary<RocketSection, bool> CheckIssues()
     {
         Dictionary<RocketSection, bool> issues = new();
