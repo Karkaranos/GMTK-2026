@@ -39,11 +39,13 @@ public class ScreenUIManager : MonoBehaviour
         private Image _partImage;
 
         [SerializeField]
-        private TMP_Text _qualityText;
+        private Image _warningImage;
         #region GS
 
         public Image PartImage { get => _partImage; }
-        public TMP_Text QualityText { get => _qualityText; }
+        public Image WarningImage { get => _warningImage; }
         #endregion
     }
+
+
 }

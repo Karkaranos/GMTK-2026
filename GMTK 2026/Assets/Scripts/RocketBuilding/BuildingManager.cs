@@ -25,4 +25,17 @@ public class BuildingManager : Manager
         }
         return parts;
     }
+
+    public Dictionary<RocketSection, bool> CheckIssues()
+    {
+        Dictionary<RocketSection, bool> issues = new();
+        foreach (var section in sections)
+        {
+            if (!issues.ContainsKey(section.Section))
+            {
+                issues.Add(section.Section, section.CheckIssue());
+            }
+        }
+        return issues;
+    }
 }
