@@ -110,13 +110,27 @@ MonoBehaviour:
       Data3: 1013354389
       Data4: -656661748
     Path: event:/Tools
-  IceBreaks:
+  IceShatter:
     Guid:
       Data1: 437580306
       Data2: 1328881480
       Data3: 1036061102
       Data4: -65384067
-    Path: event:/Ice Break
+    Path: event:/Ice Shatter
+  IceBreakOff:
+    Guid:
+      Data1: 1182270537
+      Data2: 1277768376
+      Data3: -619076176
+      Data4: 273059530
+    Path: event:/Ice Snap Off
+  IceFall:
+    Guid:
+      Data1: -1818367631
+      Data2: 1259961629
+      Data3: 1542624179
+      Data4: -805494824
+    Path: event:/Ice Fall and Land
   UIClick:
     Guid:
       Data1: 1837178418
@@ -138,6 +152,13 @@ MonoBehaviour:
       Data3: -619698757
       Data4: -1511394367
     Path: event:/FireOut
+  CoffeeSpill:
+    Guid:
+      Data1: 131193673
+      Data2: 1314743310
+      Data3: 81574784
+      Data4: -127209182
+    Path: event:/Coffee Spill
   Master:
     Guid:
       Data1: 196027296
