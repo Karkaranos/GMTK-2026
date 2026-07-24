@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using NaughtyAttributes;
 
 public class CountdownManager : Manager
 {
@@ -44,6 +45,7 @@ public class CountdownManager : Manager
         {
             isRunning = false;
             OnCountdownFinished?.Invoke();
+            MenuBehavior.Instance.LoadGameScene(1);
         }
     }
 
@@ -51,4 +53,10 @@ public class CountdownManager : Manager
     public void Resume() => isPaused = false;
 
     public float GetRemainingTime() => remainingTime;
+
+    [Button]
+    public void SkipToTheEnd()
+    {
+        remainingTime = 3;
+    }
 }
