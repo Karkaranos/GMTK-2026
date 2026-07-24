@@ -311,6 +311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c412ecf40ba0bd14ea743993f1a67832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingManager
+--- !u!224 &853552958 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7325811789227317341, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}
+  m_PrefabInstance: {fileID: 7145408913887599627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966370783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1091,6 +1096,10 @@ PrefabInstance:
       propertyPath: _simID
       value: AlertSuccess
       objectReference: {fileID: 0}
+    - target: {fileID: 6064658376838227854, guid: 561636c7b9a4b614da6487467a3265ad, type: 3}
+      propertyPath: _simParent
+      value: 
+      objectReference: {fileID: 853552958}
     - target: {fileID: 7486572745775635393, guid: 561636c7b9a4b614da6487467a3265ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.62594
