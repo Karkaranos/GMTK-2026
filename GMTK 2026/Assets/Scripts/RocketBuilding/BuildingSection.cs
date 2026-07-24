@@ -10,9 +10,16 @@ public class BuildingSection : MonoBehaviour
     [field: SerializeField] public ProgressBar BuildingBar { get; set; }
 
     private RocketPart part;
+    private ShipEventBubbleSpawner[] eventSpawners;
 
     public RocketSection Section => section;
     public RocketPart Part => part;
+
+    private void Awake()
+    {
+        eventSpawners = GetComponentsInChildren<ShipEventBubbleSpawner>();
+        ToggleEventSpawners(false);
+    }
 
     public void SetPart(RocketPart part)
     {
@@ -27,5 +34,23 @@ public class BuildingSection : MonoBehaviour
     public void AddBuildRate(int buildRate)
     {
         BuildingBar.FillRate += buildRate;
+    }
+
+    private void ToggleEventSpawners(bool isSpawning)
+    {
+        foreach (var eventSpawner in eventSpawners)
+        {
+            eventSpawner.enabled = isSpawning;
+        }
+    }
+
+    public void OnBeginBuild()
+    {
+        ToggleEventSpawners(true);
+    }
+
+    public void OnEndBuild()
+    {
+        ToggleEventSpawners(false);
     }
 }
