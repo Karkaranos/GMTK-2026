@@ -1,3 +1,5 @@
+using NaughtyAttributes;
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -5,12 +7,13 @@ using UnityEngine;
 /// </summary>
 public class BuildingSection : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer rend;
+    [SerializeField, BoxGroup("Components")] private SpriteRenderer rend;
     [SerializeField] private RocketSection section;
-    [field: SerializeField] public ProgressBar BuildingBar { get; set; }
+    [SerializeField, BoxGroup("References")] private ParticleSystem buildingParticles;
+    [field: SerializeField, BoxGroup("References")] public ProgressBar BuildingBar { get; set; }
 
     private RocketPart part;
-    [SerializeField] private ShipEventBubbleSpawner[] eventSpawners;
+    private ShipEventBubbleSpawner[] eventSpawners;
 
     public RocketSection Section => section;
     public RocketPart Part => part;
@@ -46,6 +49,7 @@ public class BuildingSection : MonoBehaviour
 
     public void OnBeginBuild()
     {
+        buildingParticles.Play();
         ToggleEventSpawners(true);
     }
 
@@ -61,6 +65,7 @@ public class BuildingSection : MonoBehaviour
 
     public void OnEndBuild()
     {
+        buildingParticles.Stop();
         ToggleEventSpawners(false);
         // Clear all bubbles.
         foreach (var eventSpawner in eventSpawners)
