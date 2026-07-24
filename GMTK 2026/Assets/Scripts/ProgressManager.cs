@@ -21,6 +21,8 @@ public class ProgressManager : Manager
     [SerializeField, ReadOnly]
     private float shipQuality = 0; //max 9
 
+    public static float DistanceFlown { get; private set; }
+
     //MANAGERS
     private BuildingManager buildMan;
     private PenguinManager penguinMan;
@@ -34,6 +36,18 @@ public class ProgressManager : Manager
 
         buildMan = FindAnyObjectByType<BuildingManager>();
         penguinMan = FindAnyObjectByType<PenguinManager>();
+
+        CountdownManager.OnCountdownFinished += SaveDistanceFlown;
+    }
+
+    private void OnDestroy()
+    {
+        CountdownManager.OnCountdownFinished -= SaveDistanceFlown;
+    }
+
+    private void SaveDistanceFlown()
+    {
+        DistanceFlown = distanceFlown;
     }
 
     private void Start()
