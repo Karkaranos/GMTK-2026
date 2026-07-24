@@ -21,6 +21,7 @@ public class RocketMover : MonoBehaviour
     [SerializeField] private float debugHeight;
 
     [SerializeField, BoxGroup("References")] private CinemachineCamera rocketCam;
+    [SerializeField, BoxGroup("References")] private ParticleSystem rocketParticles;
     [SerializeField, BoxGroup("Components")] private Rigidbody2D rb;
 
     private struct FlyTime
@@ -57,9 +58,10 @@ public class RocketMover : MonoBehaviour
     {
         Debug.Log($"Executing launch with fly distance {flyDistance} ({ProgressManager.DistanceFlown} * {unitScaler})");
 
+        rocketParticles.Play();
         yield return new WaitForSeconds(launchDelay);
         // Calculate the time the rocket needs to accelerate, decellerate, and fly at a constant speed.
-        
+
         FlyTime times = GetFlyTimes(flyDistance);
 
         float baseGravityScale = rb.gravityScale;
@@ -79,6 +81,7 @@ public class RocketMover : MonoBehaviour
 
         // Move at a constant speed.
         yield return new WaitForSeconds(times.constantSpeedTime);
+        rocketParticles.Stop();
 
         timer = times.accelerateTime;
         while (timer > 0)
