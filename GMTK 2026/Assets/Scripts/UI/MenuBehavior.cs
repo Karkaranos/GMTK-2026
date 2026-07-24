@@ -64,6 +64,7 @@ public class MenuBehavior : MonoBehaviour
 
     private void OnDestroy()
     {
+        SceneManager.activeSceneChanged -= SceneManager_activeSceneChanged;
         pauseAction.performed -= HandlePauseInput;
     }
 
@@ -194,6 +195,4 @@ public class MenuBehavior : MonoBehaviour
     {
         settings.SetActive(!settings.activeInHierarchy);
     }
-
-
 }

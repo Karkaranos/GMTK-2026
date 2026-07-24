@@ -17,6 +17,7 @@ public class RocketMover : MonoBehaviour
         "Should be approximately how far the player needs to get to \"win.\"")] 
     private float maxGravityFieldDistance;
     [SerializeField] private AnimationCurve gravityFalloffCurve;
+    [SerializeField] private float menuDelay;
     [SerializeField] private float debugHeight;
 
     [SerializeField, BoxGroup("References")] private CinemachineCamera rocketCam;
@@ -97,6 +98,8 @@ public class RocketMover : MonoBehaviour
 
         // Capture the max reached height.
         Debug.Log(rb.position.y);
+
+        yield return new WaitForSeconds(menuDelay);
 
         if (MenuBehavior.Instance == null)
         {
