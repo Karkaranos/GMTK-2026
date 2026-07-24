@@ -68,7 +68,7 @@ public class Penguin : MonoBehaviour
     private void OnMouseEnter()
     {
         mouseOverPenguin = this;
-        if (!PenguinRecDisplay.IsShown && !isDistracted)
+        if (!PenguinRecDisplay.IsShown && !isDistracted && !MenuBehavior.GamePaused)
         {
             SelectedPenguin = this;
         }
