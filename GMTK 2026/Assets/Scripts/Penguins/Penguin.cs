@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls detecting clicks on penguins and showing the popup that gives ther recomendations.
@@ -18,6 +19,8 @@ public class Penguin : MonoBehaviour
 
     private static Penguin selectedPenguin;
     private static Penguin mouseOverPenguin;
+
+    private Image perSecondUIImage;
 
     public static Penguin SelectedPenguin
     {
@@ -41,7 +44,15 @@ public class Penguin : MonoBehaviour
     #region GS
     public Dictionary<RocketSection, RocketPart> Recommendations => recomendations;
 
-    public bool IsDistracted { get => isDistracted; set => isDistracted = value; }
+    public bool IsDistracted 
+    { get => isDistracted; 
+      set
+        {
+            isDistracted = value;
+            perSecondUIImage.enabled = !isDistracted;
+        }
+    }
+    public Image PerSecondUIImage { get => perSecondUIImage; set => perSecondUIImage = value; }
     #endregion
 
     private void Reset()
@@ -49,7 +60,7 @@ public class Penguin : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
     }
 
-    public void Initialize(Dictionary<RocketSection, RocketPart> recs)
+    public void Initialize(Dictionary<RocketSection, RocketPart> recs, Image psUI)
     {
         baseColor = rend.color;
         recomendations = recs;
