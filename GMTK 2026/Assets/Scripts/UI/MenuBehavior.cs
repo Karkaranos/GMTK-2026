@@ -280,6 +280,7 @@ public class MenuBehavior : MonoBehaviour
 
     public void ClearHighScore()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         PlayerPrefs.SetFloat("score", 0);
     }
 
@@ -288,6 +289,7 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void ToggleSettings()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         if (settings.activeInHierarchy) RemoveFromMenuStack();
         else AddToMenuStack(settings);
     }

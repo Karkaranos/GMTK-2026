@@ -53,6 +53,27 @@ MonoBehaviour:
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: -1280100940
+        Data2: 1143920600
+        Data3: -281467718
+        Data4: -1359236868
+      Path: event:/Zach Penguin
   multiPenguinEvents:
   - type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
@@ -61,6 +82,27 @@ MonoBehaviour:
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: -1604180698
+        Data2: 1216909973
+        Data3: -930204255
+        Data4: -752267235
+      Path: event:/David Penguin
   globalEvents:
   - type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
@@ -69,6 +111,27 @@ MonoBehaviour:
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   penguins:
   - {fileID: 0}
   - {fileID: 0}

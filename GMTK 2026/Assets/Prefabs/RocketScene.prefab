@@ -1702,8 +1702,20 @@ PrefabInstance:
       value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 135
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 6797055020681683397, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_MaxValue
@@ -1766,11 +1778,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6037234754185662771}
     m_Modifications:
+    - target: {fileID: 605181097006089279, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 605181097006089279, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 149117166976467226}
     - target: {fileID: 873119295651863207, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 9075374581214844611}
     - target: {fileID: 873119295651863207, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 3963342759234946864}
+    - target: {fileID: 1156934079125090717, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 1156934079125090717, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 3963342759234946864}
@@ -1798,11 +1826,27 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 2959569003377104946, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 2959569003377104946, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 6304860418172524001}
     - target: {fileID: 3067025179676389356, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 9075374581214844611}
     - target: {fileID: 3067025179676389356, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 3963342759234946864}
+    - target: {fileID: 3690347204550867979, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 3690347204550867979, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 3963342759234946864}
@@ -1814,6 +1858,22 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 5022818725996662497, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 5022818725996662497, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 5235396571319346269, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 5235396571319346269, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 149117166976467226}
     - target: {fileID: 5301006159145462517, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.7
@@ -1858,6 +1918,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 6596454867107297268, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 6596454867107297268, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 3963342759234946864}
+    - target: {fileID: 7299400079189910293, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 7299400079189910293, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 7519605278705863740, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: targetCanvas
+      value: 
+      objectReference: {fileID: 9075374581214844611}
+    - target: {fileID: 7519605278705863740, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: sectionToSlow
+      value: 
+      objectReference: {fileID: 149117166976467226}
     - target: {fileID: 7782668492494095852, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 

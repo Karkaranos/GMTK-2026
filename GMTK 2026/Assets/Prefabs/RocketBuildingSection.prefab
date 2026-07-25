@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2440904258871755965}
   - component: {fileID: 970535228086808414}
   - component: {fileID: 213909140110779527}
+  - component: {fileID: 8237954941043348296}
   m_Layer: 0
   m_Name: RocketBuildingSection
   m_TagString: Untagged
@@ -107,9 +108,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSection
   rend: {fileID: 970535228086808414}
+  buildingSoundEmitter: {fileID: 8237954941043348296}
   section: 0
   buildingParticles: {fileID: 7379977743614930020}
   <BuildingBar>k__BackingField: {fileID: 0}
+--- !u!114 &8237954941043348296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2998700064653813036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -241769961
+      Data2: 1296345534
+      Data3: 1013354389
+      Data4: -656661748
+    Path: event:/Tools
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &8676622960076632561
 PrefabInstance:
   m_ObjectHideFlags: 0
