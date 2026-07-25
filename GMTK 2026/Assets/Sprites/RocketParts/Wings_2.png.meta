@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 95072caea306e0941b0ec827d858f119
+guid: 8ae2ed03c95f37a418db9e1c0b9eeb51
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5238941043187137626
-    second: Wings2_0
+      213: -876657287495958859
+    second: Wings_2_0
   - first:
-      213: -1325492215737474304
-    second: Wings2_1
+      213: -8102131703390489129
+    second: Wings_2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wings2_0
+      name: Wings_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5c32662f1574b840800000000000000
-      internalID: 5238941043187137626
+      spriteID: 5bebb0d77dc75d3f0800000000000000
+      internalID: -876657287495958859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wings2_1
+      name: Wings_2_1
       rect:
         serializedVersion: 2
         x: 696
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0032c604ad7ea9de0800000000000000
-      internalID: -1325492215737474304
+      spriteID: 7d5baf784227f8f80800000000000000
+      internalID: -8102131703390489129
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Wings2_0: 5238941043187137626
-      Wings2_1: -1325492215737474304
+      Wings_2_0: -876657287495958859
+      Wings_2_1: -8102131703390489129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

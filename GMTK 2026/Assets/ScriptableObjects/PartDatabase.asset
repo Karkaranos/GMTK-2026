@@ -17,21 +17,21 @@ MonoBehaviour:
     parts:
     - name: Top1
       sprite: {fileID: 21300000, guid: dc71bd4c4a3e6134e9353995696a2616, type: 3}
-      _quality: 2
+      _quality: 3
     - name: Top2
       sprite: {fileID: 21300000, guid: caf20299ccb37ea4383b97a2d6bbc6d7, type: 3}
       _quality: 1
     - name: Top3
       sprite: {fileID: 21300000, guid: 0461556aa3bb5a84d92e2c519604d194, type: 3}
-      _quality: 3
+      _quality: 2
   - section: 1
     parts:
     - name: Engine1
       sprite: {fileID: 21300000, guid: 029cfa0fc96f7034ca213cc1dc39008a, type: 3}
-      _quality: 3
+      _quality: 2
     - name: Engine2
       sprite: {fileID: 21300000, guid: a20b9b591c93e4049aeadca1ae09a003, type: 3}
-      _quality: 2
+      _quality: 3
     - name: Engine3
       sprite: {fileID: 21300000, guid: 9d861a006f286d44293fdb2808d5acfc, type: 3}
       _quality: 1
@@ -39,10 +39,10 @@ MonoBehaviour:
     parts:
     - name: Wings1
       sprite: {fileID: 21300000, guid: e3d7c1992c501584eaed864118523528, type: 3}
-      _quality: 1
-    - name: Wings2
-      sprite: {fileID: 21300000, guid: 95072caea306e0941b0ec827d858f119, type: 3}
       _quality: 3
+    - name: Wings2
+      sprite: {fileID: 21300000, guid: 8ae2ed03c95f37a418db9e1c0b9eeb51, type: 3}
+      _quality: 2
     - name: Wings3
       sprite: {fileID: 21300000, guid: f47e43edf01ed1e408319ef8a458db68, type: 3}
-      _quality: 2
+      _quality: 1
