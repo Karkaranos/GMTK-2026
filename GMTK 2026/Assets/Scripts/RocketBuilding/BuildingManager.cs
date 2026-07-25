@@ -8,9 +8,22 @@ public class BuildingManager : Manager
 {
     private BuildingSection[] sections;
 
+    public static Dictionary<RocketSection, RocketPart> SavedParts { get; private set; }
+
     public override void Initialize()
     {
         sections = GetComponentsInChildren<BuildingSection>(true);
+        CountdownManager.OnCountdownFinished += SaveParts;
+    }
+
+    private void OnDestroy()
+    {
+        CountdownManager.OnCountdownFinished -= SaveParts;
+    }
+
+    private void SaveParts()
+    {
+        SavedParts = GetParts();
     }
 
     public Dictionary<RocketSection, RocketPart> GetParts()
@@ -21,6 +34,19 @@ public class BuildingManager : Manager
             if (!parts.ContainsKey(section.Section))
             {
                 parts.Add(section.Section, section.Part);
+            }
+        }
+        return parts;
+    }
+
+    public Dictionary<RocketSection, RocketPart> GetConstructionParts()
+    {
+        Dictionary<RocketSection, RocketPart> parts = new();
+        foreach (var section in sections)
+        {
+            if (!parts.ContainsKey(section.Section))
+            {
+                parts.Add(section.Section, section.BuildingPart);
             }
         }
         return parts;

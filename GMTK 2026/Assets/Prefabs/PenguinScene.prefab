@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -247,8 +247,8 @@ Canvas:
   m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 558434185
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &90259072979741717
 MonoBehaviour:
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2171,6 +2171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7398569909380171625}
+  - component: {fileID: 1337325347076299772}
   m_Layer: 0
   m_Name: ShipQuality
   m_TagString: Untagged
@@ -2199,6 +2200,18 @@ RectTransform:
   m_AnchoredPosition: {x: 395, y: 160.05}
   m_SizeDelta: {x: 180, y: 373.48}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1337325347076299772
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206519461688343388}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &7270570094541262907
 GameObject:
   m_ObjectHideFlags: 0
