@@ -34,6 +34,7 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private Slider masterVolume;
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
+    [SerializeField, Required] private Slider sensitivity;
 
     [SerializeField, BoxGroup("Launch")] private float distanceModifier = 150;
     [SerializeField, BoxGroup("Launch"), Required] private TMP_Text bigScore;
@@ -75,6 +76,9 @@ public class MenuBehavior : MonoBehaviour
         masterVolume.value = AudioManager.instance.MasterVolume;
         sfxVolume.value = AudioManager.instance.SFXVolume;
         musicVolume.value = AudioManager.instance.MusicVolume;
+
+        if (!PlayerPrefs.HasKey("sens")) PlayerPrefs.SetFloat("sens", 1);
+        sensitivity.value = PlayerPrefs.GetFloat("sens");
 
         //StartCoroutine(LaunchComplete(1620));
     }
@@ -153,6 +157,7 @@ public class MenuBehavior : MonoBehaviour
             {
                 credits.SetActive(false);
                 controls.SetActive(false);
+                settings.SetActive(false);
                 InputSystem.actions.Enable();
             }
             else
@@ -244,6 +249,16 @@ public class MenuBehavior : MonoBehaviour
         AudioManager.instance.MusicVolume = volume;
         AudioManager.instance.UpdateVolume();
         AudioManager.instance.PlayOneShot(FMODEvents.instance.Music);
+    }
+
+    public void SetSensitivity()
+    {
+        PlayerPrefs.SetFloat("sens", sensitivity.value);
+    }
+
+    public void ClearHighScore()
+    {
+        PlayerPrefs.SetFloat("score", 0);
     }
 
     /// <summary>
