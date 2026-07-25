@@ -4,6 +4,7 @@
  * Modified Date:   7/24/2026
  * Description:     Stores functions called by menu buttons
  ******************************************/
+using System.Collections;
 using NaughtyAttributes;
 using TMPro;
 using Unity.VisualScripting;
@@ -34,9 +35,18 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
 
-    [SerializeField] private float distanceModifier = 150;
-    [SerializeField] private string postLaunchMessage;
-    [SerializeField, Required] private TMP_Text postLaunchData;
+    [SerializeField, BoxGroup("Launch")] private float distanceModifier = 150;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text bigScore;
+    [SerializeField, BoxGroup("Launch")] private float scoreTickSpeed = 150;
+    [SerializeField, BoxGroup("Launch")] private float minScoreTickTime = 1;
+    [SerializeField, BoxGroup("Launch")] private Vector2 scoreTickSize;
+    [SerializeField, BoxGroup("Launch")] private AnimationCurve scoreTickCurve;
+    [SerializeField, BoxGroup("Launch")] private float bigScorePauseTime;
+    [SerializeField, BoxGroup("Launch")] private string postLaunchMessage;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text postLaunchData;
+    [SerializeField, BoxGroup("Launch")] private string newHighScoreMessage;
+    [SerializeField, BoxGroup("Launch")] private string oldHighScoreMessage;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text newHighScore;
 
     public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
 
@@ -65,6 +75,8 @@ public class MenuBehavior : MonoBehaviour
         masterVolume.value = AudioManager.instance.MasterVolume;
         sfxVolume.value = AudioManager.instance.SFXVolume;
         musicVolume.value = AudioManager.instance.MusicVolume;
+
+        //StartCoroutine(LaunchComplete(1620));
     }
 
     private void OnDestroy()
@@ -150,10 +162,40 @@ public class MenuBehavior : MonoBehaviour
         }
     }
 
-    public void LaunchComplete(float flownHeight)
+    public IEnumerator LaunchComplete(float flownHeight)
     {
-        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight * distanceModifier).ToString());
+        flownHeight *= distanceModifier;
         postLaunchMenu.SetActive(true);
+        postLaunchData.gameObject.SetActive(false);
+        newHighScore.gameObject.SetActive(false);
+        bigScore.gameObject.SetActive(true);
+
+        float currentHeight = 0;
+        float maxAddedPerSecond = flownHeight / minScoreTickTime;
+        while (currentHeight < flownHeight)
+        {
+            currentHeight += Time.deltaTime * Mathf.Min(scoreTickSpeed, maxAddedPerSecond) * scoreTickCurve.Evaluate(currentHeight / flownHeight);
+            currentHeight = Mathf.Min(currentHeight, flownHeight);
+            bigScore.text = (int)currentHeight + " km";
+            bigScore.fontSize = scoreTickSize.x + ((scoreTickSize.y - scoreTickSize.x) * (currentHeight / flownHeight));
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(bigScorePauseTime);
+
+        bigScore.gameObject.SetActive(false);
+        postLaunchData.gameObject.SetActive(true);
+        newHighScore.gameObject.SetActive(true);
+        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight).ToString());
+        if (PlayerPrefs.HasKey("score") && PlayerPrefs.GetInt("score") >= Mathf.RoundToInt(flownHeight))
+        {
+            newHighScore.text = oldHighScoreMessage.Replace("<height>", PlayerPrefs.GetInt("score").ToString());
+        }
+        else
+        {
+            newHighScore.text = newHighScoreMessage;
+            PlayerPrefs.SetInt("score", Mathf.RoundToInt(flownHeight));
+        }
     }
 
     /// <summary>
