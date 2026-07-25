@@ -102,6 +102,6 @@ public class PenguinManager : Manager
             if (p.IsDistracted)
                 distractedCount++;
         }
-        return distractedCount / penguins.Length;
+        return (float)distractedCount / penguins.Length;
     }
 }
