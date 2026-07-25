@@ -4336,34 +4336,6 @@ PrefabInstance:
       propertyPath: 'penguins.Array.data[14]'
       value: 
       objectReference: {fileID: 3416275952681232826}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0].iconSprite
-      value: 
-      objectReference: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: multiPenguinEvents.Array.data[0].iconSprite
-      value: 
-      objectReference: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: singlePenguinEvents.Array.data[0].iconSprite
-      value: 
-      objectReference: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0].clickProgressIncrement
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: singlePenguinEvents.Array.data[0]._idleParticleID
-      value: Event_Sleep
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: multiPenguinEvents.Array.data[0].clickProgressIncrement
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: singlePenguinEvents.Array.data[0].clickProgressIncrement
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: m_Name
       value: ControlRoomEventBubbleSpawner

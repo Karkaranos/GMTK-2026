@@ -49,7 +49,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Sleep
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -63,7 +63,7 @@ MonoBehaviour:
     height: 6.87
   spawnPositions: []
   maxBubblesActive: 1
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 11.5, y: 18.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1 &1853106130475733169
@@ -115,7 +115,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -129,7 +129,7 @@ MonoBehaviour:
     height: 23.2
   spawnPositions: []
   maxBubblesActive: 2
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 10.5, y: 21.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1 &3255583644107374088
@@ -181,7 +181,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -195,7 +195,7 @@ MonoBehaviour:
     height: 5.45
   spawnPositions: []
   maxBubblesActive: 2
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 10.5, y: 21.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1 &3910381705555677278
@@ -247,7 +247,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Fire
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -261,7 +261,7 @@ MonoBehaviour:
     height: 20.1
   spawnPositions: []
   maxBubblesActive: 3
-  spawnTimeRange: {x: 7.5, y: 13.5}
+  spawnTimeRange: {x: 7.5, y: 18.6}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.2
 --- !u!1 &4747879298037106222
@@ -313,7 +313,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -327,7 +327,7 @@ MonoBehaviour:
     height: 23.2
   spawnPositions: []
   maxBubblesActive: 2
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 10.5, y: 21.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1 &5352628405600492231
@@ -519,7 +519,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Fire
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -533,7 +533,7 @@ MonoBehaviour:
     height: 15.2
   spawnPositions: []
   maxBubblesActive: 3
-  spawnTimeRange: {x: 7.5, y: 13.5}
+  spawnTimeRange: {x: 7.5, y: 18.6}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.2
 --- !u!1 &7154233460554261971
@@ -585,7 +585,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Fire
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -599,7 +599,7 @@ MonoBehaviour:
     height: 8.8
   spawnPositions: []
   maxBubblesActive: 3
-  spawnTimeRange: {x: 7.5, y: 13.5}
+  spawnTimeRange: {x: 7.5, y: 18.6}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.2
 --- !u!1 &7471454024583367095
@@ -651,7 +651,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -665,7 +665,7 @@ MonoBehaviour:
     height: 15.3
   spawnPositions: []
   maxBubblesActive: 1
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 11.5, y: 18.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1 &7900015779103169580
@@ -717,7 +717,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Sleep
-    clickProgressIncrement: 0.125
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
@@ -731,7 +731,7 @@ MonoBehaviour:
     height: 6.87
   spawnPositions: []
   maxBubblesActive: 1
-  spawnTimeRange: {x: 11.5, y: 16.5}
+  spawnTimeRange: {x: 11.5, y: 18.5}
   sectionToSlow: {fileID: 0}
   fillRateDecrementPerBubble: 0.4
 --- !u!1001 &182796611867248816
