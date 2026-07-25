@@ -2319,8 +2319,7 @@ MonoBehaviour:
 
     Lucas Fehlberg
 
-    Mark
-    Splingaire'
+    LessThanScunions '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c8532119180c7c478e771fa404e6373, type: 2}
   m_sharedMaterial: {fileID: -7882801082633494871, guid: 2c8532119180c7c478e771fa404e6373, type: 2}
@@ -4441,33 +4440,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<style=h1>UI</style>
-
-    Arcadia Koederitz
-
-    Marlow Greenan
-
-    Avery
-    Schupbach
-
-    Sophie Blumhardt
-
-    Cade Naylor
-
-    Evan Clayson
-
-
-    <style=h1>
-    SFX</style>
-
-    Lucas Felhberg
-
-    Mark Splingaire
-
-    Blake Niewinski
-
-    Cade
-    Naylor'
+  m_text: "<style=h1>UI</style>\nMarlow Greenan\nAvery Schupbach\nSophie Blumhardt\nCade
+    Naylor\nEvan Clayson\n\n<style=h1> SFX</style>\nLucas Felhberg\nLessThanScunions
+    \nBlake Niewinski\nCade Naylor"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2c8532119180c7c478e771fa404e6373, type: 2}
   m_sharedMaterial: {fileID: -7882801082633494871, guid: 2c8532119180c7c478e771fa404e6373, type: 2}
