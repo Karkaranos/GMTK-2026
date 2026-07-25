@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 80a6974c0b3746d418cac9c5cf16d192
+guid: f47e43edf01ed1e408319ef8a458db68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1465387773493203085
-    second: ControlRoomPlaceholder_0
+      213: -8661526097216067252
+    second: Wings_3_0
+  - first:
+      213: -4633970292179491200
+    second: Wings_3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 96
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ControlRoomPlaceholder_0
+      name: Wings_3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1914
-        height: 1081
+        width: 264
+        height: 699
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37facbe7595e9abe0800000000000000
-      internalID: -1465387773493203085
+      spriteID: c4929a2c7e31cc780800000000000000
+      internalID: -8661526097216067252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_3_1
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 0
+        width: 265
+        height: 699
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086ade23294d0bfb0800000000000000
+      internalID: -4633970292179491200
       vertices: []
       indices: 
       edges: []
@@ -138,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ControlRoomPlaceholder_0: -1465387773493203085
+      Wings_3_0: -8661526097216067252
+      Wings_3_1: -4633970292179491200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,34 +15,34 @@ MonoBehaviour:
   partDatabase:
   - section: 0
     parts:
-    - name: TestTop1
-      sprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
-      _quality: 1
-    - name: TestTop2
-      sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+    - name: Top1
+      sprite: {fileID: 21300000, guid: dc71bd4c4a3e6134e9353995696a2616, type: 3}
       _quality: 2
-    - name: TestTop3
-      sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    - name: Top2
+      sprite: {fileID: 21300000, guid: caf20299ccb37ea4383b97a2d6bbc6d7, type: 3}
+      _quality: 1
+    - name: Top3
+      sprite: {fileID: 21300000, guid: 0461556aa3bb5a84d92e2c519604d194, type: 3}
       _quality: 3
   - section: 1
     parts:
     - name: Engine1
-      sprite: {fileID: 21300000, guid: 6912b9696ff28034aa3f4a41dbca2b09, type: 3}
-      _quality: 1
+      sprite: {fileID: 21300000, guid: 029cfa0fc96f7034ca213cc1dc39008a, type: 3}
+      _quality: 3
     - name: Engine2
-      sprite: {fileID: 21300000, guid: 8197cb62d8bc4cf4fa208d55e4a43d9d, type: 3}
+      sprite: {fileID: 21300000, guid: a20b9b591c93e4049aeadca1ae09a003, type: 3}
       _quality: 2
     - name: Engine3
-      sprite: {fileID: 21300000, guid: 500be38f3e52a294b9318e8dc2aa64e4, type: 3}
-      _quality: 3
+      sprite: {fileID: 21300000, guid: 9d861a006f286d44293fdb2808d5acfc, type: 3}
+      _quality: 1
   - section: 2
     parts:
-    - name: TestWings1
-      sprite: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
+    - name: Wings1
+      sprite: {fileID: 21300000, guid: e3d7c1992c501584eaed864118523528, type: 3}
       _quality: 1
-    - name: TestWings2
-      sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-      _quality: 2
-    - name: TestWings3
-      sprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    - name: Wings2
+      sprite: {fileID: 21300000, guid: 95072caea306e0941b0ec827d858f119, type: 3}
       _quality: 3
+    - name: Wings3
+      sprite: {fileID: 21300000, guid: f47e43edf01ed1e408319ef8a458db68, type: 3}
+      _quality: 2
