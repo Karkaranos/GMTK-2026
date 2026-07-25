@@ -46,6 +46,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     private void Start()
     {
         StartCoroutine(Timer(0.1f));
+        if (bubbleData.IdleParticleID != "")
+            ParticleMaster.INST.Play(bubbleData.IdleParticleID, transform);
     }
 
     private void Update()
@@ -158,6 +160,9 @@ public struct PopupBubbleData
 
     public Sprite iconSprite;
 
+    [SerializeField, Tooltip("The particle playing while the popup exists.\nEx. Put out fire plays fire.")]
+    private string _idleParticleID;
+
     [Tooltip("Percent progress filled by a single click (1.0 is 100% completed)")]
     public float clickProgressIncrement;
 
@@ -174,5 +179,6 @@ public struct PopupBubbleData
 
     #region GS
     public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
+    public string IdleParticleID { get => _idleParticleID; set => _idleParticleID = value; }
     #endregion
 }

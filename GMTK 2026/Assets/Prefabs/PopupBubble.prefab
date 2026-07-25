@@ -495,6 +495,7 @@ MonoBehaviour:
   bubbleData:
     type: 0
     iconSprite: {fileID: 0}
+    _idleParticleID: 
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0.075
