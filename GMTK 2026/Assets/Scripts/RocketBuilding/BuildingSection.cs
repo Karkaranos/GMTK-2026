@@ -53,7 +53,7 @@ public class BuildingSection : MonoBehaviour
     {
         this.buildingPart = buildingPart;
         var shapeMod = buildingParticles.shape;
-        shapeMod.sprite = part.Sprite;
+        shapeMod.sprite = buildingPart.Sprite;
         buildingParticles.Play();
         ToggleEventSpawners(true);
     }
