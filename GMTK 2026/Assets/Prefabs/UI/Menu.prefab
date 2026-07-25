@@ -6390,6 +6390,9 @@ MonoBehaviour:
   masterVolume: {fileID: 5207297596677882114}
   sfxVolume: {fileID: 5931869225645518378}
   musicVolume: {fileID: 6935943290787746140}
+  distanceModifier: 150
+  postLaunchMessage: 'You flew <height> km '
+  postLaunchData: {fileID: 3142431253779603096}
 --- !u!1 &6665255261261698057
 GameObject:
   m_ObjectHideFlags: 0

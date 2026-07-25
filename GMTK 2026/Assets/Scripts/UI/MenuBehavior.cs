@@ -5,6 +5,7 @@
  * Description:     Stores functions called by menu buttons
  ******************************************/
 using NaughtyAttributes;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -32,6 +33,10 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private Slider masterVolume;
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
+
+    [SerializeField] private float distanceModifier = 150;
+    [SerializeField] private string postLaunchMessage;
+    [SerializeField, Required] private TMP_Text postLaunchData;
 
     public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
 
@@ -145,8 +150,9 @@ public class MenuBehavior : MonoBehaviour
         }
     }
 
-    public void LaunchComplete()
+    public void LaunchComplete(float flownHeight)
     {
+        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight * distanceModifier).ToString());
         postLaunchMenu.SetActive(true);
     }
 
