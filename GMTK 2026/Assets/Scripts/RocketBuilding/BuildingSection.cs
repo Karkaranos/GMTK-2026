@@ -52,6 +52,8 @@ public class BuildingSection : MonoBehaviour
     public void OnBeginBuild(RocketPart buildingPart)
     {
         this.buildingPart = buildingPart;
+        var shapeMod = buildingParticles.shape;
+        shapeMod.sprite = part.Sprite;
         buildingParticles.Play();
         ToggleEventSpawners(true);
     }

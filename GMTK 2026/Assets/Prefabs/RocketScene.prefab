@@ -2090,6 +2090,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 5226990021525448474, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_Name
       value: EngineBuildBar
@@ -2257,23 +2265,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -975
+      value: -1550
       objectReference: {fileID: 0}
     - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49
+      value: -975
       objectReference: {fileID: 0}
     - target: {fileID: 5226990021525448474, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_Name
       value: TopBuildBar
       objectReference: {fileID: 0}
-    - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 5226990021525448474, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2388,6 +2400,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5465301610146542583, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465301610146542583, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5643398376703673022, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_Size.x
       value: 24.125
@@ -2396,13 +2416,33 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 25.4375
       objectReference: {fileID: 0}
+    - target: {fileID: 5643398376703673022, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5926155582445500069, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 7753191897099023815, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7753191897099023815, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7931147649142604942, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8333009143752764127, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_Size.y
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333009143752764127, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2575,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2820481771715883275, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -825
       objectReference: {fileID: 0}
     - target: {fileID: 2820481771715883275, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2591,23 +2631,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -975
+      value: -2780
       objectReference: {fileID: 0}
     - target: {fileID: 3705391049767655526, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 5226990021525448474, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_Name
       value: WingsBuildBar
       objectReference: {fileID: 0}
-    - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 5226990021525448474, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5972457983730924211, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_SizeDelta.x
