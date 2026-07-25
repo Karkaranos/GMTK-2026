@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls scrolling up and down in the rocket scene.
@@ -13,6 +14,7 @@ public class SceneScroller : MonoBehaviour
     [SerializeField] private float scrollRange;
     [SerializeField] private float scrollSpeed;
     [SerializeField] private float lerpSpeed;
+    [SerializeField] private Scrollbar sceneScrollbar;
 
     private InputAction scrollAction;
     private Vector3 baseLocation;
@@ -72,9 +74,26 @@ public class SceneScroller : MonoBehaviour
         {
             float step = 1 - Mathf.Pow(0.5f, Time.deltaTime * lerpSpeed);
             ScrollLocation = Mathf.Lerp(scrollLocation, targetScrollLocation, step);
+            UpdateScrollbar();
+
             yield return null;
         }
         ScrollLocation = targetScrollLocation;
+        UpdateScrollbar();
+    }
+
+    private void UpdateScrollbar()
+    {
+        if (sceneScrollbar != null)
+        {
+            sceneScrollbar.SetValueWithoutNotify((scrollLocation + (scrollRange / 2)) / scrollRange);
+        }
+    }
+
+    public void SetScrollNormalized(float normalizedValue)
+    {
+        lerpRoutine.StopCoroutine();
+        ScrollLocation = (normalizedValue * scrollRange) - (scrollRange / 2);
     }
 
     private void OnDrawGizmosSelected()
