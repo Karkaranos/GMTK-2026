@@ -786,6 +786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wings
       objectReference: {fileID: 0}
+    - target: {fileID: 7825132208836824126, guid: d40919145566a0c4c81f42b9be4c8171, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
