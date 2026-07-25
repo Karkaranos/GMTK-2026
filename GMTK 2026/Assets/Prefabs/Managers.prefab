@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6436147e005da70428c6499af7033ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketManager
+  partQualityMultipliers: 030000000100000000000000
   parts: {fileID: 11400000, guid: 522d400508916094a8e386cdf679663e, type: 2}
 --- !u!1001 &22900311986815503
 PrefabInstance:
