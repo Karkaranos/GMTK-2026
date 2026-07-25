@@ -1,3 +1,4 @@
+using FMODUnity;
 using MarUtility.UIExtensions;
 using NaughtyAttributes;
 using System;
@@ -21,6 +22,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     private Image fadeIconImage;
     [SerializeField, BoxGroup("Components")]
     private Animator _animator;
+    [SerializeField, BoxGroup("Components")]
+    private StudioEventEmitter _ambientEmitter;
 
     //ANIMATION
     [SerializeField, BoxGroup("Animation")]
@@ -48,6 +51,11 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         StartCoroutine(Timer(0.1f));
         if (bubbleData.IdleParticleID != "")
             ParticleMaster.INST.Play(bubbleData.IdleParticleID, transform);
+        if (!bubbleData.ambientSound.IsNull)
+        {
+            _ambientEmitter.EventReference = bubbleData.ambientSound;
+            _ambientEmitter.Play();
+        }
     }
 
     private void Update()
@@ -83,6 +91,11 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         if (bubbleData.type == PopupBubbleData.Type.Click)
         {
             progress += bubbleData.clickProgressIncrement;
+
+            if (!bubbleData.clickSound.IsNull)
+            {
+                AudioManager.instance.PlayOneShot(bubbleData.clickSound);
+            }
         }
 
         if (progress >= 1)
@@ -140,6 +153,12 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         completed = true;
 
         //little pop sound would be fun
+        _ambientEmitter.Stop();
+
+        if (!bubbleData.completeSound.IsNull)
+        {
+            AudioManager.instance.PlayOneShot(bubbleData.completeSound);
+        }
 
         bubbleData.onComplete?.Invoke();
         _animator.SetTrigger(_animCompleteID);
@@ -174,6 +193,10 @@ public struct PopupBubbleData
 
     [SerializeField, Tooltip("How long the pop-up exists before it starts draining progress.")]
     private float _gracePeriod;
+
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference ambientSound;
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference clickSound;
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference completeSound;
 
     public Action onComplete;
 

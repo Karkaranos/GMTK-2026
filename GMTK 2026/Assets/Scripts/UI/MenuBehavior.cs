@@ -5,6 +5,7 @@
  * Description:     Stores functions called by menu buttons
  ******************************************/
 using System.Collections;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using Unity.VisualScripting;
@@ -30,6 +31,8 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private GameObject controls;
     [SerializeField, Required] private GameObject credits;
     [SerializeField, Required] private GameObject settings;
+    [SerializeField, Required] private GameObject mainMenuBG;
+    [SerializeField] private List<GameObject> menuStack = new();
 
     [SerializeField, Required] private Slider masterVolume;
     [SerializeField, Required] private Slider sfxVolume;
@@ -68,10 +71,8 @@ public class MenuBehavior : MonoBehaviour
         pauseMenu.SetActive(false);
         postLaunchMenu.SetActive(false);
 
-        // If the current scene is the menu scene, enables the menu. Otherwise, disables it
-        mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
-
         SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+        SceneManager_activeSceneChanged(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
 
         masterVolume.value = AudioManager.instance.MasterVolume;
         sfxVolume.value = AudioManager.instance.SFXVolume;
@@ -91,8 +92,14 @@ public class MenuBehavior : MonoBehaviour
 
     private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
     {
-        mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
-        if(IsPaused)
+        while (menuStack.Count > 0) RemoveFromMenuStack();
+
+        // Enable main menu when entering it
+        if (arg1.buildIndex == menuScene) AddToMenuStack(mainMenu);
+
+        mainMenuBG.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
+
+        if (IsPaused)
         {
             SetPaused(false);
         }
@@ -136,6 +143,21 @@ public class MenuBehavior : MonoBehaviour
         Application.Quit();
     }
 
+    private void AddToMenuStack(GameObject menu)
+    {
+        menuStack.Insert(0, menu);
+        menuStack[0].SetActive(true);
+        for (int i = 1; i < menuStack.Count; i++) menuStack[i].SetActive(false);
+    }
+
+    private void RemoveFromMenuStack()
+    {
+        if (menuStack.Count == 0) return;
+        menuStack[0].SetActive(false);
+        menuStack.RemoveAt(0);
+        if (menuStack.Count > 0) menuStack[0].SetActive(true);
+    }
+
     /// <summary>
     /// Listens to pausing
     /// </summary>
@@ -150,14 +172,12 @@ public class MenuBehavior : MonoBehaviour
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
             IsPaused = paused;
-            pauseMenu.SetActive(IsPaused);
+            if (paused) AddToMenuStack(pauseMenu);
+            else while (menuStack.Count > 0) RemoveFromMenuStack();
             Time.timeScale = IsPaused ? 0 : 1;
 
             if (!IsPaused)
             {
-                credits.SetActive(false);
-                controls.SetActive(false);
-                settings.SetActive(false);
                 InputSystem.actions.Enable();
             }
             else
@@ -209,7 +229,8 @@ public class MenuBehavior : MonoBehaviour
     public void ToggleCredits()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
-        credits.SetActive(!credits.activeInHierarchy);
+        if (credits.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(credits);
     }
 
     /// <summary>
@@ -218,7 +239,8 @@ public class MenuBehavior : MonoBehaviour
     public void ToggleControls()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
-        controls.SetActive(!controls.activeInHierarchy);
+        if (controls.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(controls);
     }
 
     /// <summary>
@@ -258,6 +280,7 @@ public class MenuBehavior : MonoBehaviour
 
     public void ClearHighScore()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         PlayerPrefs.SetFloat("score", 0);
     }
 
@@ -266,6 +289,8 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void ToggleSettings()
     {
-        settings.SetActive(!settings.activeInHierarchy);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        if (settings.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(settings);
     }
 }
