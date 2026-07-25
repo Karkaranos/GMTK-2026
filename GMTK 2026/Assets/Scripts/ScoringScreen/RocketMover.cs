@@ -109,7 +109,7 @@ public class RocketMover : MonoBehaviour
             Debug.LogWarning("And then the menu would pop up");
             yield break;
         }
-        StartCoroutine(MenuBehavior.Instance.LaunchComplete(flownHeight));
+        MenuBehavior.Instance.LaunchComplete(flownHeight);
     }
 
     private FlyTime GetFlyTimes(float flyDistance)

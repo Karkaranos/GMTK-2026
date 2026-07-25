@@ -4,7 +4,6 @@
  * Modified Date:   7/24/2026
  * Description:     Stores functions called by menu buttons
  ******************************************/
-using System.Collections;
 using NaughtyAttributes;
 using TMPro;
 using Unity.VisualScripting;
@@ -34,20 +33,10 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private Slider masterVolume;
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
-    [SerializeField, Required] private Slider sensitivity;
 
-    [SerializeField, BoxGroup("Launch")] private float distanceModifier = 150;
-    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text bigScore;
-    [SerializeField, BoxGroup("Launch")] private float scoreTickSpeed = 150;
-    [SerializeField, BoxGroup("Launch")] private float minScoreTickTime = 1;
-    [SerializeField, BoxGroup("Launch")] private Vector2 scoreTickSize;
-    [SerializeField, BoxGroup("Launch")] private AnimationCurve scoreTickCurve;
-    [SerializeField, BoxGroup("Launch")] private float bigScorePauseTime;
-    [SerializeField, BoxGroup("Launch")] private string postLaunchMessage;
-    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text postLaunchData;
-    [SerializeField, BoxGroup("Launch")] private string newHighScoreMessage;
-    [SerializeField, BoxGroup("Launch")] private string oldHighScoreMessage;
-    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text newHighScore;
+    [SerializeField] private float distanceModifier = 150;
+    [SerializeField] private string postLaunchMessage;
+    [SerializeField, Required] private TMP_Text postLaunchData;
 
     public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
 
@@ -76,11 +65,6 @@ public class MenuBehavior : MonoBehaviour
         masterVolume.value = AudioManager.instance.MasterVolume;
         sfxVolume.value = AudioManager.instance.SFXVolume;
         musicVolume.value = AudioManager.instance.MusicVolume;
-
-        if (!PlayerPrefs.HasKey("sens")) PlayerPrefs.SetFloat("sens", 1);
-        sensitivity.value = PlayerPrefs.GetFloat("sens");
-
-        //StartCoroutine(LaunchComplete(1620));
     }
 
     private void OnDestroy()
@@ -157,7 +141,6 @@ public class MenuBehavior : MonoBehaviour
             {
                 credits.SetActive(false);
                 controls.SetActive(false);
-                settings.SetActive(false);
                 InputSystem.actions.Enable();
             }
             else
@@ -167,40 +150,10 @@ public class MenuBehavior : MonoBehaviour
         }
     }
 
-    public IEnumerator LaunchComplete(float flownHeight)
+    public void LaunchComplete(float flownHeight)
     {
-        flownHeight *= distanceModifier;
+        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight * distanceModifier).ToString());
         postLaunchMenu.SetActive(true);
-        postLaunchData.gameObject.SetActive(false);
-        newHighScore.gameObject.SetActive(false);
-        bigScore.gameObject.SetActive(true);
-
-        float currentHeight = 0;
-        float maxAddedPerSecond = flownHeight / minScoreTickTime;
-        while (currentHeight < flownHeight)
-        {
-            currentHeight += Time.deltaTime * Mathf.Min(scoreTickSpeed, maxAddedPerSecond) * scoreTickCurve.Evaluate(currentHeight / flownHeight);
-            currentHeight = Mathf.Min(currentHeight, flownHeight);
-            bigScore.text = (int)currentHeight + " km";
-            bigScore.fontSize = scoreTickSize.x + ((scoreTickSize.y - scoreTickSize.x) * (currentHeight / flownHeight));
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(bigScorePauseTime);
-
-        bigScore.gameObject.SetActive(false);
-        postLaunchData.gameObject.SetActive(true);
-        newHighScore.gameObject.SetActive(true);
-        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight).ToString());
-        if (PlayerPrefs.HasKey("score") && PlayerPrefs.GetInt("score") >= Mathf.RoundToInt(flownHeight))
-        {
-            newHighScore.text = oldHighScoreMessage.Replace("<height>", PlayerPrefs.GetInt("score").ToString());
-        }
-        else
-        {
-            newHighScore.text = newHighScoreMessage;
-            PlayerPrefs.SetInt("score", Mathf.RoundToInt(flownHeight));
-        }
     }
 
     /// <summary>
@@ -249,16 +202,6 @@ public class MenuBehavior : MonoBehaviour
         AudioManager.instance.MusicVolume = volume;
         AudioManager.instance.UpdateVolume();
         AudioManager.instance.PlayOneShot(FMODEvents.instance.Music);
-    }
-
-    public void SetSensitivity()
-    {
-        PlayerPrefs.SetFloat("sens", sensitivity.value);
-    }
-
-    public void ClearHighScore()
-    {
-        PlayerPrefs.SetFloat("score", 0);
     }
 
     /// <summary>
