@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8342572415b212a41863166f3e6c53b9, type: 3}
+  m_Name: PartDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::RocketPartDatabase
+  partDatabase:
+  - section: 0
+    parts:
+    - name: Top1
+      sprite: {fileID: 21300000, guid: dc71bd4c4a3e6134e9353995696a2616, type: 3}
+      _quality: 3
+    - name: Top2
+      sprite: {fileID: 21300000, guid: caf20299ccb37ea4383b97a2d6bbc6d7, type: 3}
+      _quality: 1
+    - name: Top3
+      sprite: {fileID: 21300000, guid: 0461556aa3bb5a84d92e2c519604d194, type: 3}
+      _quality: 2
+  - section: 1
+    parts:
+    - name: Engine1
+      sprite: {fileID: 21300000, guid: 029cfa0fc96f7034ca213cc1dc39008a, type: 3}
+      _quality: 2
+    - name: Engine2
+      sprite: {fileID: 21300000, guid: a20b9b591c93e4049aeadca1ae09a003, type: 3}
+      _quality: 3
+    - name: Engine3
+      sprite: {fileID: 21300000, guid: 9d861a006f286d44293fdb2808d5acfc, type: 3}
+      _quality: 1
+  - section: 2
+    parts:
+    - name: Wings1
+      sprite: {fileID: 21300000, guid: e3d7c1992c501584eaed864118523528, type: 3}
+      _quality: 3
+    - name: Wings2
+      sprite: {fileID: 21300000, guid: 8ae2ed03c95f37a418db9e1c0b9eeb51, type: 3}
+      _quality: 2
+    - name: Wings3
+      sprite: {fileID: 21300000, guid: f47e43edf01ed1e408319ef8a458db68, type: 3}
+      _quality: 1

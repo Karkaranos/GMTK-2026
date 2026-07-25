@@ -1,3 +1,4 @@
+using MarUtility.UIExtensions;
 using NaughtyAttributes;
 using System;
 using System.Collections;
@@ -12,6 +13,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     //COMPONENTS
     [SerializeField, BoxGroup("Components")]
     private Image radialFillImage;
+    [SerializeField, BoxGroup("Components")]
+    private FillController _fillCtrl;
     [SerializeField, BoxGroup("Components")]
     private Image iconImage;
     [SerializeField, BoxGroup("Components")]
@@ -32,6 +35,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
 
     private bool mouseDown;
 
+    private bool completed;
+
     #region GS
     public Image FadeIconImage { get => fadeIconImage; set => fadeIconImage = value; }
     public Image IconImage { get => iconImage; set => iconImage = value; }
@@ -41,6 +46,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     private void Start()
     {
         StartCoroutine(Timer(0.1f));
+        if (bubbleData.IdleParticleID != "")
+            ParticleMaster.INST.Play(bubbleData.IdleParticleID, transform);
     }
 
     private void Update()
@@ -65,7 +72,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         }    
 
         //update visual
-        radialFillImage.fillAmount = progress;
+        //radialFillImage.fillAmount = progress;
+        _fillCtrl.FillAmount = progress;
     }
 
     #region Input
@@ -128,6 +136,9 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
 
     public void Complete()
     {
+        if (completed) return;
+        completed = true;
+
         //little pop sound would be fun
 
         bubbleData.onComplete?.Invoke();
@@ -149,6 +160,9 @@ public struct PopupBubbleData
 
     public Sprite iconSprite;
 
+    [SerializeField, Tooltip("The particle playing while the popup exists.\nEx. Put out fire plays fire.")]
+    private string _idleParticleID;
+
     [Tooltip("Percent progress filled by a single click (1.0 is 100% completed)")]
     public float clickProgressIncrement;
 
@@ -165,5 +179,6 @@ public struct PopupBubbleData
 
     #region GS
     public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
+    public string IdleParticleID { get => _idleParticleID; set => _idleParticleID = value; }
     #endregion
 }

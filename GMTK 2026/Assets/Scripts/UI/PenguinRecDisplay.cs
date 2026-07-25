@@ -1,10 +1,17 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class PenguinRecDisplay : MonoBehaviour
+public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private CanvasGroup cg;
     [SerializeField] private RecReferences[] recReferences;
+
+    private bool isMouseOver;
+    private static bool isShown;
+
+    public static bool IsShown => isShown;
 
     #region Nested
     [System.Serializable]
@@ -28,15 +35,34 @@ public class PenguinRecDisplay : MonoBehaviour
 
     public void HidePopup()
     {
+        Penguin.ResetSelectedPenguin();
         TogglePopup(false);
     }
 
     public void TogglePopup(bool shown)
     {
         SceneSwitcher.CanSwitchScenes = !shown;
+        isShown = shown;
         cg.alpha = shown ? 1 : 0;
         cg.blocksRaycasts = shown;
         cg.interactable = shown;
+    }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isMouseOver = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isMouseOver = false;
+    }
+
+    public void HandlePopupClick()
+    {
+        if (!isMouseOver)
+        {
+            HidePopup();
+        }
     }
 }

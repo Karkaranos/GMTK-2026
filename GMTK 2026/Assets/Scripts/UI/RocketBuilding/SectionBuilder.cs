@@ -8,7 +8,7 @@ public class SectionBuilder : MonoBehaviour
     [SerializeField] private RocketPartDatabase partDB;
     [SerializeField] private BuildingSection section;
     [SerializeField] private Image partDisplay;
-    [SerializeField] private ProgressBar buildBar;
+    public ProgressBar buildBar;
 
     [SerializeField, ReadOnly] private CanvasGroup group;
 
@@ -51,6 +51,7 @@ public class SectionBuilder : MonoBehaviour
     {
         buildBar.gameObject.SetActive(true);
         group.interactable = false;
+        section.OnBeginBuild(parts[selectedPart]);
     }
 
     private void OnBarFinish()
@@ -58,6 +59,7 @@ public class SectionBuilder : MonoBehaviour
         buildBar.gameObject.SetActive(false);
         group.interactable = true;
 
-        section.SetPart(parts[selectedPart]);
+        section.OnEndBuild();
+        
     }
 }

@@ -335,6 +335,63 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1001 &1399180138
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276220704326547818, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358621122965157599, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
+      propertyPath: m_Name
+      value: Pre_ParticleMaster
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe474da6db5af05469e9cccd0d8e3d17, type: 3}
 --- !u!1 &1779501860
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BubbleTester
   testBubbleData:
     type: 0
-    iconSprite: {fileID: 21300000, guid: f53f7fc3c477dd04fab2dc46045733a1, type: 3}
+    iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0.1
@@ -438,8 +495,8 @@ Canvas:
   m_GameObject: {fileID: 1944878416}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 789484337}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -465,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3927586daa64248be0a5847e5e197f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupBubbleManager
-  BubblePrefab: {fileID: 9166382726989490355, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
 --- !u!224 &1944878420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -510,3 +567,4 @@ SceneRoots:
   - {fileID: 675866698}
   - {fileID: 1944878420}
   - {fileID: 1779501862}
+  - {fileID: 1399180138}

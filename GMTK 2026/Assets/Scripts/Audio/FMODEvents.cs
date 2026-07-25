@@ -10,10 +10,25 @@ using NaughtyAttributes;
 
 public class FMODEvents : MonoBehaviour
 {
-    [SerializeField, Foldout("Music")] public EventReference MainMenu;
+    [SerializeField, Foldout("Music")] public EventReference Beat;
 
     [SerializeField, Foldout("SFX")] public EventReference Bee;
     [SerializeField, Foldout("SFX")] public EventReference Meow;
+    [SerializeField, Foldout("SFX")] public EventReference Pen;
+    [SerializeField, Foldout("SFX")] public EventReference DavidNoise;
+    [SerializeField, Foldout("SFX")] public EventReference ZachNoise;
+    [SerializeField, Foldout("SFX")] public EventReference Tools;
+    [SerializeField, Foldout("SFX")] public EventReference IceShatter;
+    [SerializeField, Foldout("SFX")] public EventReference IceBreakOff;
+    [SerializeField, Foldout("SFX")] public EventReference IceFall;
+    [SerializeField, Foldout("SFX")] public EventReference UIClick;
+    [SerializeField, Foldout("SFX")] public EventReference Fire;
+    [SerializeField, Foldout("SFX")] public EventReference FireOut;
+    [SerializeField, Foldout("SFX")] public EventReference CoffeeSpill;
+
+    [SerializeField, Foldout("Test Sounds")] public EventReference Master;
+    [SerializeField, Foldout("Test Sounds")] public EventReference SFX;
+    [SerializeField, Foldout("Test Sounds")] public EventReference Music;
 
 
     public static FMODEvents instance { get; private set; }
