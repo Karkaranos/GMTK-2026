@@ -119,9 +119,9 @@ TextureImporter:
       name: Wings_1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 102
         y: 0
-        width: 201
+        width: 202
         height: 641
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Wings_1_1
       rect:
         serializedVersion: 2
-        x: 591
+        x: 694
         y: 0
-        width: 202
-        height: 643
+        width: 203
+        height: 644
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
