@@ -1411,6 +1411,7 @@ MonoBehaviour:
   scrollRange: 115
   scrollSpeed: 1.5
   lerpSpeed: 5
+  sceneScrollbar: {fileID: 0}
 --- !u!1 &6661085187535314367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,10 +2275,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 135
+      objectReference: {fileID: 0}
     - target: {fileID: 6797055020681683397, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_MaxValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8335350002159557210, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc71bd4c4a3e6134e9353995696a2616, type: 3}
     - target: {fileID: 9149244957421012650, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_Name
       value: TopBuilder
@@ -2592,10 +2609,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379660846804467246, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 357
+      objectReference: {fileID: 0}
     - target: {fileID: 6797055020681683397, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_MaxValue
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8335350002159557210, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f47e43edf01ed1e408319ef8a458db68, type: 3}
     - target: {fileID: 9149244957421012650, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
       propertyPath: m_Name
       value: WingsBuilder
