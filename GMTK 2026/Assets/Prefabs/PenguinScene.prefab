@@ -4105,6 +4105,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0]._idleParticleID
+      value: Event_Sleep
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: multiPenguinEvents.Array.data[0].clickProgressIncrement
       value: 0.2
       objectReference: {fileID: 0}

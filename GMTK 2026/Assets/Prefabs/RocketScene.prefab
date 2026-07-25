@@ -994,7 +994,7 @@ MonoBehaviour:
   bubbleData:
     type: 0
     iconSprite: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    _idleParticleID: 
+    _idleParticleID: Event_Sleep
     clickProgressIncrement: 0.125
     fillSpeed: 0
     drainSpeed: 0

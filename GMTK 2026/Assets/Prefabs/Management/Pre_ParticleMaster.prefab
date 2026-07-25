@@ -49,5 +49,7 @@ MonoBehaviour:
     _prefab: {fileID: 6350412805820953488, guid: f5db90290c813804ab7b54029491d9a9, type: 3}
   - _id: Alert_Success
     _prefab: {fileID: 8072399824244248882, guid: c17b8275e8473f64db411548dd8074a5, type: 3}
+  - _id: Event_Sleep
+    _prefab: {fileID: 9201924766907406531, guid: cdb58e7f03d926742af75665178510a9, type: 3}
   _simID: 
   _simParent: {fileID: 0}
