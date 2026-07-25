@@ -35,6 +35,7 @@ public class PenguinRecDisplay : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void HidePopup()
     {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
         Penguin.ResetSelectedPenguin();
         TogglePopup(false);
     }

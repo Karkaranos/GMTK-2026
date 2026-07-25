@@ -45,6 +45,7 @@ public class SectionBuilder : MonoBehaviour
     public void ScrollPart(int direction)
     {
         SelectedPart += direction;
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
     }
 
     public void Build()
@@ -52,6 +53,7 @@ public class SectionBuilder : MonoBehaviour
         buildBar.gameObject.SetActive(true);
         group.interactable = false;
         section.OnBeginBuild(parts[selectedPart]);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
     }
 
     private void OnBarFinish()
