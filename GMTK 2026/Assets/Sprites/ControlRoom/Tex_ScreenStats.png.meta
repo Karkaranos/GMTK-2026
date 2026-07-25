@@ -26,9 +26,6 @@ TextureImporter:
   - first:
       213: -866301495135642023
     second: Tex_ScreenStats_7
-  - first:
-      213: -6053853025321418358
-    second: Tex_ScreenStats_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -215,9 +212,9 @@ TextureImporter:
       name: Tex_ScreenStats_4
       rect:
         serializedVersion: 2
-        x: 82
+        x: 180
         y: 0
-        width: 98
+        width: 34
         height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,10 +234,10 @@ TextureImporter:
       name: Tex_ScreenStats_5
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 34
-        height: 65
+        x: 188
+        y: 65
+        width: 54
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +256,10 @@ TextureImporter:
       name: Tex_ScreenStats_6
       rect:
         serializedVersion: 2
-        x: 188
-        y: 65
-        width: 54
-        height: 20
+        x: 214
+        y: 0
+        width: 30
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,28 +278,6 @@ TextureImporter:
       name: Tex_ScreenStats_7
       rect:
         serializedVersion: 2
-        x: 214
-        y: 0
-        width: 30
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 95edc0a41674af3f0800000000000000
-      internalID: -866301495135642023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tex_ScreenStats_8
-      rect:
-        serializedVersion: 2
         x: 244
         y: 0
         width: 18
@@ -315,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a810b478fb46cfba0800000000000000
-      internalID: -6053853025321418358
+      spriteID: 95edc0a41674af3f0800000000000000
+      internalID: -866301495135642023
       vertices: []
       indices: 
       edges: []
@@ -343,7 +318,6 @@ TextureImporter:
       Tex_ScreenStats_5: 2110224486385318357
       Tex_ScreenStats_6: 2050743071279657144
       Tex_ScreenStats_7: -866301495135642023
-      Tex_ScreenStats_8: -6053853025321418358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
