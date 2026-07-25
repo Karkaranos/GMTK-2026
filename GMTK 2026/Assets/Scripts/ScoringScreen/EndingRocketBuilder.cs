@@ -14,8 +14,11 @@ public class EndingRocketBuilder : MonoBehaviour
     {
         Dictionary<RocketSection, RocketPart> parts = BuildingManager.SavedParts;
 
-        topRend.sprite = parts[RocketSection.Top].Sprite;
-        wingRend.sprite = parts[RocketSection.Wings].Sprite;
-        engineRend.sprite = parts[RocketSection.Engine].Sprite;
+        RocketPart rp = parts[RocketSection.Top];
+        topRend.sprite = rp == null ? null : rp.Sprite;
+        rp = parts[RocketSection.Wings];
+        wingRend.sprite = rp == null ? null : rp.Sprite;
+        rp = parts[RocketSection.Engine];
+        engineRend.sprite = rp == null ? null : rp.Sprite;
     }
 }
