@@ -93,6 +93,138 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &250235428263634113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7826887451236435894}
+  - component: {fileID: 6396581910668568494}
+  m_Layer: 0
+  m_Name: Alert
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7826887451236435894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250235428263634113}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.9, y: 10.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3368560596045975478}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6396581910668568494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250235428263634113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 15
+    height: 15.3
+  spawnPositions: []
+  maxBubblesActive: 2
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 149117166976467226}
+  fillRateDecrementPerBubble: 0.5
+--- !u!1 &347691591522098418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5421755634365193903}
+  - component: {fileID: 611370076834365225}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5421755634365193903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347691591522098418}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.3, y: -12.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080846505794029958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611370076834365225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347691591522098418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Fire
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -8.9
+    y: 3.19
+    width: 13.45
+    height: 20.1
+  spawnPositions: []
+  maxBubblesActive: 3
+  spawnTimeRange: {x: 7.5, y: 11.5}
+  sectionToSlow: {fileID: 6304860418172524001}
+  fillRateDecrementPerBubble: 0.2
 --- !u!1 &442506595768908592
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,72 +503,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &2521711175162095065
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7639366565443315480}
-  - component: {fileID: 2477671960824568704}
-  m_Layer: 0
-  m_Name: Fire
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7639366565443315480
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2521711175162095065}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3368560596045975478}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2477671960824568704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2521711175162095065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
-  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
-  bubbleData:
-    type: 0
-    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    _idleParticleID: Event_Fire
-    clickProgressIncrement: 0.125
-    fillSpeed: 0
-    drainSpeed: 0
-    _gracePeriod: 3
-  targetCanvas: {fileID: 9075374581214844611}
-  randomizeSpawnPosition: 1
-  spawnRect:
-    serializedVersion: 2
-    x: -8.9
-    y: 3.19
-    width: 17.5
-    height: 8.8
-  spawnPositions: []
-  maxBubblesActive: 3
-  spawnTimeRange: {x: 6, y: 10}
-  sectionToSlow: {fileID: 149117166976467226}
-  fillRateDecrementPerBubble: 0.2
 --- !u!1 &2629242495714858423
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +595,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &2633058690959083765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2586621461355614049}
+  - component: {fileID: 5547799173804723262}
+  m_Layer: 0
+  m_Name: Ice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2586621461355614049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633058690959083765}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 10.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080846505794029958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5547799173804723262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633058690959083765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 6.1
+    height: 23.2
+  spawnPositions: []
+  maxBubblesActive: 2
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 6304860418172524001}
+  fillRateDecrementPerBubble: 0.5
 --- !u!1 &3030642502084809165
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +845,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &3450267758991049366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8835775274151279300}
+  - component: {fileID: 7148965839280350671}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8835775274151279300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450267758991049366}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.9, y: -7.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3368560596045975478}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7148965839280350671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450267758991049366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Fire
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -8.9
+    y: 3.19
+    width: 17.5
+    height: 8.8
+  spawnPositions: []
+  maxBubblesActive: 3
+  spawnTimeRange: {x: 7.5, y: 11.5}
+  sectionToSlow: {fileID: 149117166976467226}
+  fillRateDecrementPerBubble: 0.2
 --- !u!1 &3857307350358435505
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +1005,72 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &3999248406065451750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6211345367410815033}
+  - component: {fileID: 7999833246024245719}
+  m_Layer: 0
+  m_Name: Sleeping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6211345367410815033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999248406065451750}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.525027, y: -17.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389962215090923479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7999833246024245719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999248406065451750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Sleep
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 15
+    height: 6.87
+  spawnPositions: []
+  maxBubblesActive: 1
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 3963342759234946864}
+  fillRateDecrementPerBubble: 0.5
 --- !u!1 &4720787762830863782
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,72 +1163,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &5056557253743865375
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8312282401295166889}
-  - component: {fileID: 2257183126346844268}
-  m_Layer: 0
-  m_Name: SleepingWorkers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8312282401295166889
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5056557253743865375}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3368560596045975478}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2257183126346844268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5056557253743865375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
-  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
-  bubbleData:
-    type: 0
-    iconSprite: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
-    _idleParticleID: Event_Sleep
-    clickProgressIncrement: 0.125
-    fillSpeed: 0
-    drainSpeed: 0
-    _gracePeriod: 3
-  targetCanvas: {fileID: 9075374581214844611}
-  randomizeSpawnPosition: 1
-  spawnRect:
-    serializedVersion: 2
-    x: -15.4
-    y: -3.39
-    width: 15
-    height: 3.75
-  spawnPositions: []
-  maxBubblesActive: 1
-  spawnTimeRange: {x: 10, y: 15}
-  sectionToSlow: {fileID: 149117166976467226}
-  fillRateDecrementPerBubble: 0.5
 --- !u!1 &5988701906256833672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1411,72 @@ MonoBehaviour:
   scrollRange: 115
   scrollSpeed: 1.5
   lerpSpeed: 5
+--- !u!1 &6661085187535314367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8581672679360946596}
+  - component: {fileID: 6070140233819181628}
+  m_Layer: 0
+  m_Name: Ice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8581672679360946596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661085187535314367}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.1, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3368560596045975478}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6070140233819181628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6661085187535314367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 15
+    height: 5.45
+  spawnPositions: []
+  maxBubblesActive: 2
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 149117166976467226}
+  fillRateDecrementPerBubble: 0.5
 --- !u!1 &7415785994408578552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,6 +1662,204 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &7748876822072015551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3278667470733994034}
+  - component: {fileID: 3334767868943050496}
+  m_Layer: 0
+  m_Name: Fire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3278667470733994034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748876822072015551}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9, y: -32.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389962215090923479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3334767868943050496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748876822072015551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Fire
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -8.9
+    y: 3.19
+    width: 22.6
+    height: 15.2
+  spawnPositions: []
+  maxBubblesActive: 3
+  spawnTimeRange: {x: 7.5, y: 11.5}
+  sectionToSlow: {fileID: 3963342759234946864}
+  fillRateDecrementPerBubble: 0.2
+--- !u!1 &8072786830347042430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7780646611687976547}
+  - component: {fileID: 1647983959808013957}
+  m_Layer: 0
+  m_Name: Sleeping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7780646611687976547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072786830347042430}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.4, y: -5.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1080846505794029958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647983959808013957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8072786830347042430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Sleep
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: -15.4
+    y: -3.39
+    width: 15
+    height: 6.87
+  spawnPositions: []
+  maxBubblesActive: 1
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 6304860418172524001}
+  fillRateDecrementPerBubble: 0.5
+--- !u!1 &8126142465500825174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4574399923524906038}
+  - component: {fileID: 6377482459039888817}
+  m_Layer: 0
+  m_Name: Ice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4574399923524906038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126142465500825174}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3, y: -6.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389962215090923479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6377482459039888817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126142465500825174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30ede8c98fb5d041beda6e53e31b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipEventBubbleSpawner
+  BubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
+  bubbleData:
+    type: 0
+    iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.125
+    fillSpeed: 0
+    drainSpeed: 0
+    _gracePeriod: 3
+  targetCanvas: {fileID: 9075374581214844611}
+  randomizeSpawnPosition: 1
+  spawnRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 11.7
+    height: 23.2
+  spawnPositions: []
+  maxBubblesActive: 2
+  spawnTimeRange: {x: 11.5, y: 16.5}
+  sectionToSlow: {fileID: 3963342759234946864}
+  fillRateDecrementPerBubble: 0.5
 --- !u!1 &8816212590097557192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +2295,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2820481771715883275, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
   m_PrefabInstance: {fileID: 4405532808441505395}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3963342759234946864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 730435822883234115, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+  m_PrefabInstance: {fileID: 4405532808441505395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889569367649493209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778215bf7d2b81c4a81acc9633d169c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SectionBuilder
 --- !u!1 &4889569367649493209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9149244957421012650, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
@@ -1898,19 +2371,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5643398376703673022, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_Size.x
+      value: 24.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643398376703673022, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_Size.y
+      value: 25.4375
+      objectReference: {fileID: 0}
     - target: {fileID: 5926155582445500069, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 8333009143752764127, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_Size.y
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6846340541368549692, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3278667470733994034}
+    - targetCorrespondingSourceObject: {fileID: 6846340541368549692, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4574399923524906038}
+    - targetCorrespondingSourceObject: {fileID: 6846340541368549692, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6211345367410815033}
+    - targetCorrespondingSourceObject: {fileID: 4807246378336399213, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5421755634365193903}
+    - targetCorrespondingSourceObject: {fileID: 4807246378336399213, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2586621461355614049}
+    - targetCorrespondingSourceObject: {fileID: 4807246378336399213, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7780646611687976547}
     - targetCorrespondingSourceObject: {fileID: 7131095091454126429, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7639366565443315480}
+      addedObject: {fileID: 8835775274151279300}
     - targetCorrespondingSourceObject: {fileID: 7131095091454126429, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8312282401295166889}
+      addedObject: {fileID: 8581672679360946596}
+    - targetCorrespondingSourceObject: {fileID: 7131095091454126429, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7826887451236435894}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
 --- !u!4 &421579369003125790 stripped
@@ -1929,6 +2435,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb1b137c73de854f81abe72c362c693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuildingSection
+--- !u!4 &1080846505794029958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4807246378336399213, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+  m_PrefabInstance: {fileID: 5496983334180710123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1389962215090923479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6846340541368549692, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+  m_PrefabInstance: {fileID: 5496983334180710123}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3303338017545677244 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7034311847252528983, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
@@ -2109,6 +2625,17 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6304860418172524001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 730435822883234115, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
+  m_PrefabInstance: {fileID: 6727351618933945506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568458577960890888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778215bf7d2b81c4a81acc9633d169c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SectionBuilder
 --- !u!224 &8824811844333077929 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2820481771715883275, guid: 7e013ae888180184aa50ee00c55dd39c, type: 3}
