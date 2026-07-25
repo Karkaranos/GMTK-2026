@@ -24,6 +24,8 @@ public class CountdownManager : Manager
         isRunning = true;
         isPaused = false;
 
+        ProgressBar.Cheat(1);
+
         OnTimeChanged?.Invoke(remainingTime);
     }
 
@@ -58,5 +60,15 @@ public class CountdownManager : Manager
     public void SkipToTheEnd()
     {
         remainingTime = 3;
+    }
+    [Button]
+    public void SkipProgressBars()
+    {
+        ProgressBar.Cheat(1000);
+    }
+    [Button]
+    public void StopSkippingProgressBars()
+    {
+        ProgressBar.Cheat(1);
     }
 }
