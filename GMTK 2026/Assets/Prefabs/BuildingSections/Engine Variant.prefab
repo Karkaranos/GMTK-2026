@@ -156,11 +156,11 @@ MonoBehaviour:
       Path: 
     completeSound:
       Guid:
-        Data1: -1383689436
-        Data2: 1164258753
-        Data3: -1637655413
-        Data4: 1767073262
-      Path: event:/Fire
+        Data1: -472736569
+        Data2: 1224101437
+        Data3: -619698757
+        Data4: -1511394367
+      Path: event:/FireOut
   targetCanvas: {fileID: 0}
   randomizeSpawnPosition: 1
   spawnRect:
