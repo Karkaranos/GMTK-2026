@@ -59,7 +59,7 @@ public class CountdownManager : Manager
     [Button]
     public void SkipToTheEnd()
     {
-        remainingTime = 3;
+        remainingTime = 0.5f;
     }
     [Button]
     public void SkipProgressBars()
