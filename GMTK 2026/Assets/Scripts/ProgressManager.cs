@@ -11,6 +11,7 @@ public class ProgressManager : Manager
 
     [SerializeField]
     private float _distanceModifier = 1;
+    [SerializeField] private AnimationCurve scoringCurve;
 
     [SerializeField, ReadOnly]
     private float totalProgress;
@@ -83,7 +84,7 @@ public class ProgressManager : Manager
     #region Calculate
     private void CalculatePerSecondProgress()
     {
-        perSecondProgress = 1 - penguinMan.GetDistractedPercentage();
+        perSecondProgress = scoringCurve.Evaluate(1 - penguinMan.GetDistractedPercentage());
     }
 
     //Calculate total of ship quality. If a part isn't built, 0 quality score for it.
