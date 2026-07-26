@@ -105,6 +105,9 @@ public class AudioManager : MonoBehaviour
             case MusicType.Gameplay:
                 backgroundMusic = CreateEventInstance(FMODEvents.instance.GameplayMusic);
                 break;
+            case MusicType.SadEnding:
+                backgroundMusic = CreateEventInstance(FMODEvents.instance.BadEndingMusic);
+                break;
         }
         backgroundMusic.start();
     }

@@ -4907,61 +4907,73 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3416275952681232826}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: singlePenguinEvents.Array.data[0].clickSound.Path
+      value: event:/UI Click
       objectReference: {fileID: 0}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: singlePenguinEvents.Array.data[0].ambientSound.Path
+      value: event:/Snoring
       objectReference: {fileID: 0}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: singlePenguinEvents.Array.data[0].completeSound.Path
+      value: event:/PenguinWakeUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].clickSound.Guid.Data1
+      value: 1837178418
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].clickSound.Guid.Data2
+      value: 1116657435
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].clickSound.Guid.Data3
+      value: -931052415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].clickSound.Guid.Data4
+      value: 286084437
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].ambientSound.Guid.Data1
+      value: -1737591126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].ambientSound.Guid.Data2
+      value: 1094257110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].ambientSound.Guid.Data3
+      value: 1379625872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].ambientSound.Guid.Data4
+      value: -1294610613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].completeSound.Guid.Data1
+      value: 87934451
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].completeSound.Guid.Data2
+      value: 1272073864
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].completeSound.Guid.Data3
+      value: 1323398078
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0].completeSound.Guid.Data4
+      value: -435954230
       objectReference: {fileID: 0}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3052321130924986723}
     - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3052321130924986723}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndFireAlarm
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartFireAlarm
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AlertEnvironmentManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AlertEnvironmentManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
-      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: m_Name
       value: ControlRoomEventBubbleSpawner

@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using System.Collections;
 
 public class CountdownManager : Manager
 {
@@ -48,7 +49,7 @@ public class CountdownManager : Manager
 
         if (remainingTime <= 0f)
         {
-            Done();
+            StartCoroutine(Done(false));
         }
 
         // this needs to be last in the function because return
@@ -59,9 +60,19 @@ public class CountdownManager : Manager
         funnyButton.gameObject.SetActive(true);
     }
 
-    private void Done()
+    private IEnumerator Done(bool launched)
     {
         isRunning = false;
+        if (launched)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Launch);
+            yield return new WaitForSeconds(10);
+        }
+        else
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Explosion);
+            yield return new WaitForSeconds(1);
+        }
         OnCountdownFinished?.Invoke();
         MenuBehavior.Instance.LoadGameScene(1);
     }
@@ -74,7 +85,7 @@ public class CountdownManager : Manager
     public void ProceedToLaunch()
     {
         ProgressManager.INST.SkipAhead(Mathf.RoundToInt(countdownDuration));
-        Done();
+        StartCoroutine(Done(true));
     }
 
     [Button]
