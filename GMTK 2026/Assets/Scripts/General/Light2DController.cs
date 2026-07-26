@@ -1,7 +1,6 @@
 using MarUtility;
 using NaughtyAttributes;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -59,11 +58,13 @@ public class Light2DController : MonoBehaviour
     [Button]
     private void Simulate()
     {
-        if (!EditorApplication.isPlaying)
+#if UNITY_EDITOR
+        if (!UnityEditor.EditorApplication.isPlaying)
         {
             DebugMessages.SimulationPlaytestOnly();
             return;
         }
+#endif
         BeginLerpIntensity(_simIntensity);
     }
 }
