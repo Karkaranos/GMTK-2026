@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6821919478404687773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cheer
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Cheer
+  Guid:
+    Data1: -1351123301
+    Data2: 1139401354
+    Data3: -1426430589
+    Data4: -900753388
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7471
 --- !u!114 &-6497894426769936796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +216,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2885232855276016829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Launch
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Launch
+  Guid:
+    Data1: -2098535296
+    Data2: 1162616473
+    Data3: 1695538346
+    Data4: -1631623165
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42630
 --- !u!114 &-1943266697834411430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +270,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1494965556949137752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Explosion
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Explosion
+  Guid:
+    Data1: -102968917
+    Data2: 1211095848
+    Data3: 1503640456
+    Data4: -1161084442
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1421148465446812755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,10 +312,10 @@ MonoBehaviour:
   Path: Assets/FMOD Builds/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639206163327035361
+  lastModified: 639206564493759963
   FileSizes:
   - Name: 
-    Value: 1786
+    Value: 2046
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -273,12 +354,18 @@ MonoBehaviour:
   - {fileID: 8866695137947706861}
   - {fileID: -6497894426769936796}
   - {fileID: 77249307259006108}
+  - {fileID: 4629709068612089743}
+  - {fileID: -2885232855276016829}
+  - {fileID: -6821919478404687773}
+  - {fileID: 6272896854181850839}
+  - {fileID: -1494965556949137752}
+  - {fileID: 1337206641968639192}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5954273247740078721}
   StringsBanks:
   - {fileID: -1421148465446812755}
-  cacheTime: 639206163327035361
+  cacheTime: 639206564493759963
   cacheVersion: 131637
 --- !u!114 &77249307259006108
 MonoBehaviour:
@@ -442,6 +529,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1337206641968639192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PenguinWakeUp
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/PenguinWakeUp
+  Guid:
+    Data1: 87934451
+    Data2: 1272073864
+    Data3: 1323398078
+    Data4: -435954230
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2652571299342895075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,6 +665,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4629709068612089743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BadEndingMusic
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BadEndingMusic
+  Guid:
+    Data1: 754418275
+    Data2: 1113318636
+    Data3: 1467112611
+    Data4: 668161277
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66351
 --- !u!114 &4714218301480322775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,9 +758,36 @@ MonoBehaviour:
   Path: Assets/FMOD Builds/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639206163327015156
+  lastModified: 639206564493631452
   FileSizes: []
   Exists: 1
+--- !u!114 &6272896854181850839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Snoring
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Snoring
+  Guid:
+    Data1: -1737591126
+    Data2: 1094257110
+    Data3: 1379625872
+    Data4: -1294610613
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2700
 --- !u!114 &7510366871384383642
 MonoBehaviour:
   m_ObjectHideFlags: 0
