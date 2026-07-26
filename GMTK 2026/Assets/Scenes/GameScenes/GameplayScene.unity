@@ -7733,13 +7733,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.9997932
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 16.875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7764,7 +7764,7 @@ Transform:
   m_GameObject: {fileID: 1254691701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 40, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14018,10 +14018,6 @@ PrefabInstance:
     - target: {fileID: 8649320297318334114, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
-      propertyPath: globalEvents.Array.data[0]._idleParticleID
-      value: Event_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 8753904626245624951, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchorMax.y
