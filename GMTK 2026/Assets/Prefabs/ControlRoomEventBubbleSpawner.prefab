@@ -49,6 +49,7 @@ MonoBehaviour:
   - type: 0
     iconSprite: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Sleep
+    _penguinAnimTrigger: T_SLEEPING
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
@@ -74,10 +75,17 @@ MonoBehaviour:
         Data3: -281467718
         Data4: -1359236868
       Path: event:/Zach Penguin
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   multiPenguinEvents:
   - type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
+    _penguinAnimTrigger: T_FIGHTING
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
@@ -103,10 +111,17 @@ MonoBehaviour:
         Data3: -930204255
         Data4: -752267235
       Path: event:/David Penguin
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   globalEvents:
   - type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
+    _penguinAnimTrigger: T_PANICKING
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
@@ -132,6 +147,12 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   penguins:
   - {fileID: 0}
   - {fileID: 0}
