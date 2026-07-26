@@ -24,7 +24,11 @@ public class RocketMover : MonoBehaviour
     [SerializeField, BoxGroup("References")] private ParticleSystem rocketParticles;
     [SerializeField, BoxGroup("References")] private ParticleSystem _explosionParticles;
     [SerializeField, BoxGroup("Components")] private Rigidbody2D rb;
+    private Animator animator;
     private EndingRocketBuilder rocketBuilder;
+
+    [SerializeField, BoxGroup("Animation")]
+    private string _animExplosionID = "T_EXPLOSION";
 
     private struct FlyTime
     {
@@ -34,6 +38,7 @@ public class RocketMover : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         rocketBuilder = GetComponent<EndingRocketBuilder>();
 
         if (MenuBehavior.Instance == null)
@@ -70,6 +75,7 @@ public class RocketMover : MonoBehaviour
 
         if (rocketBuilder.Parts[RocketSection.Top] == null || rocketBuilder.Parts[RocketSection.Wings] == null || rocketBuilder.Parts[RocketSection.Engine] == null)
         {
+            animator.SetTrigger(_animExplosionID);
             _explosionParticles.Play();
         }
         else
