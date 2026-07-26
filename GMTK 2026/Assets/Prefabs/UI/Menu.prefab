@@ -8786,8 +8786,8 @@ MonoBehaviour:
   sensitivity: {fileID: 4539913174263209676}
   distanceModifier: 150
   bigScore: {fileID: 3359924438804093711}
-  scoreTickSpeed: 60000
-  minScoreTickTime: 1
+  scoreTickSpeed: 6000
+  minScoreTickTime: 1.5
   scoreTickSize: {x: 40, y: 140}
   scoreTickCurve:
     serializedVersion: 2

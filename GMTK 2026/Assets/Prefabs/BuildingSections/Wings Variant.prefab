@@ -49,31 +49,38 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Sleep
+    _penguinAnimTrigger: 
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 3
     ambientSound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1737591126
+        Data2: 1094257110
+        Data3: 1379625872
+        Data4: -1294610613
+      Path: event:/Snoring
     clickSound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1837178418
+        Data2: 1116657435
+        Data3: -931052415
+        Data4: 286084437
+      Path: event:/UI Click
     completeSound:
       Guid:
-        Data1: -1280100940
-        Data2: 1143920600
-        Data3: -281467718
-        Data4: -1359236868
-      Path: event:/Zach Penguin
+        Data1: 87934451
+        Data2: 1272073864
+        Data3: 1323398078
+        Data4: -435954230
+      Path: event:/PenguinWakeUp
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   targetCanvas: {fileID: 0}
   randomizeSpawnPosition: 1
   spawnRect:
@@ -136,6 +143,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: Event_Fire
+    _penguinAnimTrigger: 
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
@@ -149,11 +157,11 @@ MonoBehaviour:
       Path: event:/Fire
     clickSound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1837178418
+        Data2: 1116657435
+        Data3: -931052415
+        Data4: 286084437
+      Path: event:/UI Click
     completeSound:
       Guid:
         Data1: -472736569
@@ -161,6 +169,12 @@ MonoBehaviour:
         Data3: -619698757
         Data4: -1511394367
       Path: event:/FireOut
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   targetCanvas: {fileID: 0}
   randomizeSpawnPosition: 1
   spawnRect:
@@ -223,6 +237,7 @@ MonoBehaviour:
     type: 0
     iconSprite: {fileID: 215299163658943982, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
     _idleParticleID: 
+    _penguinAnimTrigger: 
     clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
@@ -236,18 +251,24 @@ MonoBehaviour:
       Path: 
     clickSound:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
-    completeSound:
-      Guid:
         Data1: 437580306
         Data2: 1328881480
         Data3: 1036061102
         Data4: -65384067
       Path: event:/Ice Shatter
+    completeSound:
+      Guid:
+        Data1: -1818367631
+        Data2: 1259961629
+        Data3: 1542624179
+        Data4: -805494824
+      Path: event:/Ice Fall and Land
+    _onStart:
+      m_PersistentCalls:
+        m_Calls: []
+    _onEnd:
+      m_PersistentCalls:
+        m_Calls: []
   targetCanvas: {fileID: 0}
   randomizeSpawnPosition: 1
   spawnRect:
