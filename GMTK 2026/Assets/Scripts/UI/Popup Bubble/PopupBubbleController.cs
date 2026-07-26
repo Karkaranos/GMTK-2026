@@ -1,8 +1,10 @@
+using FMODUnity;
 using MarUtility.UIExtensions;
 using NaughtyAttributes;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -21,6 +23,8 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
     private Image fadeIconImage;
     [SerializeField, BoxGroup("Components")]
     private Animator _animator;
+    [SerializeField, BoxGroup("Components")]
+    private StudioEventEmitter _ambientEmitter;
 
     //ANIMATION
     [SerializeField, BoxGroup("Animation")]
@@ -48,6 +52,12 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         StartCoroutine(Timer(0.1f));
         if (bubbleData.IdleParticleID != "")
             ParticleMaster.INST.Play(bubbleData.IdleParticleID, transform);
+        if (!bubbleData.ambientSound.IsNull)
+        {
+            _ambientEmitter.EventReference = bubbleData.ambientSound;
+            _ambientEmitter.Play();
+        }
+        bubbleData.OnStart.Invoke();
     }
 
     private void Update()
@@ -83,6 +93,11 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         if (bubbleData.type == PopupBubbleData.Type.Click)
         {
             progress += bubbleData.clickProgressIncrement;
+
+            if (!bubbleData.clickSound.IsNull)
+            {
+                AudioManager.instance.PlayOneShot(bubbleData.clickSound);
+            }
         }
 
         if (progress >= 1)
@@ -140,8 +155,15 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         completed = true;
 
         //little pop sound would be fun
+        _ambientEmitter.Stop();
+
+        if (!bubbleData.completeSound.IsNull)
+        {
+            AudioManager.instance.PlayOneShot(bubbleData.completeSound);
+        }
 
         bubbleData.onComplete?.Invoke();
+        bubbleData.OnEnd.Invoke();
         _animator.SetTrigger(_animCompleteID);
     }
 
@@ -175,10 +197,21 @@ public struct PopupBubbleData
     [SerializeField, Tooltip("How long the pop-up exists before it starts draining progress.")]
     private float _gracePeriod;
 
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference ambientSound;
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference clickSound;
+    [SerializeField, BoxGroup("Sounds"), AllowNesting] public EventReference completeSound;
+
     public Action onComplete;
+
+    [SerializeField]
+    private UnityEvent _onStart;
+    [SerializeField]
+    private UnityEvent _onEnd;
 
     #region GS
     public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
     public string IdleParticleID { get => _idleParticleID; set => _idleParticleID = value; }
+    public UnityEvent OnStart { get => _onStart; set => _onStart = value; }
+    public UnityEvent OnEnd { get => _onEnd; set => _onEnd = value; }
     #endregion
 }

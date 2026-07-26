@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using NaughtyAttributes;
 using System;
 using UnityEngine;
@@ -8,6 +10,7 @@ using UnityEngine;
 public class BuildingSection : MonoBehaviour
 {
     [SerializeField, BoxGroup("Components")] private SpriteRenderer rend;
+    [SerializeField, BoxGroup("Components")] private StudioEventEmitter buildingSoundEmitter;
     [SerializeField] private RocketSection section;
     [SerializeField, BoxGroup("References")] private ParticleSystem buildingParticles;
     [field: SerializeField, BoxGroup("References")] public ProgressBar BuildingBar { get; set; }
@@ -15,6 +18,7 @@ public class BuildingSection : MonoBehaviour
     private RocketPart part;
     private RocketPart buildingPart;
     private ShipEventBubbleSpawner[] eventSpawners;
+
 
     public RocketSection Section => section;
     public RocketPart Part => part;
@@ -51,6 +55,7 @@ public class BuildingSection : MonoBehaviour
 
     public void OnBeginBuild(RocketPart buildingPart)
     {
+        buildingSoundEmitter.Play();
         this.buildingPart = buildingPart;
         var shapeMod = buildingParticles.shape;
         shapeMod.sprite = buildingPart.Sprite;
@@ -70,6 +75,7 @@ public class BuildingSection : MonoBehaviour
 
     public void OnEndBuild()
     {
+        buildingSoundEmitter.Stop();
         SetPart(buildingPart);
         buildingParticles.Stop();
         ToggleEventSpawners(false);

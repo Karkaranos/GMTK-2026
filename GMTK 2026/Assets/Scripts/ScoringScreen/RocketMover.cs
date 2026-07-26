@@ -22,7 +22,13 @@ public class RocketMover : MonoBehaviour
 
     [SerializeField, BoxGroup("References")] private CinemachineCamera rocketCam;
     [SerializeField, BoxGroup("References")] private ParticleSystem rocketParticles;
+    [SerializeField, BoxGroup("References")] private ParticleSystem _explosionParticles;
     [SerializeField, BoxGroup("Components")] private Rigidbody2D rb;
+    private Animator animator;
+    private EndingRocketBuilder rocketBuilder;
+
+    [SerializeField, BoxGroup("Animation")]
+    private string _animExplosionID = "T_EXPLOSION";
 
     private struct FlyTime
     {
@@ -32,6 +38,9 @@ public class RocketMover : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        rocketBuilder = GetComponent<EndingRocketBuilder>();
+
         if (MenuBehavior.Instance == null)
         {
             Debug.LogWarning("Didn't start in title scene; automatic launch canceled; use inspector buttons to test launch");
@@ -62,45 +71,57 @@ public class RocketMover : MonoBehaviour
         yield return new WaitForSeconds(launchDelay);
         // Calculate the time the rocket needs to accelerate, decellerate, and fly at a constant speed.
 
-        FlyTime times = GetFlyTimes(flyDistance);
+        float flownHeight = 0;
 
-        float baseGravityScale = rb.gravityScale;
-        rb.gravityScale = 0;
-
-        float velocity = 0;
-        // Accelerate to max speed.
-        float timer = times.accelerateTime;
-        while(timer > 0)
+        if (rocketBuilder.Parts[RocketSection.Top] == null || rocketBuilder.Parts[RocketSection.Wings] == null || rocketBuilder.Parts[RocketSection.Engine] == null)
         {
-            velocity = Mathf.MoveTowards(velocity, rocketSpeed, rocketAcceleration * Time.deltaTime);
-
-            rb.linearVelocityY = velocity;
-            timer -= Time.deltaTime;
-            yield return null;
+            animator.SetTrigger(_animExplosionID);
+            _explosionParticles.Play();
         }
-
-        // Move at a constant speed.
-        yield return new WaitForSeconds(times.constantSpeedTime);
-        rocketParticles.Stop();
-
-        timer = times.accelerateTime;
-        while (timer > 0)
+        else
         {
-            velocity = Mathf.MoveTowards(velocity, driftSpeed, rocketAcceleration * Time.deltaTime);
 
-            rb.linearVelocityY = velocity;
-            timer -= Time.deltaTime;
-            yield return null;
+            FlyTime times = GetFlyTimes(flyDistance);
+
+            float baseGravityScale = rb.gravityScale;
+            rb.gravityScale = 0;
+
+            float velocity = 0;
+            // Accelerate to max speed.
+            float timer = times.accelerateTime;
+            while (timer > 0)
+            {
+                velocity = Mathf.MoveTowards(velocity, rocketSpeed, rocketAcceleration * Time.deltaTime);
+
+                rb.linearVelocityY = velocity;
+                timer -= Time.deltaTime;
+                yield return null;
+            }
+
+            // Move at a constant speed.
+            yield return new WaitForSeconds(times.constantSpeedTime);
+            rocketParticles.Stop();
+
+            timer = times.accelerateTime;
+            while (timer > 0)
+            {
+                velocity = Mathf.MoveTowards(velocity, driftSpeed, rocketAcceleration * Time.deltaTime);
+
+                rb.linearVelocityY = velocity;
+                timer -= Time.deltaTime;
+                yield return null;
+            }
+
+            flownHeight = rb.position.y;
+            //Reapply gravity based on how far the rocket traveled.
+            float normalizedGravDistance = Mathf.Clamp01(flownHeight / maxGravityFieldDistance);
+            rb.gravityScale = baseGravityScale * (1 - gravityFalloffCurve.Evaluate(normalizedGravDistance));
+            rocketCam.Follow = null;
+
+            // Capture the max reached height.
+            Debug.Log(rb.position.y);
+
         }
-
-        float flownHeight = rb.position.y;
-        //Reapply gravity based on how far the rocket traveled.
-        float normalizedGravDistance = Mathf.Clamp01(flownHeight / maxGravityFieldDistance);
-        rb.gravityScale = baseGravityScale * (1 - gravityFalloffCurve.Evaluate(normalizedGravDistance));
-        rocketCam.Follow = null;
-
-        // Capture the max reached height.
-        Debug.Log(rb.position.y);
 
         yield return new WaitForSeconds(menuDelay);
 
