@@ -8733,6 +8733,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6304860418172524001}
     - target: {fileID: 2959569003377104946, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: spawnRect.x
+      value: -12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959569003377104946, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 9075374581214844611}
@@ -8740,6 +8744,10 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 2959569003377104946, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: spawnRect.width
+      value: 11.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3023986924483110060, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7
@@ -8837,6 +8845,10 @@ PrefabInstance:
       value: Rocket
       objectReference: {fileID: 0}
     - target: {fileID: 6596454867107297268, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: spawnRect.x
+      value: -12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596454867107297268, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
       objectReference: {fileID: 9075374581214844611}
@@ -8844,6 +8856,10 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 3963342759234946864}
+    - target: {fileID: 6596454867107297268, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: spawnRect.width
+      value: 11.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7299400079189910293, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
