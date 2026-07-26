@@ -14019,6 +14019,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: globalEvents.Array.data[0]._idleParticleID
+      value: Event_Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 8753904626245624951, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
