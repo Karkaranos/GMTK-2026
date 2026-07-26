@@ -455,6 +455,56 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1981341077374854158, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981341077374854158, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981341077374854158, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981341077374854158, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535032559432355793, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_text
+      value: '(Programming, Design)
+
+        (Programming, Design)
+
+        (Programming,
+        Design)
+
+        (Programming)
+
+
+        (Art, UI)
+
+        (Art, UI, Programming)
+
+        (Art,
+        SFX)
+
+
+        (SFX, Programming)
+
+        (Music, SFX, Programming)
+
+        (Music,
+        SFX)
+
+
+        (Producer, Design)
+
+        (Design)
+
+        (Ideas Guy) '
+      objectReference: {fileID: 0}
     - target: {fileID: 3114640637328323217, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -538,6 +588,22 @@ PrefabInstance:
     - target: {fileID: 6606174048273140913, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
       propertyPath: m_Name
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887208807484727018, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887208807484727018, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887208807484727018, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7887208807484727018, guid: 5c242af735b6cb647a5f1e211df17222, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
