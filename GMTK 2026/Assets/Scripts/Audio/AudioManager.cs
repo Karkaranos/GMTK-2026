@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
     /// <summary>
     /// Gets a reference to busses
     /// </summary>
-    private void Start()
+    private void Awake()
     {
         if (instance != null)
         {

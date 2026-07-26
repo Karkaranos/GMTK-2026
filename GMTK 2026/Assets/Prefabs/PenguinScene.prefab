@@ -3474,6 +3474,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7563586887833097606, guid: 0ee90d5c5d6f0eb4abd82259dec5c81b, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 8795908250881524124, guid: 0ee90d5c5d6f0eb4abd82259dec5c81b, type: 3}
       propertyPath: m_Name
       value: RecommendationPoup
