@@ -94,6 +94,7 @@ public class SceneScroller : MonoBehaviour
     {
         lerpRoutine.StopCoroutine();
         ScrollLocation = (normalizedValue * scrollRange) - (scrollRange / 2);
+        TargetScrollLocation = ScrollLocation;
     }
 
     private void OnDrawGizmosSelected()

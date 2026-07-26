@@ -2627,8 +2627,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -367360151
+  m_SortingLayer: -1
   m_SortingOrder: -32
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 6815823dc8ef49c49bbfe73841534c4a, type: 3}
@@ -4215,9 +4215,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -20
+  m_SortingLayerID: -367360151
+  m_SortingLayer: -1
+  m_SortingOrder: -15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d521bc096352c4642bb5b750d8bc4c05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5040,6 +5040,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1267135512}
+        m_TargetAssemblyTypeName: SceneScroller, Assembly-CSharp
+        m_MethodName: SetScrollNormalized
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1410229076}
         m_TargetAssemblyTypeName: SceneScroller, Assembly-CSharp
         m_MethodName: SetScrollNormalized
         m_Mode: 0
@@ -7732,14 +7744,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 0.9997932
-    height: 1
+    y: 0.055555556
+    width: 0.33333334
+    height: 0.3333333
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.875
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7764,7 +7776,7 @@ Transform:
   m_GameObject: {fileID: 1254691701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9180,8 +9192,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -367360151
+  m_SortingLayer: -1
   m_SortingOrder: -20
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 053d95587d6eaf341afdaa092bea1504, type: 3}
@@ -10121,9 +10133,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -367360151
+  m_SortingLayer: -1
+  m_SortingOrder: -15
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: d521bc096352c4642bb5b750d8bc4c05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14098,6 +14110,10 @@ PrefabInstance:
     - target: {fileID: 8649320297318334114, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: globalEvents.Array.data[0]._idleParticleID
+      value: Event_Fire
       objectReference: {fileID: 0}
     - target: {fileID: 8753904626245624951, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchorMax.y
