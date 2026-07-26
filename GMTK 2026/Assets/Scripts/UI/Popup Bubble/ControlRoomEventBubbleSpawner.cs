@@ -119,7 +119,7 @@ public class ControlRoomEventBubbleSpawner : MonoBehaviour
         instance.transform.position = worldPos;
 
         foreach (var penguin in affectedPenguins)
-            penguin.AddDistraction();
+            penguin.AddDistraction(data.AnimTrigger);
 
         controller.bubbleData = data;
         controller.IconImage.sprite = data.iconSprite;

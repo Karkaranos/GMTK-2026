@@ -4412,6 +4412,18 @@ PrefabInstance:
       propertyPath: 'penguins.Array.data[14]'
       value: 
       objectReference: {fileID: 3416275952681232826}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._penguinAnimTrigger
+      value: T_PANICKING
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0]._penguinAnimTrigger
+      value: T_FIGHTING
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: singlePenguinEvents.Array.data[0]._penguinAnimTrigger
+      value: T_SLEEPING
+      objectReference: {fileID: 0}
     - target: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: m_Name
       value: ControlRoomEventBubbleSpawner

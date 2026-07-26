@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: T_FIGHTING
+    m_ConditionEvent: IsDistracted
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8480473044581505109}
@@ -61,7 +61,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: T_PANICKING
+    m_ConditionEvent: IsDistracted
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8480473044581505109}
@@ -86,7 +86,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: T_SLEEPING
+    m_ConditionEvent: IsDistracted
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8480473044581505109}
@@ -140,6 +140,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: T_FIGHTING
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsDistracted
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2516353765294571159}
   m_Solo: 0
@@ -163,20 +166,26 @@ AnimatorController:
   m_Name: ComputerPenguin
   serializedVersion: 6
   m_AnimatorParameters:
-  - m_Name: T_FIGHTING
+  - m_Name: IsDistracted
     m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: T_FIGHTING
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: T_SLEEPING
-    m_Type: 4
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: T_PANICKING
-    m_Type: 4
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -240,6 +249,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: T_PANICKING
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsDistracted
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4185782873023219276}
   m_Solo: 0
@@ -264,6 +276,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: T_SLEEPING
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsDistracted
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8258397501196693075}

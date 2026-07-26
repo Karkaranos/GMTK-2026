@@ -182,6 +182,9 @@ public struct PopupBubbleData
     [SerializeField, Tooltip("The particle playing while the popup exists.\nEx. Put out fire plays fire.")]
     private string _idleParticleID;
 
+    [SerializeField, Tooltip("The animation to play on affected penguins.")]
+    private string _penguinAnimTrigger;
+
     [Tooltip("Percent progress filled by a single click (1.0 is 100% completed)")]
     public float clickProgressIncrement;
 
@@ -203,5 +206,6 @@ public struct PopupBubbleData
     #region GS
     public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
     public string IdleParticleID { get => _idleParticleID; set => _idleParticleID = value; }
+    public string AnimTrigger => _penguinAnimTrigger;
     #endregion
 }

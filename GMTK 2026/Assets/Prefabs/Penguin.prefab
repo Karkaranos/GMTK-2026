@@ -61,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 41c2b845ee46b2340960938cf1775533, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c62b6645878bd7499c4e3717c4fbce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PenguinRecomendation
-  selectedColor: {r: 0.3764706, g: 0.34117648, b: 0.8039216, a: 1}
+  selectedColor: {r: 0.14884686, g: 0.25177637, b: 0.8930817, a: 1}
   rend: {fileID: 844107620817959322}
+  anim: {fileID: 4902839641509602511}
 --- !u!95 &4902839641509602511
 Animator:
   serializedVersion: 7
