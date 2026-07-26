@@ -103,6 +103,7 @@ public class ShipEventBubbleSpawner : MonoBehaviour
     {
         GameObject instance = Instantiate(BubblePrefab, targetCanvas.transform);
         PopupBubbleController bubbleController = instance.transform.GetComponent<PopupBubbleController>();
+        PopupIndicatorHandler.Instance.AddPopup(instance.transform);
 
         int posIndex = -1;
 
@@ -129,7 +130,12 @@ public class ShipEventBubbleSpawner : MonoBehaviour
         bubbleController.IconImage.sprite = data.iconSprite;
         bubbleController.FadeIconImage.sprite = data.iconSprite;
 
-        bubbleController.bubbleData.onComplete = () => { BubblePopped(bubbleController); if (!randomizeSpawnPosition) positionsInUse[posIndex] = false; };
+        bubbleController.bubbleData.onComplete = () =>
+        {
+            BubblePopped(bubbleController);
+            if (!randomizeSpawnPosition) positionsInUse[posIndex] = false;
+            PopupIndicatorHandler.Instance.RemovePopup(instance.transform);
+        };
 
         sectionToSlow.buildBar.FillRate -= fillRateDecrementPerBubble;
 
