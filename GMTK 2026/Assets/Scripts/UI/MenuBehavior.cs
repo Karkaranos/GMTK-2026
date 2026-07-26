@@ -51,6 +51,10 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, BoxGroup("Launch")] private string newHighScoreMessage;
     [SerializeField, BoxGroup("Launch")] private string oldHighScoreMessage;
     [SerializeField, BoxGroup("Launch"), Required] private TMP_Text newHighScore;
+    [SerializeField, BoxGroup("Launch")] private bool showTips;
+    [SerializeField, BoxGroup("Launch"), ShowIf(nameof(showTips))] private string[] tips;
+    [SerializeField, BoxGroup("Launch"), ShowIf(nameof(showTips))] private float heightTipThreshold = 100;
+    [SerializeField, BoxGroup("Launch"), ShowIf(nameof(showTips)), Required] private TMP_Text tipText;
 
     public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
 
@@ -189,6 +193,7 @@ public class MenuBehavior : MonoBehaviour
 
     public IEnumerator LaunchComplete(float flownHeight)
     {
+        tipText.gameObject.SetActive(false);
         flownHeight *= distanceModifier;
         postLaunchMenu.SetActive(true);
         postLaunchData.gameObject.SetActive(false);
@@ -220,6 +225,12 @@ public class MenuBehavior : MonoBehaviour
         {
             newHighScore.text = newHighScoreMessage;
             PlayerPrefs.SetInt("score", Mathf.RoundToInt(flownHeight));
+        }
+
+        if (showTips && flownHeight < heightTipThreshold)
+        {
+            tipText.gameObject.SetActive(true);
+            tipText.text = tips[Random.Range(0, tips.Length)];
         }
     }
 
