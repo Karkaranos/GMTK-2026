@@ -919,7 +919,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!95 &3346590312971957313
@@ -4752,7 +4752,7 @@ SpriteRenderer:
   m_Size: {x: 1.75, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
 --- !u!95 &3435453215005981023
@@ -8688,6 +8688,10 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 149117166976467226}
+    - target: {fileID: 700068117499110044, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7
+      objectReference: {fileID: 0}
     - target: {fileID: 873119295651863207, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
@@ -8736,6 +8740,10 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 3023986924483110060, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3067025179676389356, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
@@ -8760,6 +8768,10 @@ PrefabInstance:
       propertyPath: sectionToSlow
       value: 
       objectReference: {fileID: 6304860418172524001}
+    - target: {fileID: 3765729986478803709, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5022818725996662497, guid: 5f5d2f14ede270143b483d4614531b9e, type: 3}
       propertyPath: targetCanvas
       value: 
