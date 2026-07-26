@@ -12,6 +12,9 @@ public class ProgressManager : Manager
     [SerializeField]
     private float _distanceModifier = 1;
     [SerializeField] private AnimationCurve scoringCurve;
+    private float internalTime;
+    private int ticks;
+    private bool forceFullPoints;
 
     [SerializeField, ReadOnly]
     private float totalProgress;
@@ -60,16 +63,34 @@ public class ProgressManager : Manager
 
     private IEnumerator Tick()
     {
+        internalTime = Time.time;
         while (true)
         {
-            yield return new WaitForSeconds(_tick);
+            // Prevents the slow desyncing of time compared to using WaitForSeconds
+            yield return new WaitUntil(() => Time.time >= internalTime + _tick);
+            TickLogic();
+        }
+    }
 
-            CalculatePerSecondProgress();
-            AddProgress(perSecondProgress);
+    private void TickLogic()
+    {
+        internalTime += _tick;
+        ticks++;
 
-            CalculateShipQuality();
+        CalculatePerSecondProgress();
+        AddProgress(perSecondProgress);
 
-            CalculateDistanceFlown();
+        CalculateShipQuality();
+
+        CalculateDistanceFlown();
+    }
+
+    public void SkipAhead(int timerLength)
+    {
+        forceFullPoints = true;
+        while (ticks < timerLength)
+        {
+            TickLogic();
         }
     }
 
@@ -84,7 +105,8 @@ public class ProgressManager : Manager
     #region Calculate
     private void CalculatePerSecondProgress()
     {
-        perSecondProgress = scoringCurve.Evaluate(1 - penguinMan.GetDistractedPercentage());
+        if (forceFullPoints) perSecondProgress = scoringCurve.Evaluate(1);
+        else perSecondProgress = scoringCurve.Evaluate(1 - penguinMan.GetDistractedPercentage());
     }
 
     //Calculate total of ship quality. If a part isn't built, 0 quality score for it.

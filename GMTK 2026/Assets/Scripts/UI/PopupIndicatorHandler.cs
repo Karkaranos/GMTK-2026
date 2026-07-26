@@ -43,6 +43,7 @@ public class PopupIndicatorHandler : MonoBehaviour
     public void AddPopup(Transform t)
     {
         popups.Add(t, Instantiate(prefab, canvas.transform).GetComponent<RectTransform>());
+        popups[t].gameObject.SetActive(false);
     }
 
     public void RemovePopup(Transform t)
