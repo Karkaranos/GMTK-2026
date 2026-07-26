@@ -21,6 +21,8 @@ public class CountdownManager : Manager
     public event Action<float> OnTimeChanged;
     public static event Action OnCountdownFinished;
 
+    private bool calledAudio;
+
     public override void Initialize()
     {
         remainingTime = countdownDuration;
@@ -49,7 +51,13 @@ public class CountdownManager : Manager
 
         if (remainingTime <= 0f)
         {
-            StartCoroutine(Done(false));
+            Done();
+        }
+
+        if(remainingTime <= 12f && !calledAudio)
+        {
+            calledAudio = true;
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Countdown);
         }
 
         // this needs to be last in the function because return
@@ -60,19 +68,10 @@ public class CountdownManager : Manager
         funnyButton.gameObject.SetActive(true);
     }
 
-    private IEnumerator Done(bool launched)
+    private void Done()
     {
         isRunning = false;
-        if (launched)
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.Launch);
-            yield return new WaitForSeconds(10);
-        }
-        else
-        {
-            AudioManager.instance.PlayOneShot(FMODEvents.instance.Explosion);
-            yield return new WaitForSeconds(1);
-        }
+
         OnCountdownFinished?.Invoke();
         MenuBehavior.Instance.LoadGameScene(1);
     }
@@ -85,7 +84,7 @@ public class CountdownManager : Manager
     public void ProceedToLaunch()
     {
         ProgressManager.INST.SkipAhead(Mathf.RoundToInt(countdownDuration));
-        StartCoroutine(Done(true));
+        Done();
     }
 
     [Button]

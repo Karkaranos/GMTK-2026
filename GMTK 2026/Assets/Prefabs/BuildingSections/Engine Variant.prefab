@@ -56,11 +56,11 @@ MonoBehaviour:
     _gracePeriod: 3
     ambientSound:
       Guid:
-        Data1: -1737591126
-        Data2: 1094257110
-        Data3: 1379625872
-        Data4: -1294610613
-      Path: event:/Snoring
+        Data1: -1609586305
+        Data2: 1313656983
+        Data3: -1529737030
+        Data4: 156616737
+      Path: event:/ComputerGlitch
     clickSound:
       Guid:
         Data1: 1837178418
@@ -70,11 +70,11 @@ MonoBehaviour:
       Path: event:/UI Click
     completeSound:
       Guid:
-        Data1: 87934451
-        Data2: 1272073864
-        Data3: 1323398078
-        Data4: -435954230
-      Path: event:/PenguinWakeUp
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
     _onStart:
       m_PersistentCalls:
         m_Calls: []

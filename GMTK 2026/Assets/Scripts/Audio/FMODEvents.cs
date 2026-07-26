@@ -30,11 +30,14 @@ public class FMODEvents : MonoBehaviour
     [SerializeField, Foldout("SFX")] public EventReference Game;
     [SerializeField, Foldout("SFX")] public EventReference ComputerGlitch;
     [SerializeField, Foldout("SFX")] public EventReference Beat;
+    [SerializeField, Foldout("SFX")] public EventReference Countdown;
     [SerializeField, Foldout("SFX")] public EventReference Launch;
     [SerializeField, Foldout("SFX")] public EventReference Cheer;
     [SerializeField, Foldout("SFX")] public EventReference Explosion;
     [SerializeField, Foldout("SFX")] public EventReference Snoring;
     [SerializeField, Foldout("SFX")] public EventReference WakeUp;
+    [SerializeField, Foldout("SFX")] public EventReference Fight;
+    [SerializeField, Foldout("SFX")] public EventReference Score;
 
     [SerializeField, Foldout("Test Sounds")] public EventReference Master;
     [SerializeField, Foldout("Test Sounds")] public EventReference SFX;

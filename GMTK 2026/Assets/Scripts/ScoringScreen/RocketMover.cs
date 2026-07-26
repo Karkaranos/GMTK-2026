@@ -81,12 +81,14 @@ public class RocketMover : MonoBehaviour
         {
             animator.SetTrigger(_animExplosionID);
             _explosionParticles.Play();
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Explosion);
         }
         else
         {
 
             FlyTime times = GetFlyTimes(flyDistance);
 
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Launch);
             
 
             float velocity = 0;

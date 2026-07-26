@@ -194,6 +194,13 @@ MonoBehaviour:
       Data3: -1373569101
       Data4: -1988611906
     Path: event:/Beat
+  Countdown:
+    Guid:
+      Data1: -2098535296
+      Data2: 1162616473
+      Data3: 1695538346
+      Data4: -1631623165
+    Path: event:/Launch
   Launch:
     Guid:
       Data1: -2098535296
@@ -229,6 +236,20 @@ MonoBehaviour:
       Data3: 1323398078
       Data4: -435954230
     Path: event:/PenguinWakeUp
+  Fight:
+    Guid:
+      Data1: 441418407
+      Data2: 1245201898
+      Data3: 29842844
+      Data4: 303639864
+    Path: event:/Fight
+  Score:
+    Guid:
+      Data1: -1730453914
+      Data2: 1312177221
+      Data3: -855506551
+      Data4: 190652663
+    Path: event:/HighScore
   Master:
     Guid:
       Data1: 196027296
