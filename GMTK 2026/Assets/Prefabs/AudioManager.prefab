@@ -203,11 +203,11 @@ MonoBehaviour:
     Path: event:/Launch
   Launch:
     Guid:
-      Data1: -2098535296
-      Data2: 1162616473
-      Data3: 1695538346
-      Data4: -1631623165
-    Path: event:/Launch
+      Data1: 443617609
+      Data2: 1205338172
+      Data3: -1333295938
+      Data4: -489296993
+    Path: event:/LaunchUp
   Cheer:
     Guid:
       Data1: -1351123301
