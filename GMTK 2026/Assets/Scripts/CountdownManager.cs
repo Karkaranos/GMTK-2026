@@ -54,7 +54,7 @@ public class CountdownManager : Manager
             Done();
         }
 
-        if(remainingTime <= 13f && !calledAudio)
+        if(remainingTime <= 13f && remainingTime >= 12f && !calledAudio)
         {
             calledAudio = true;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Countdown);
