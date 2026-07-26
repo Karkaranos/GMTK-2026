@@ -7739,7 +7739,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16.875
+  orthographic size: 5.625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7764,7 +7764,7 @@ Transform:
   m_GameObject: {fileID: 1254691701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14097,6 +14097,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8649320297318334114, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].ambientSound.Path
+      value: event:/Fight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].completeSound.Path
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].ambientSound.Guid.Data1
+      value: 441418407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].ambientSound.Guid.Data2
+      value: 1245201898
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].ambientSound.Guid.Data3
+      value: 29842844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].ambientSound.Guid.Data4
+      value: 303639864
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].completeSound.Guid.Data1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].completeSound.Guid.Data2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].completeSound.Guid.Data3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658168433266203389, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
+      propertyPath: multiPenguinEvents.Array.data[0].completeSound.Guid.Data4
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8753904626245624951, guid: 7f3e3ee86fdf3f64a8250f82159a854c, type: 3}
