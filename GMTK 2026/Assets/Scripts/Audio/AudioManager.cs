@@ -94,6 +94,21 @@ public class AudioManager : MonoBehaviour
         musicBus.setVolume(MusicVolume);
     }
 
+    public void SetMusic(MusicType musicType)
+    {
+        backgroundMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        switch(musicType)
+        {
+            case MusicType.Menu:
+                backgroundMusic = CreateEventInstance(FMODEvents.instance.MenuMusic);
+                break;
+            case MusicType.Gameplay:
+                backgroundMusic = CreateEventInstance(FMODEvents.instance.GameplayMusic);
+                break;
+        }
+        backgroundMusic.start();
+    }
+
     /// <summary>
     /// Stops any background music when this object is destroyed
     /// </summary>
