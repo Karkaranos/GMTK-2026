@@ -3,32 +3,23 @@ guid: 72d9692bfbbc793428d4a777b3a80c15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2699721380527466488
-    second: pixilart-sprite (7)_0
+      213: 1757868297604733656
+    second: Penguin_2_0
   - first:
-      213: -6317328553093526140
-    second: pixilart-sprite (7)_1
+      213: 7342652088706610771
+    second: Penguin_2_1
   - first:
-      213: -4293931877964787223
-    second: pixilart-sprite (7)_2
+      213: 7240863005025608286
+    second: Penguin_2_2
   - first:
-      213: -7534931932984655772
-    second: pixilart-sprite (7)_3
+      213: -9117857830907093302
+    second: Penguin_2_3
   - first:
-      213: 9135284674282138978
-    second: pixilart-sprite (7)_4
+      213: 7234486359579007729
+    second: Penguin_2_4
   - first:
-      213: 800262850943670068
-    second: pixilart-sprite (7)_5
-  - first:
-      213: 6274502120886714153
-    second: pixilart-sprite (7)_6
-  - first:
-      213: 1074096326220525701
-    second: pixilart-sprite (7)_7
-  - first:
-      213: 8689843405515316638
-    second: pixilart-sprite (7)_8
+      213: -3341333748406938165
+    second: Penguin_2_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -124,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-sprite (7)_0
+      name: Penguin_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f7edd6ba46577520800000000000000
-      internalID: 2699721380527466488
+      spriteID: 8da96a037e3356810800000000000000
+      internalID: 1757868297604733656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (7)_1
+      name: Penguin_2_1
       rect:
         serializedVersion: 2
         x: 28
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 48d8d6fc6275458a0800000000000000
-      internalID: -6317328553093526140
+      spriteID: 35633a0fb2756e560800000000000000
+      internalID: 7342652088706610771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (7)_2
+      name: Penguin_2_2
       rect:
         serializedVersion: 2
         x: 56
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e1de2c05b3e864c0800000000000000
-      internalID: -4293931877964787223
+      spriteID: e52a1d11a86bc7460800000000000000
+      internalID: 7240863005025608286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (7)_3
+      name: Penguin_2_3
       rect:
         serializedVersion: 2
         x: 84
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 460c3b7245b8e6790800000000000000
-      internalID: -7534931932984655772
+      spriteID: aced44c7c9cd67180800000000000000
+      internalID: -9117857830907093302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (7)_4
+      name: Penguin_2_4
       rect:
         serializedVersion: 2
         x: 112
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26d28aca20d07ce70800000000000000
-      internalID: 9135284674282138978
+      spriteID: 1fa9d1b930f066460800000000000000
+      internalID: 7234486359579007729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixilart-sprite (7)_5
+      name: Penguin_2_5
       rect:
         serializedVersion: 2
         x: 140
         y: 0
         width: 28
-        height: 36
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 437507da2da1b1b00800000000000000
-      internalID: 800262850943670068
+      spriteID: bc51e22b8a231a1d0800000000000000
+      internalID: -3341333748406938165
       vertices: []
       indices: 
       edges: []
@@ -259,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 98475144e0a53394192f52290647f03a
+    spriteID: 29e99c970c7aefc4b969a26048a52af5
     internalID: 0
     vertices: []
     indices: 
@@ -269,14 +260,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":28.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":28.0,"y":38.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      pixilart-sprite (7)_0: 2699721380527466488
-      pixilart-sprite (7)_1: -6317328553093526140
-      pixilart-sprite (7)_2: -4293931877964787223
-      pixilart-sprite (7)_3: -7534931932984655772
-      pixilart-sprite (7)_4: 9135284674282138978
-      pixilart-sprite (7)_5: 800262850943670068
+      Penguin_2_0: 1757868297604733656
+      Penguin_2_1: 7342652088706610771
+      Penguin_2_2: 7240863005025608286
+      Penguin_2_3: -9117857830907093302
+      Penguin_2_4: 7234486359579007729
+      Penguin_2_5: -3341333748406938165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
