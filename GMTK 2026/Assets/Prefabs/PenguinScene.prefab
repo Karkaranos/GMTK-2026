@@ -4412,6 +4412,62 @@ PrefabInstance:
       propertyPath: 'penguins.Array.data[14]'
       value: 
       objectReference: {fileID: 3416275952681232826}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3052321130924986723}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3052321130924986723}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndFireAlarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartFireAlarm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AlertEnvironmentManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AlertEnvironmentManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432255878540201795, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      propertyPath: globalEvents.Array.data[0]._onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
       propertyPath: m_Name
       value: ControlRoomEventBubbleSpawner
@@ -4419,8 +4475,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3052321130924986723}
   m_SourcePrefab: {fileID: 100100000, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+--- !u!1 &2624780211448616510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7045988124434695040, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
+  m_PrefabInstance: {fileID: 5018548666123916734}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3052321130924986723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624780211448616510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647ebfdf7de12644ba245fa0ef0feb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlertEnvironmentManager
+  _fireAlarmAnimator: {fileID: 3790555227095150952}
+  _animFireAlarmOnID: B_ON
 --- !u!4 &4870807516276027329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449764907982584447, guid: 2525aa85c272ae3439b7a50b3920e07d, type: 3}
