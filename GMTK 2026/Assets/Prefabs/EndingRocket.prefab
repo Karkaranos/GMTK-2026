@@ -157,6 +157,7 @@ MonoBehaviour:
   debugHeight: 60
   rocketCam: {fileID: 0}
   rocketParticles: {fileID: 6654902441313934263}
+  _explosionParticles: {fileID: 3941984377306658508}
   rb: {fileID: 6948407583173311499}
 --- !u!114 &3069592192474385423
 MonoBehaviour:
@@ -5206,5 +5207,10 @@ PrefabInstance:
 --- !u!4 &386782025641530302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4216898851587315595, guid: a4a32434ef178c84b92e46e9d86f961c, type: 3}
+  m_PrefabInstance: {fileID: 4601358418136253493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3941984377306658508 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 680029241403994873, guid: a4a32434ef178c84b92e46e9d86f961c, type: 3}
   m_PrefabInstance: {fileID: 4601358418136253493}
   m_PrefabAsset: {fileID: 0}
