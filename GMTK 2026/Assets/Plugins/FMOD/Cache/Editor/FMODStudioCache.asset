@@ -129,7 +129,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 5954273247740078721}
   IsStream: 1
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 5954273247740078721}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -204,10 +204,10 @@ MonoBehaviour:
   Path: Assets/FMOD Builds/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639205924378396857
+  lastModified: 639206118885353673
   FileSizes:
   - Name: 
-    Value: 1588
+    Value: 1696
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -243,12 +243,13 @@ MonoBehaviour:
   - {fileID: 1163815257012085019}
   - {fileID: 2887408315123616073}
   - {fileID: 364048716043867978}
+  - {fileID: 3167171819399394187}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5954273247740078721}
   StringsBanks:
   - {fileID: -1421148465446812755}
-  cacheTime: 639205924378396857
+  cacheTime: 639206118885353673
   cacheVersion: 131637
 --- !u!114 &278269780330209501
 MonoBehaviour:
@@ -439,6 +440,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3167171819399394187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ComputerGlitch
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/ComputerGlitch
+  Guid:
+    Data1: -1609586305
+    Data2: 1313656983
+    Data3: -1529737030
+    Data4: 156616737
+  Banks:
+  - {fileID: 5954273247740078721}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5134975717707107688}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
 --- !u!114 &4233250270370330993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +522,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5134975717707107688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ComputerGlitch/GlitchNoise
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
+  Name: GlitchNoise
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2477700235
+    data2: 1990951334
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5954273247740078721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +561,7 @@ MonoBehaviour:
   Path: Assets/FMOD Builds/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639205924378386870
+  lastModified: 639206118885328056
   FileSizes: []
   Exists: 1
 --- !u!114 &8407159438334510695
