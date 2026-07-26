@@ -1,5 +1,4 @@
 using NaughtyAttributes;
-using UnityEditor;
 using UnityEngine;
 
 public class BubbleTester : MonoBehaviour
@@ -11,8 +10,10 @@ public class BubbleTester : MonoBehaviour
         testBubbleData.onComplete = () => { TestListener(); };
     }
 
-    private bool InPlayMode => EditorApplication.isPlaying;
+#if UNITY_EDITOR
+    private bool InPlayMode => UnityEditor.EditorApplication.isPlaying;
     [Button, ShowIf("InPlayMode")]
+#endif
     public void Spawn()
     {
         PopupBubbleManager.Instance.SpawnPopupBubble(testBubbleData, Vector3.zero);

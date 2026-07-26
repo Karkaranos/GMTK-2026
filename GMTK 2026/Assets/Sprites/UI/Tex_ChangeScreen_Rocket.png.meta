@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7444898abd05f604894bcff81d33a531
+guid: cc3343ecf332a80458c8e505c7761941
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1436014674249631330
-    second: Tex_Recommendations_0
+      213: 5722927590525740143
+    second: Tex_ChangeScreen_Rocket_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,10 +49,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 241, z: 0, w: 5}
+  alignment: 5
+  spritePivot: {x: 1, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tex_Recommendations_0
+      name: Tex_ChangeScreen_Rocket_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 31
-        width: 256
-        height: 225
+        x: 255
+        y: 23
+        width: 257
+        height: 466
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 266c5e6ecbfbde310800000000000000
-      internalID: 1436014674249631330
+      spriteID: f64a19c725ceb6f40800000000000000
+      internalID: 5722927590525740143
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tex_Recommendations_0: 1436014674249631330
+      Tex_ChangeScreen_Rocket_0: 5722927590525740143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

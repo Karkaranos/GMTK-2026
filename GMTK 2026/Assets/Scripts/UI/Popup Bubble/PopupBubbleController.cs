@@ -4,6 +4,7 @@ using NaughtyAttributes;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -56,6 +57,7 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
             _ambientEmitter.EventReference = bubbleData.ambientSound;
             _ambientEmitter.Play();
         }
+        bubbleData.OnStart.Invoke();
     }
 
     private void Update()
@@ -161,6 +163,7 @@ public class PopupBubbleController : MonoBehaviour, IPointerClickHandler, IPoint
         }
 
         bubbleData.onComplete?.Invoke();
+        bubbleData.OnEnd.Invoke();
         _animator.SetTrigger(_animCompleteID);
     }
 
@@ -200,8 +203,15 @@ public struct PopupBubbleData
 
     public Action onComplete;
 
+    [SerializeField]
+    private UnityEvent _onStart;
+    [SerializeField]
+    private UnityEvent _onEnd;
+
     #region GS
     public float GracePeriod { get => _gracePeriod; set => _gracePeriod = value; }
     public string IdleParticleID { get => _idleParticleID; set => _idleParticleID = value; }
+    public UnityEvent OnStart { get => _onStart; set => _onStart = value; }
+    public UnityEvent OnEnd { get => _onEnd; set => _onEnd = value; }
     #endregion
 }

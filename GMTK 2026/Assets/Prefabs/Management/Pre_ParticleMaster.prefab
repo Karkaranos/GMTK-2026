@@ -51,5 +51,7 @@ MonoBehaviour:
     _prefab: {fileID: 8072399824244248882, guid: c17b8275e8473f64db411548dd8074a5, type: 3}
   - _id: Event_Sleep
     _prefab: {fileID: 9201924766907406531, guid: cdb58e7f03d926742af75665178510a9, type: 3}
+  - _id: Launch_BigExplosion
+    _prefab: {fileID: 7961876541418562068, guid: d2dd1e728d5f09441a30a4cacc0be6f5, type: 3}
   _simID: 
   _simParent: {fileID: 0}
