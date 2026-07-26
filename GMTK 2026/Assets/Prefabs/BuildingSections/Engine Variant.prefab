@@ -56,11 +56,11 @@ MonoBehaviour:
     _gracePeriod: 3
     ambientSound:
       Guid:
-        Data1: -1609586305
-        Data2: 1313656983
-        Data3: -1529737030
-        Data4: 156616737
-      Path: event:/ComputerGlitch
+        Data1: 441418407
+        Data2: 1245201898
+        Data3: 29842844
+        Data4: 303639864
+      Path: event:/Fight
     clickSound:
       Guid:
         Data1: 1837178418
