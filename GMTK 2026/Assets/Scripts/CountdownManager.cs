@@ -1,10 +1,12 @@
 using UnityEngine;
 using System;
 using NaughtyAttributes;
+using UnityEngine.UI;
 
 public class CountdownManager : Manager
 {
     [SerializeField] private float countdownDuration = 300f;
+    [SerializeField] private Button funnyButton;
 
     private float remainingTime;
     private bool isPaused = false;
@@ -27,6 +29,7 @@ public class CountdownManager : Manager
         ProgressBar.Cheat(1);
 
         OnTimeChanged?.Invoke(remainingTime);
+        funnyButton.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -45,16 +48,34 @@ public class CountdownManager : Manager
 
         if (remainingTime <= 0f)
         {
-            isRunning = false;
-            OnCountdownFinished?.Invoke();
-            MenuBehavior.Instance.LoadGameScene(1);
+            Done();
         }
+
+        // this needs to be last in the function because return
+        foreach (var part in FindAnyObjectByType<BuildingManager>().GetParts())
+        {
+            if (part.Value == null) return;
+        }
+        funnyButton.gameObject.SetActive(true);
+    }
+
+    private void Done()
+    {
+        isRunning = false;
+        OnCountdownFinished?.Invoke();
+        MenuBehavior.Instance.LoadGameScene(1);
     }
 
     public void Pause() => isPaused = true;
     public void Resume() => isPaused = false;
 
     public float GetRemainingTime() => remainingTime;
+
+    public void ProceedToLaunch()
+    {
+        ProgressManager.INST.SkipAhead(Mathf.RoundToInt(countdownDuration));
+        Done();
+    }
 
     [Button]
     public void SkipToTheEnd()
