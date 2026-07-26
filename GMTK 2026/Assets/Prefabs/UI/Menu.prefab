@@ -3132,6 +3132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934788368641890025}
   - component: {fileID: 5207297596677882114}
+  - component: {fileID: 6835711614370407768}
   m_Layer: 5
   m_Name: MasterVolume
   m_TagString: Untagged
@@ -3225,6 +3226,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6835711614370407768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904129979573794718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8146169197902214651}
+          m_TargetAssemblyTypeName: MenuBehavior, Assembly-CSharp
+          m_MethodName: PlayMasterTest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1972355456157183085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3691,6 +3721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3101835421108846507}
   - component: {fileID: 5931869225645518378}
+  - component: {fileID: 4734645419639424731}
   m_Layer: 5
   m_Name: SFX Volume
   m_TagString: Untagged
@@ -3784,6 +3815,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4734645419639424731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543803371023811474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8146169197902214651}
+          m_TargetAssemblyTypeName: MenuBehavior, Assembly-CSharp
+          m_MethodName: PlaySFXTest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2579967963883980884
 GameObject:
   m_ObjectHideFlags: 0
@@ -12186,6 +12246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2985493807570447927}
   - component: {fileID: 6935943290787746140}
+  - component: {fileID: 3709624614840970620}
   m_Layer: 5
   m_Name: Music Volume
   m_TagString: Untagged
@@ -12279,6 +12340,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3709624614840970620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189898798588478058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8146169197902214651}
+          m_TargetAssemblyTypeName: MenuBehavior, Assembly-CSharp
+          m_MethodName: PlayMusicTest
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &8827379628981233040
 PrefabInstance:
   m_ObjectHideFlags: 0
