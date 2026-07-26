@@ -165,7 +165,7 @@ MonoBehaviour:
   randomizeSpawnPosition: 1
   spawnRect:
     serializedVersion: 2
-    x: -8.9
+    x: -38.43
     y: 3.19
     width: 13.45
     height: 20.1

@@ -7,10 +7,7 @@
 using FMOD.Studio;
 using FMODUnity;
 using NaughtyAttributes;
-using NUnit.Framework.Constraints;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -109,7 +106,8 @@ public class AudioManager : MonoBehaviour
     [Button]
     public void PlaySound()
     {
-        EventReference reference = EventReference.Find("event:/" + testString);
+        //EventReference reference = EventReference.Find("event:/" + testString);
+        EventReference reference = FMODUnity.RuntimeManager.PathToEventReference("event:/" + testString);
         PlayOneShot(reference);
     }
 
