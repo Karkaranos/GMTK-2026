@@ -4,11 +4,10 @@
  * Modified Date:   7/24/2026
  * Description:     Stores functions called by menu buttons
  ******************************************/
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
-using NaughtyAttributes;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -259,8 +258,14 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void SetMasterVolume(float volume)
     {
-        AudioManager.instance.MasterVolume = volume;
+        float logVol = volume < 0.296f ? 0.1f * volume : Mathf.Exp(5.0f * volume - 5);
+
+        AudioManager.instance.MasterVolume = logVol;
         AudioManager.instance.UpdateVolume();
+    }
+
+    public void PlayMasterTest()
+    {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.Master);
     }
 
@@ -269,8 +274,14 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void SetSFXVolume(float volume)
     {
-        AudioManager.instance.SFXVolume = volume;
+        float logVol = volume < 0.296f ? 0.1f * volume : Mathf.Exp(5.0f * volume - 5);
+
+        AudioManager.instance.SFXVolume = logVol;
         AudioManager.instance.UpdateVolume();
+    }
+
+    public void PlaySFXTest()
+    {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.SFX);
     }
 
@@ -279,8 +290,14 @@ public class MenuBehavior : MonoBehaviour
     /// </summary>
     public void SetMusicVolume(float volume)
     {
-        AudioManager.instance.MusicVolume = volume;
+        float logVol = volume < 0.296f ? 0.1f * volume : Mathf.Exp(5.0f * volume - 5);
+
+        AudioManager.instance.MusicVolume = logVol;
         AudioManager.instance.UpdateVolume();
+    }
+
+    public void PlayMusicTest()
+    {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.Music);
     }
 
