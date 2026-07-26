@@ -27,6 +27,8 @@ public class RocketMover : MonoBehaviour
     private Animator animator;
     private EndingRocketBuilder rocketBuilder;
 
+    private float baseGravityScale;
+
     [SerializeField, BoxGroup("Animation")]
     private string _animExplosionID = "T_EXPLOSION";
 
@@ -38,6 +40,8 @@ public class RocketMover : MonoBehaviour
 
     private void Awake()
     {
+        baseGravityScale = rb.gravityScale;
+        rb.gravityScale = 0;
         animator = GetComponent<Animator>();
         rocketBuilder = GetComponent<EndingRocketBuilder>();
 
@@ -83,8 +87,7 @@ public class RocketMover : MonoBehaviour
 
             FlyTime times = GetFlyTimes(flyDistance);
 
-            float baseGravityScale = rb.gravityScale;
-            rb.gravityScale = 0;
+            
 
             float velocity = 0;
             // Accelerate to max speed.
