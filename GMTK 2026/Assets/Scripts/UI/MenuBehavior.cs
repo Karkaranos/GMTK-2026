@@ -4,6 +4,8 @@
  * Modified Date:   7/24/2026
  * Description:     Stores functions called by menu buttons
  ******************************************/
+using System.Collections;
+using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using Unity.VisualScripting;
@@ -29,14 +31,26 @@ public class MenuBehavior : MonoBehaviour
     [SerializeField, Required] private GameObject controls;
     [SerializeField, Required] private GameObject credits;
     [SerializeField, Required] private GameObject settings;
+    [SerializeField, Required] private GameObject mainMenuBG;
+    [SerializeField] private List<GameObject> menuStack = new();
 
     [SerializeField, Required] private Slider masterVolume;
     [SerializeField, Required] private Slider sfxVolume;
     [SerializeField, Required] private Slider musicVolume;
+    [SerializeField, Required] private Slider sensitivity;
 
-    [SerializeField] private float distanceModifier = 150;
-    [SerializeField] private string postLaunchMessage;
-    [SerializeField, Required] private TMP_Text postLaunchData;
+    [SerializeField, BoxGroup("Launch")] private float distanceModifier = 150;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text bigScore;
+    [SerializeField, BoxGroup("Launch")] private float scoreTickSpeed = 150;
+    [SerializeField, BoxGroup("Launch")] private float minScoreTickTime = 1;
+    [SerializeField, BoxGroup("Launch")] private Vector2 scoreTickSize;
+    [SerializeField, BoxGroup("Launch")] private AnimationCurve scoreTickCurve;
+    [SerializeField, BoxGroup("Launch")] private float bigScorePauseTime;
+    [SerializeField, BoxGroup("Launch")] private string postLaunchMessage;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text postLaunchData;
+    [SerializeField, BoxGroup("Launch")] private string newHighScoreMessage;
+    [SerializeField, BoxGroup("Launch")] private string oldHighScoreMessage;
+    [SerializeField, BoxGroup("Launch"), Required] private TMP_Text newHighScore;
 
     public static bool GamePaused => Instance == null ? false : Instance.IsPaused;
 
@@ -57,14 +71,17 @@ public class MenuBehavior : MonoBehaviour
         pauseMenu.SetActive(false);
         postLaunchMenu.SetActive(false);
 
-        // If the current scene is the menu scene, enables the menu. Otherwise, disables it
-        mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
-
         SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+        SceneManager_activeSceneChanged(SceneManager.GetActiveScene(), SceneManager.GetActiveScene());
 
         masterVolume.value = AudioManager.instance.MasterVolume;
         sfxVolume.value = AudioManager.instance.SFXVolume;
         musicVolume.value = AudioManager.instance.MusicVolume;
+
+        if (!PlayerPrefs.HasKey("sens")) PlayerPrefs.SetFloat("sens", 1);
+        sensitivity.value = PlayerPrefs.GetFloat("sens");
+
+        //StartCoroutine(LaunchComplete(1620));
     }
 
     private void OnDestroy()
@@ -75,8 +92,14 @@ public class MenuBehavior : MonoBehaviour
 
     private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
     {
-        mainMenu.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
-        if(IsPaused)
+        while (menuStack.Count > 0) RemoveFromMenuStack();
+
+        // Enable main menu when entering it
+        if (arg1.buildIndex == menuScene) AddToMenuStack(mainMenu);
+
+        mainMenuBG.SetActive(SceneManager.GetActiveScene().buildIndex == menuScene);
+
+        if (IsPaused)
         {
             SetPaused(false);
         }
@@ -120,6 +143,21 @@ public class MenuBehavior : MonoBehaviour
         Application.Quit();
     }
 
+    private void AddToMenuStack(GameObject menu)
+    {
+        menuStack.Insert(0, menu);
+        menuStack[0].SetActive(true);
+        for (int i = 1; i < menuStack.Count; i++) menuStack[i].SetActive(false);
+    }
+
+    private void RemoveFromMenuStack()
+    {
+        if (menuStack.Count == 0) return;
+        menuStack[0].SetActive(false);
+        menuStack.RemoveAt(0);
+        if (menuStack.Count > 0) menuStack[0].SetActive(true);
+    }
+
     /// <summary>
     /// Listens to pausing
     /// </summary>
@@ -134,13 +172,12 @@ public class MenuBehavior : MonoBehaviour
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
             IsPaused = paused;
-            pauseMenu.SetActive(IsPaused);
+            if (paused) AddToMenuStack(pauseMenu);
+            else while (menuStack.Count > 0) RemoveFromMenuStack();
             Time.timeScale = IsPaused ? 0 : 1;
 
             if (!IsPaused)
             {
-                credits.SetActive(false);
-                controls.SetActive(false);
                 InputSystem.actions.Enable();
             }
             else
@@ -150,10 +187,40 @@ public class MenuBehavior : MonoBehaviour
         }
     }
 
-    public void LaunchComplete(float flownHeight)
+    public IEnumerator LaunchComplete(float flownHeight)
     {
-        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight * distanceModifier).ToString());
+        flownHeight *= distanceModifier;
         postLaunchMenu.SetActive(true);
+        postLaunchData.gameObject.SetActive(false);
+        newHighScore.gameObject.SetActive(false);
+        bigScore.gameObject.SetActive(true);
+
+        float currentHeight = 0;
+        float maxAddedPerSecond = flownHeight / minScoreTickTime;
+        while (currentHeight < flownHeight)
+        {
+            currentHeight += Time.deltaTime * Mathf.Min(scoreTickSpeed, maxAddedPerSecond) * scoreTickCurve.Evaluate(currentHeight / flownHeight);
+            currentHeight = Mathf.Min(currentHeight, flownHeight);
+            bigScore.text = (int)currentHeight + " km";
+            bigScore.fontSize = scoreTickSize.x + ((scoreTickSize.y - scoreTickSize.x) * (currentHeight / flownHeight));
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(bigScorePauseTime);
+
+        bigScore.gameObject.SetActive(false);
+        postLaunchData.gameObject.SetActive(true);
+        newHighScore.gameObject.SetActive(true);
+        postLaunchData.text = postLaunchMessage.Replace("<height>", Mathf.RoundToInt(flownHeight).ToString());
+        if (PlayerPrefs.HasKey("score") && PlayerPrefs.GetInt("score") >= Mathf.RoundToInt(flownHeight))
+        {
+            newHighScore.text = oldHighScoreMessage.Replace("<height>", PlayerPrefs.GetInt("score").ToString());
+        }
+        else
+        {
+            newHighScore.text = newHighScoreMessage;
+            PlayerPrefs.SetInt("score", Mathf.RoundToInt(flownHeight));
+        }
     }
 
     /// <summary>
@@ -162,7 +229,8 @@ public class MenuBehavior : MonoBehaviour
     public void ToggleCredits()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
-        credits.SetActive(!credits.activeInHierarchy);
+        if (credits.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(credits);
     }
 
     /// <summary>
@@ -171,7 +239,8 @@ public class MenuBehavior : MonoBehaviour
     public void ToggleControls()
     {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
-        controls.SetActive(!controls.activeInHierarchy);
+        if (controls.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(controls);
     }
 
     /// <summary>
@@ -204,11 +273,24 @@ public class MenuBehavior : MonoBehaviour
         AudioManager.instance.PlayOneShot(FMODEvents.instance.Music);
     }
 
+    public void SetSensitivity()
+    {
+        PlayerPrefs.SetFloat("sens", sensitivity.value);
+    }
+
+    public void ClearHighScore()
+    {
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        PlayerPrefs.SetFloat("score", 0);
+    }
+
     /// <summary>
     /// Toggles whether the credits are enabled or not
     /// </summary>
     public void ToggleSettings()
     {
-        settings.SetActive(!settings.activeInHierarchy);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.UIClick);
+        if (settings.activeInHierarchy) RemoveFromMenuStack();
+        else AddToMenuStack(settings);
     }
 }

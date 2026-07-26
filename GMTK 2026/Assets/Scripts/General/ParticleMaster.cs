@@ -1,6 +1,5 @@
 using NaughtyAttributes;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class ParticleMaster : Manager
@@ -83,11 +82,13 @@ public class ParticleMaster : Manager
     [Button]
     private void Simulate()
     {
-        if (!EditorApplication.isPlaying)
+#if UNITY_EDITOR
+        if (!UnityEditor.EditorApplication.isPlaying)
         {
             Debug.Log("Editor application must be playing to simulate.");
             return;
         }
+#endif
 
         if (_simParent != null) Play(_simID, _simParent);
         else Play(_simID, transform);

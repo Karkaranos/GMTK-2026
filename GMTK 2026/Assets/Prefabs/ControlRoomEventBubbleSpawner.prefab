@@ -47,25 +47,91 @@ MonoBehaviour:
   bubblePrefab: {fileID: 7666055893952580933, guid: c5ca608fd5ee040439f6090bda93e211, type: 3}
   singlePenguinEvents:
   - type: 0
-    iconSprite: {fileID: 0}
-    clickProgressIncrement: 0
+    iconSprite: {fileID: 5979724520321032520, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: Event_Sleep
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: -1280100940
+        Data2: 1143920600
+        Data3: -281467718
+        Data4: -1359236868
+      Path: event:/Zach Penguin
   multiPenguinEvents:
   - type: 0
-    iconSprite: {fileID: 0}
-    clickProgressIncrement: 0
+    iconSprite: {fileID: 3848997963619355576, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: -1604180698
+        Data2: 1216909973
+        Data3: -930204255
+        Data4: -752267235
+      Path: event:/David Penguin
   globalEvents:
   - type: 0
-    iconSprite: {fileID: 0}
-    clickProgressIncrement: 0
+    iconSprite: {fileID: -8957787747618776797, guid: 7af01a671ee05db49aebf568d5c04850, type: 3}
+    _idleParticleID: 
+    clickProgressIncrement: 0.2
     fillSpeed: 0
     drainSpeed: 0
     _gracePeriod: 0
+    ambientSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    clickSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    completeSound:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   penguins:
   - {fileID: 0}
   - {fileID: 0}
@@ -82,5 +148,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  spawnTimeRange: {x: 3, y: 7}
-  maxEventsActive: 3
+  spawnTimeRange: {x: 5, y: 9}
+  maxEventsActive: 7

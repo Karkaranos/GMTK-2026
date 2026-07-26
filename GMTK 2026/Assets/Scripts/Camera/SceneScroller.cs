@@ -65,7 +65,7 @@ public class SceneScroller : MonoBehaviour
 
     private void HandleScrollPerformed(InputAction.CallbackContext obj)
     {
-        TargetScrollLocation -= scrollSpeed * obj.ReadValue<Vector2>().normalized.y;
+        TargetScrollLocation -= scrollSpeed * PlayerPrefs.GetFloat("sens", 1) * obj.ReadValue<Vector2>().normalized.y;
     }
 
     private IEnumerator LerpToTargetPos()

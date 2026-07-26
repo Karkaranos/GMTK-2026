@@ -7,7 +7,6 @@
  */
 using NaughtyAttributes;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -76,11 +75,13 @@ namespace MarUtility.UIExtensions
         [Button]
         private void SimulateFill()
         {
-            if (!EditorApplication.isPlaying)
+#if UNITY_EDITOR
+            if (!UnityEditor.EditorApplication.isPlaying)
             {
                 DebugMessages.SimulationPlaytestOnly("Fill");
                 return;
             }
+#endif
             BeginFillLerp(1, 0);
         }
 
