@@ -68,6 +68,20 @@ MonoBehaviour:
       Data3: -1373569101
       Data4: -1988611906
     Path: event:/Beat
+  GameplayMusic:
+    Guid:
+      Data1: 1928747893
+      Data2: 1183333413
+      Data3: 777688206
+      Data4: 147141499
+    Path: event:/GameplayMusic
+  MenuMusic:
+    Guid:
+      Data1: 1044036102
+      Data2: 1114484630
+      Data3: -377801315
+      Data4: -1722414183
+    Path: event:/MenuMusic
   Bee:
     Guid:
       Data1: -1480843819

@@ -1072,6 +1072,7 @@ GameObject:
   - component: {fileID: 1254691707}
   - component: {fileID: 1254691708}
   - component: {fileID: 1254691709}
+  - component: {fileID: 1254691710}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1106,10 +1107,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.31614584
     y: 0
-    width: 1
-    height: 1
+    width: 0.33148152
+    height: 0.3314815
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1275,6 +1276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 1254691701}
+--- !u!114 &1254691710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254691701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23c574b91a58b34d8b728f5f87fd598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicSetter
+  musicType: 1
 --- !u!114 &1267135512 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1496891876127075374, guid: 95bbf2edc0739da4c98aa4964ef553f0, type: 3}

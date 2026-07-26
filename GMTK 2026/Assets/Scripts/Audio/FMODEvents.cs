@@ -11,6 +11,8 @@ using NaughtyAttributes;
 public class FMODEvents : MonoBehaviour
 {
     [SerializeField, Foldout("Music")] public EventReference Beat;
+    [SerializeField, Foldout("Music")] public EventReference GameplayMusic;
+    [SerializeField, Foldout("Music")] public EventReference MenuMusic;
 
     [SerializeField, Foldout("SFX")] public EventReference Bee;
     [SerializeField, Foldout("SFX")] public EventReference Meow;
