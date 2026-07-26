@@ -11,11 +11,13 @@ public class Penguin : MonoBehaviour
     [SerializeField] private Color selectedColor;
 
     [SerializeField, BoxGroup("Components")] private SpriteRenderer rend;
+    [SerializeField, BoxGroup("Components")] private Animator anim;
 
     private Dictionary<RocketSection, RocketPart> recomendations;
 
     private bool isDistracted  = false;
     private Color baseColor;
+    private Material outlineMat;
 
     private static Penguin selectedPenguin;
     private static Penguin mouseOverPenguin;
@@ -66,20 +68,24 @@ public class Penguin : MonoBehaviour
 
     public void Initialize(Dictionary<RocketSection, RocketPart> recs, Image psImage)
     {
-        baseColor = rend.color;
+        outlineMat = rend.material;
+        baseColor = outlineMat.GetColor("_OutlineColor");
         recomendations = recs;
 
         perSecondImage = psImage;
+        rend.material = outlineMat;
     }
 
     public void OnSelected()
     {
-        rend.color = selectedColor;
+        outlineMat.SetColor("_OutlineColor", selectedColor);
+        //rend.color = selectedColor;
     }
 
     public void OnDeselected()
     {
-        rend.color = baseColor;
+        outlineMat.SetColor("_OutlineColor", baseColor);
+        //rend.color = baseColor;
     }
 
     private void OnMouseEnter()
@@ -108,14 +114,17 @@ public class Penguin : MonoBehaviour
         SelectedPenguin = mouseOverPenguin;
     }
 
-    public void AddDistraction()
+    public void AddDistraction(string distractionTrigger)
     {
+        anim.SetBool("IsDistracted", true);
+        anim.SetTrigger(distractionTrigger);
         distractionCount++;
         IsDistracted = distractionCount > 0;
     }
 
     public void RemoveDistraction()
     {
+        anim.SetBool("IsDistracted", false);
         distractionCount = Mathf.Max(0, distractionCount - 1);
         IsDistracted = distractionCount > 0;
     }
