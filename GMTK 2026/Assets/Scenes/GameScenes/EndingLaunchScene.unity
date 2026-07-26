@@ -8230,7 +8230,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5e1d498ab6337754980736f679f3fd56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10128,7 +10128,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 9268e13d9f7e9b64280129bca6c3ee65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18013,7 +18013,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 35ad0c83ee6f76e4cb6c17888ef75079, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19661,7 +19661,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: aeec224397d08f54dad4a5f88d1e6e1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -21727,10 +21727,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.12115094
-    width: 0.8080808
-    height: 0.72690564
+    x: 0.2921875
+    y: 0
+    width: 0.33240741
+    height: 0.33240741
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -21760,7 +21760,7 @@ Transform:
   m_GameObject: {fileID: 1737889613}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.2499847, z: -10}
+  m_LocalPosition: {x: 0, y: 4.849991, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26014,7 +26014,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 44e269ee1cbca8c4c80fa28b45a76f80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -26554,9 +26554,21 @@ PrefabInstance:
       propertyPath: rocketCam
       value: 
       objectReference: {fileID: 948896848}
+    - target: {fileID: 2686229302933214521, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3128153864501940148, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401728506028815928, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401728506028815928, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2007299389
       objectReference: {fileID: 0}
     - target: {fileID: 5763532122182750753, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26598,6 +26610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6480483573186495225, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6654902441313934263, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
       propertyPath: CollisionModule.type
       value: 1
@@ -26613,6 +26629,14 @@ PrefabInstance:
     - target: {fileID: 6654902441313934263, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
       propertyPath: CollisionModule.m_Bounce.scalar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7213330913500752536, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768285625442403529, guid: 342736e871a0e38408d03738fb0ab55e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -8620,9 +8620,9 @@ MonoBehaviour:
   sfxVolume: {fileID: 5931869225645518378}
   musicVolume: {fileID: 6935943290787746140}
   sensitivity: {fileID: 4539913174263209676}
-  distanceModifier: 150
+  distanceModifier: 7500
   bigScore: {fileID: 3359924438804093711}
-  scoreTickSpeed: 6000
+  scoreTickSpeed: 300000
   minScoreTickTime: 1.5
   scoreTickSize: {x: 40, y: 140}
   scoreTickCurve:
