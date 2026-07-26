@@ -115,6 +115,7 @@ public class ControlRoomEventBubbleSpawner : MonoBehaviour
     {
         GameObject instance = Instantiate(bubblePrefab, transform);
         PopupBubbleController controller = instance.GetComponent<PopupBubbleController>();
+        PopupIndicatorHandler.Instance.AddPopup(instance.transform);
 
         instance.transform.position = worldPos;
 
@@ -139,6 +140,8 @@ public class ControlRoomEventBubbleSpawner : MonoBehaviour
                 penguin.RemoveDistraction();
 
             activeEvents.Remove(evt);
+
+            PopupIndicatorHandler.Instance.RemovePopup(instance.transform);
         };
     }
 
